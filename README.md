@@ -26,7 +26,7 @@ macOSの環境構築
 brew ls
 ```
 
-多い。。主にavr-cc
+多い…。主にqmk周り
 
 - awscli
 - jenv
@@ -102,9 +102,45 @@ npm list -g -depth=0
 
 ### Java
 
-brew caskでadoptOpenJdk
-jenvでバージョン管理
+AdoptOpenJdk  
+jenvでバージョン管理  
+
+```sh
+brew cask install adoptopenjdk
+brew install jenv
+```
 
 ### Scala
 
-WIP
+Javaを導入後、sbtでバージョン管理
+
+```sh
+brew cask install adoptopenjdk
+brew install scala
+brew install sbt
+```
+
+### Karabiner-Elements
+
+WIP setting.jsonの引き回し
+
+## keyboard settings
+
+ErgoDashを使用  
+QMKでkeymapを反映させます。  
+<https://github.com/t-mario-y/qmk_firmware/blob/master/keyboards/ergodash/rev1/keymaps/t-mario-y/keymap.c>
+
+```sh
+# install
+git clone https://github.com/t-mario-y/qmk_firmware
+cd qmk_firmware
+util/qmk_install.sh
+
+make ergodash/rev1:t-mario-y:avrdude
+```
+
+TODO：`qmk_firmware/util/macos_install.sh`で入ってくるものが多い。  
+
+## TODO
+
+Chrome settings(拡張機能)
