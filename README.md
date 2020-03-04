@@ -53,12 +53,17 @@ Kalabiner と Discord ?
 
 - adoptopenjdk
 - adoptopenjdk8
+- dash
+- docker
 - google-cloud-sdk
 - hyper
 - postman
 - qmk-toolbox
 - sequel-pro
 - sourcetree
+
+sequel-proは職場PCでやたらと落ちたので消した。
+MySQLクライアントないかしらね。
 
 ## manually
 
