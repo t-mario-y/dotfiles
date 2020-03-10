@@ -55,6 +55,7 @@ Kalabiner と Discord ?
 - adoptopenjdk8
 - dash
 - docker
+- font-ricty-diminished
 - google-cloud-sdk
 - hyper
 - postman
@@ -63,7 +64,10 @@ Kalabiner と Discord ?
 - sourcetree
 
 sequel-proは職場PCでやたらと落ちたので消した。
-MySQLクライアントないかしらね。
+MySQLクライアントほしい。
+
+graphiqlは学習用に入れたが、使い勝手にはときめいてない。
+intellij-idea-ceはcaskでも入るが、公式の方法ではないです。
 
 ## manually
 
