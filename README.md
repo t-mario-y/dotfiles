@@ -66,7 +66,7 @@ Kalabiner と Discord ?
 sequel-proは職場PCでやたらと落ちたので消した。
 MySQLクライアントほしい。
 
-graphiqlは学習用に入れたが、使い勝手にはときめいてない。
+graphiqlは学習用に入れたが、使い勝手にはときめいてない。  
 intellij-idea-ceはcaskでも入るが、公式の方法ではないです。
 
 ## manually
