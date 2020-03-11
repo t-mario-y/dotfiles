@@ -69,6 +69,13 @@ MySQLクライアントほしい。
 graphiqlは学習用に入れたが、使い勝手にはときめいてない。  
 intellij-idea-ceはcaskでも入るが、公式の方法ではないです。
 
+フォントは`tap`が必要
+
+```sh
+brew tap homebrew/cask-fonts
+brew cask install font-ricty-diminished
+```
+
 ## manually
 
 App Storeから入れる
