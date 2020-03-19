@@ -42,6 +42,7 @@ brew ls
 - starship
 - tfenv
 - tig
+- tree
 - yarn
 
 ```sh
