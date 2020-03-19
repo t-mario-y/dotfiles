@@ -35,6 +35,7 @@ brew ls
 - git-flow
 - kubernetes-cli
 - minikube
+- mysql-client
 - nodebrew
 - python
 - sbt
