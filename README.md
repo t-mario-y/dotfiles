@@ -44,6 +44,7 @@ brew ls
 - tfenv
 - tig
 - tree
+- watch
 - yarn
 
 ```sh
