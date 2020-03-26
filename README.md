@@ -30,6 +30,7 @@ brew ls
 
 - awscli
 - jenv
+- jq
 - krew
 - git
 - git-flow
