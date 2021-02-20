@@ -71,7 +71,7 @@ sequel-proは職場PCでやたらと落ちたので消した。
 MySQLクライアントほしい。
 
 graphiqlは学習用に入れたが、使い勝手にはときめいてない。  
-intellij-idea-ceはcaskでも入るが、公式の方法ではないです。
+intellij-idea-ceはcaskでも入るが、公式の方法ではないため非推奨。[IntelliJ Toolbox App](https://www.jetbrains.com/toolbox-app/)で良いでしょう。
 
 フォントは`tap`が必要
 
