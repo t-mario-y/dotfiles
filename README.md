@@ -76,6 +76,9 @@ intellij-idea-ceはcaskでも入るが、公式の方法ではないため非推
 - adoptopenjdk
 - adoptopenjdk8
 
+helm/bazel/bazelisk はcurlで入れている。
+根拠は、公式docsにbrewで入れるガイドがないこと。(kubectlはある)
+
 フォントは`tap`が必要
 
 ```sh
