@@ -34,10 +34,11 @@ brew ls
 - krew
 - git
 - git-flow
+- google-cloud-sdk
 - kubernetes-cli
 - minikube
 - mysql-client
-- nodebrew
+- nodenv
 - python
 - sbt
 - scala
@@ -55,8 +56,6 @@ brew cask ls
 TODO: caskで良いものをcaskで入れ直す
 Kalabiner と Discord ?
 
-- adoptopenjdk
-- adoptopenjdk8
 - dash
 - docker
 - font-ricty-diminished
@@ -72,6 +71,10 @@ MySQLクライアントほしい。
 
 graphiqlは学習用に入れたが、使い勝手にはときめいてない。  
 intellij-idea-ceはcaskでも入るが、公式の方法ではないため非推奨。[IntelliJ Toolbox App](https://www.jetbrains.com/toolbox-app/)で良いでしょう。
+
+各言語(Java/Python/Node)はバージョン切り替えツールから入れるようにしたい。
+- adoptopenjdk
+- adoptopenjdk8
 
 フォントは`tap`が必要
 
