@@ -1,6 +1,7 @@
 # dotfiles and more
 
-macOSの環境構築
+macOSの環境構築  
+開発系ツールだけをdotfilesとして、それ以外は非公開のメモで残して良い。
 
 ## dotfiles
 
