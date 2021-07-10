@@ -147,10 +147,6 @@ brew install scala
 brew install sbt
 ```
 
-### Karabiner-Elements
-
-WIP setting.jsonの引き回し
-
 ## keyboard settings
 
 ErgoDashを使用  
