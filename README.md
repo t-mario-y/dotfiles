@@ -52,80 +52,179 @@ brew ls --formula
 
 private PC
 
-```json
-[
-  "arm-gcc-bin@8",
-  "autoconf",
-  "avr-binutils",
-  "avr-gcc@7",
-  "avr-gcc@8",
-  "avr-gcc@9",
-  "avrdude",
-  "awscli",
-  "bootloadhid",
-  "brotli",
-  "c-ares",
-  "clang-format",
-  "dfu-programmer",
-  "dfu-util",
-  "gcc",
-  "gcc-arm-none-eabi",
-  "gdbm",
-  "gettext",
-  "gh",
-  "git",
-  "git-flow",
-  "gmp",
-  "go",
-  "grep",
-  "helm",
-  "isl",
-  "jemalloc",
-  "jenv",
-  "jq",
-  "krew",
-  "kubernetes-cli",
-  "libelf",
-  "libev",
-  "libevent",
-  "libftdi0",
-  "libhid",
-  "libmpc",
-  "libusb",
-  "libusb-compat",
-  "libuv",
-  "litestream",
-  "m4",
-  "minikube",
-  "mpdecimal",
-  "mpfr",
-  "mysql-client",
-  "ncurses",
-  "nghttp2",
-  "node-build",
-  "nodenv",
-  "oniguruma",
-  "openjdk",
-  "openssl@1.1",
-  "pcre",
-  "pcre2",
-  "pkg-config",
-  "pyenv",
-  "python@3.8",
-  "python@3.9",
-  "readline",
-  "sbt",
-  "scala",
-  "sqlite",
-  "starship",
-  "tcl-tk",
-  "tfenv",
-  "tig",
-  "tree",
-  "watch",
-  "xz",
-  "zstd"
-]
+```shell script
+brew deps --installed --tree
+###
+adoptopenjdk
+
+adoptopenjdk/openjdk/adoptopenjdk8
+
+authy
+
+autoconf
+└── m4
+
+awscli
+└── python@3.9
+    ├── gdbm
+    ├── mpdecimal
+    ├── openssl@1.1
+    ├── readline
+    ├── sqlite
+    │   └── readline
+    └── xz
+
+dash
+
+docker
+
+gdbm
+
+gettext
+
+gh
+
+git
+├── gettext
+└── pcre2
+
+git-flow
+
+go
+
+google-cloud-sdk
+└── python
+    ├── gdbm
+    ├── mpdecimal
+    ├── openssl@1.1
+    ├── readline
+    ├── sqlite
+    │   └── readline
+    └── xz
+
+grep
+└── pcre
+
+helm
+
+hyper
+
+jenv
+
+jq
+└── oniguruma
+
+krew
+└── kubernetes-cli
+
+kubernetes-cli
+
+libevent
+└── openssl@1.1
+
+benbjohnson/litestream/litestream
+
+m4
+
+minikube
+└── kubernetes-cli
+
+mpdecimal
+
+mysql-client
+├── libevent
+│   └── openssl@1.1
+├── openssl@1.1
+└── zstd
+
+ncurses
+
+node-build
+├── autoconf
+│   └── m4
+├── openssl@1.1
+└── pkg-config
+
+nodenv
+└── node-build
+    ├── autoconf
+    │   └── m4
+    ├── openssl@1.1
+    └── pkg-config
+
+oniguruma
+
+openjdk
+
+openssl@1.1
+
+pcre
+
+pcre2
+
+pkg-config
+
+postman
+
+pyenv
+├── autoconf
+│   └── m4
+├── openssl@1.1
+├── pkg-config
+└── readline
+
+python@3.8
+├── gdbm
+├── mpdecimal
+├── openssl@1.1
+├── readline
+├── sqlite
+│   └── readline
+├── tcl-tk
+│   └── openssl@1.1
+└── xz
+
+python@3.9
+├── gdbm
+├── mpdecimal
+├── openssl@1.1
+├── readline
+├── sqlite
+│   └── readline
+└── xz
+
+readline
+
+sbt
+└── openjdk
+
+scala
+└── openjdk
+
+sourcetree
+
+sqlite
+└── readline
+
+starship
+└── openssl@1.1
+
+tcl-tk
+└── openssl@1.1
+
+tfenv
+
+tig
+└── readline
+
+tree
+
+watch
+└── ncurses
+
+xz
+
+zstd
 ```
 
 ```sh
