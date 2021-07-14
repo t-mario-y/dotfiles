@@ -51,27 +51,23 @@ brew ls
 - yarn
 
 ```sh
-brew cask ls
+brew 
+ls
 ```
 
-TODO: caskで良いものをcaskで入れ直す
-Kalabiner と Discord ?
-
+- authy
 - dash
 - docker
-- font-ricty-diminished
 - google-cloud-sdk
-- hyper
 - postman
-- qmk-toolbox
-- sequel-pro
 - sourcetree
 
-sequel-proは職場PCでやたらと落ちたので消した。
-MySQLクライアントほしい。
+なくしたい
+- hyper
+- adoptopenjdk
+- adoptopenjdk8
+- qmk-toolbox
 
-graphiqlは学習用に入れたが、使い勝手にはときめいてない。  
-intellij-idea-ceはcaskでも入るが、公式の方法ではないため非推奨。[IntelliJ Toolbox App](https://www.jetbrains.com/toolbox-app/)で良いでしょう。
 
 各言語(Java/Python/Node)はバージョン切り替えツールから入れるようにしたい。
 - adoptopenjdk
@@ -100,10 +96,9 @@ App Storeから入れる
 - Pixelmator Pro
 - slack
 
-### IntelliJ IDEA CE
-
-toolbeltで入れる caskでも良い
-setting sync
+### IntelliJ IDEA
+[JetBrains Toolbox](https://www.jetbrains.com/ja-jp/toolbox-app/)
+setting syncはGitHubリポジトリで行う。
 
 ### VSCode
 
