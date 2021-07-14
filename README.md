@@ -24,7 +24,7 @@ macOSの環境構築
 開発に必要なものだけを列挙する
 
 ```sh
-brew ls
+brew ls --formula
 ```
 
 多い…。主にqmk周り
@@ -51,8 +51,7 @@ brew ls
 - yarn
 
 ```sh
-brew 
-ls
+brew ls --casks
 ```
 
 - authy
