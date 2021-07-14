@@ -78,6 +78,8 @@ dash
 
 docker
 
+fzf
+
 gdbm
 
 gettext
@@ -108,6 +110,8 @@ grep
 helm
 
 hyper
+
+iterm2
 
 jenv
 
