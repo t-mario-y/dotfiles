@@ -15,10 +15,6 @@ macOSの環境構築
 
 `~/.config/starship.toml`
 
-### Hyper
-
-`~/.hyper.js`
-
 ## brew install
 
 開発に必要なものだけを列挙する
@@ -108,8 +104,6 @@ grep
 └── pcre
 
 helm
-
-hyper
 
 iterm2
 
@@ -243,7 +237,6 @@ brew ls --casks
 - sourcetree
 
 なくしたい
-- hyper
 - adoptopenjdk
 - adoptopenjdk8
 - qmk-toolbox
@@ -262,6 +255,9 @@ helm/bazel/bazelisk はcurlで入れている。
 brew tap homebrew/cask-fonts
 brew cask install font-ricty-diminished
 ```
+
+無理にbrewで入れなくてもいい気がしてきた
+ワンライナーで完結することにそこまでこだわらずとも…
 
 ## manually
 
@@ -282,12 +278,12 @@ setting syncはGitHubリポジトリで行う。
 
 ### VSCode
 
-caskでもよさげ
-setting sync
+公式サイトからDL
+設定の同期は公式の機能を使うこと
 
 ### Node.js
 
-nodebrewでバージョン管理
+~~nodebrewでバージョン管理~~ asdfに移行したい
 
 ```sh
 npm list -g -depth=0
@@ -305,7 +301,7 @@ npm list -g -depth=0
 ### Java
 
 AdoptOpenJdk  
-jenvでバージョン管理  
+~~jenvでバージョン管理~~ asdfに移行したい
 
 ```sh
 brew cask install adoptopenjdk
