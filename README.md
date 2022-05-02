@@ -22,9 +22,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-brew upgrade
-brew bundle install --file=~/dotfiles/Brewfile
-brew cleanup
+bash bin/brew.sh
 
 # gh cliによりGitHub認証
 gh auth login
@@ -54,7 +52,11 @@ Alacritty本体は環境ごとに入れ方が異なるので手動でインス�
 
 ### Homebrew
 
-`Brewfile`を使ってbrew bundleする。
+~`Brewfile`を使ってbrew bundleする。~
+ファイル分割の読み込みが簡単にはできなかった。(homebrew-fileなら可能だがmacOSしか対応していない)
+ansibleを使いつつYAMLをガッチャンコすると良さそう。
+ひとまずbrew install を並べたshell scriptにしておく。
+環境の同期は`brew bundle dump --force --file=~/dotfiles/homebrew/Brewfile.dump.rb`で吐き出した結果とYAMLを比べるように。
 
 ### git
 
