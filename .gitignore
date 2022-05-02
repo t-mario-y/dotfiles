@@ -1,2 +1,4 @@
 homebrew/Brewfile.lock.json
 homebrew/Brewfile.dump.rb
+
+.idea/**
