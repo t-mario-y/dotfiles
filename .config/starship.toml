@@ -1,2 +1,19 @@
+# ~/.config/starship.toml
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+command_timeout=1500
+
+[kubernetes]
+symbol = "⛵"
+style = "dim green"
+disabled = false
+
+[terraform]
+symbol = "🌍"
+
 [nodejs]
-symbol="🧵"
+symbol = "🧵"
+
+[git_branch]
+symbol = "🌱"
