@@ -7,11 +7,11 @@
 gitおよびbashが使用できる環境で実行する。
 
 ```shell script
-# シンボリックリンクを貼っておく。
+# 最初にシンボリックリンクを貼っておく。
 cd ~/
 git clone https://github.com/t-mario-y/dotfiles
 cd dotfiles
-bash bin/install.sh
+bash bin/symlink.sh
 
 # zshをインストールして、ログインシェルに設定する。
 sudo apt-get install zsh
