@@ -4,3 +4,6 @@
 	editor = code --wait
 [pull]
 	rebase = false
+[include] # 公開リポジトリに置かない情報をincludeする。
+	path = ~/.gitconfig.local
+	# user.mail

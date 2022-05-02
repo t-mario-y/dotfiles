@@ -27,7 +27,10 @@ brew install gcc
 
 bash bin/brew.sh
 
-# gh cliによりGitHub認証
+# .gitconfig
+# git管理しない情報を記入する。
+touch ~/.gitconfig.local
+# gh cliによりGitHub認証を行う。
 gh auth login
 ```
 
