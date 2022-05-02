@@ -1,19 +1,29 @@
-# ~/.config/starship.toml
+# dotfilesで管理する~/.config/starship.toml
+
 # Don't print a new line at the start of the prompt
 add_newline = false
 
 command_timeout=1500
 
+[aws]
+format = "on [$symbol$profile]($style) "
+symbol = "☁️ "
+disabled = true
+
+[gcloud]
+format = "on [$symbol$project]($style) "
+symbol = "☁️ "
+
 [kubernetes]
-symbol = "⛵"
+symbol = "⛵ "
 style = "dim green"
 disabled = false
 
 [terraform]
-symbol = "🌍"
+symbol = "🌍 "
 
 [nodejs]
-symbol = "🧵"
+symbol = "🪢 "
 
 [git_branch]
-symbol = "🌱"
+symbol = "🌱 "
