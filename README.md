@@ -62,7 +62,7 @@ Alacritty本体は環境ごとに入れ方が異なるので手動でインス�
 ファイル分割の読み込みが簡単にはできなかった。(homebrew-fileなら可能だがmacOSしか対応していない)
 ansibleを使いつつYAMLをガッチャンコすると良さそう。
 ひとまずbrew install を並べたshell scriptにしておく。
-環境の同期は`brew bundle dump --force --file=~/dotfiles/homebrew/Brewfile.dump.rb`で吐き出した結果とYAMLを比べるように。
+環境の同期は`brew bundle dump --force --file=~/dotfiles/Brewfile.dump.rb`で吐き出した結果とYAMLを比べるように。
 
 ### git
 
