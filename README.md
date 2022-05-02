@@ -1,340 +1,82 @@
-# dotfiles and more
-
-macOSの環境構築  
-開発系ツールだけをdotfilesとして、それ以外は非公開のメモで残して良い。
-
-## dotfiles
+# dotfiles
 
 <https://scrapbox.io/tmarioyoshi-83818027/my_dotfiles>
 
-### zsh
+## Usage
 
-`~/.zshrc`
-
-### starship
-
-`~/.config/starship.toml`
-
-## brew install
-
-開発に必要なものだけを列挙する
-
-```sh
-brew ls --formula
-```
-
-多い…。主にqmk周り
-
-- awscli
-- jenv
-- jq
-- krew
-- git
-- git-flow
-- google-cloud-sdk
-- kubernetes-cli
-- minikube
-- mysql-client
-- nodenv
-- python
-- sbt
-- scala
-- starship
-- tfenv
-- tig
-- tree
-- watch
-- yarn
-
-private PC
+gitおよびbashが使用できる環境で実行する。
 
 ```shell script
-brew deps --installed --tree
-###
-adoptopenjdk
+# シンボリックリンクを貼っておく。
+cd ~/
+git clone https://github.com/t-mario-y/dotfiles
+cd dotfiles
+bash bin/install.sh
 
-adoptopenjdk/openjdk/adoptopenjdk8
+# zshをインストールして、ログインシェルに設定する。
+sudo apt-get install zsh
+chsh -s $(which zsh)
 
-authy
+# zshを起動してhomebrewでツール群をインストールする
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-autoconf
-└── m4
+brew upgrade
+brew bundle install --file=~/dotfiles/Brewfile
+brew cleanup
 
-awscli
-└── python@3.9
-    ├── gdbm
-    ├── mpdecimal
-    ├── openssl@1.1
-    ├── readline
-    ├── sqlite
-    │   └── readline
-    └── xz
-
-dash
-
-docker
-
-fzf
-
-gdbm
-
-gettext
-
-gh
-
-git
-├── gettext
-└── pcre2
-
-git-flow
-
-go
-
-google-cloud-sdk
-└── python
-    ├── gdbm
-    ├── mpdecimal
-    ├── openssl@1.1
-    ├── readline
-    ├── sqlite
-    │   └── readline
-    └── xz
-
-grep
-└── pcre
-
-helm
-
-iterm2
-
-jenv
-
-jq
-└── oniguruma
-
-krew
-└── kubernetes-cli
-
-kubernetes-cli
-
-libevent
-└── openssl@1.1
-
-benbjohnson/litestream/litestream
-
-m4
-
-minikube
-└── kubernetes-cli
-
-mpdecimal
-
-mysql-client
-├── libevent
-│   └── openssl@1.1
-├── openssl@1.1
-└── zstd
-
-ncurses
-
-node-build
-├── autoconf
-│   └── m4
-├── openssl@1.1
-└── pkg-config
-
-nodenv
-└── node-build
-    ├── autoconf
-    │   └── m4
-    ├── openssl@1.1
-    └── pkg-config
-
-oniguruma
-
-openjdk
-
-openssl@1.1
-
-pcre
-
-pcre2
-
-pkg-config
-
-postman
-
-pyenv
-├── autoconf
-│   └── m4
-├── openssl@1.1
-├── pkg-config
-└── readline
-
-python@3.8
-├── gdbm
-├── mpdecimal
-├── openssl@1.1
-├── readline
-├── sqlite
-│   └── readline
-├── tcl-tk
-│   └── openssl@1.1
-└── xz
-
-python@3.9
-├── gdbm
-├── mpdecimal
-├── openssl@1.1
-├── readline
-├── sqlite
-│   └── readline
-└── xz
-
-readline
-
-sbt
-└── openjdk
-
-scala
-└── openjdk
-
-sourcetree
-
-sqlite
-└── readline
-
-starship
-└── openssl@1.1
-
-tcl-tk
-└── openssl@1.1
-
-tfenv
-
-tig
-└── readline
-
-tree
-
-watch
-└── ncurses
-
-xz
-
-zstd
+# gh cliによりGitHub認証
+gh auth login
 ```
 
-```sh
-brew ls --casks
-```
+## 同期するツール群
 
-- authy
-- dash
-- docker
-- google-cloud-sdk
-- postman
-- sourcetree
+### zsh
 
-なくしたい
-- adoptopenjdk
-- adoptopenjdk8
-- qmk-toolbox
+- ~/.zshrc
+- ~/.zsh_history
 
+分離のアイデア
 
-各言語(Java/Python/Node)はバージョン切り替えツールから入れるようにしたい。
-- adoptopenjdk
-- adoptopenjdk8
+alias
+function
+toolが自動的に書き込んでくる情報
 
-helm/bazel/bazelisk はcurlで入れている。
-根拠は、公式docsにbrewで入れるガイドがないこと。(kubectlはある)
+### Starship
 
-フォントは`tap`が必要
+`~/.config/starship.toml`  
+Nerd fontを使わないことによる一部文字の置き換え
 
-```sh
-brew tap homebrew/cask-fonts
-brew cask install font-ricty-diminished
-```
+### Alacritty
 
-無理にbrewで入れなくてもいい気がしてきた
-ワンライナーで完結することにそこまでこだわらずとも…
+Alacritty本体は環境ごとに入れ方が異なるので手動でインストールするが、設定ファイル`alacritty.yaml`を管理する。
 
-## manually
+### Homebrew
 
-App Storeから入れる
+`Brewfile`を使ってbrew bundleする。
 
-- BettorSnapTool
-- BetterTouchTool
-- Clipy
-- Kinoppy
-- Kindle
-- The Unarchiver
-- Pixelmator Pro
-- slack
+### git
 
-### IntelliJ IDEA
+`.gitconfig`
+
+### (TODO) lazygit
+
+`~/.config/lazygit/config.yml` に設定ファイルがある。今のところ凝った設定はしていないがgit-deltaを使いたいと思ったときに同期する。
+
+### 手動でインストールが必要
+
+接続元であるmacOS/Windowsの環境差分は吸収していない。
+
+#### IntelliJ IDEA
 [JetBrains Toolbox](https://www.jetbrains.com/ja-jp/toolbox-app/)
 setting syncはGitHubリポジトリで行う。
 
-### VSCode
+#### VSCode
 
-公式サイトからDL
-設定の同期は公式の機能を使うこと
+公式の機能で設定を同期する。
 
-### Node.js
+#### フォント
 
-~~nodebrewでバージョン管理~~ asdfに移行したい
-
-```sh
-npm list -g -depth=0
-~/.nodebrew/node/v12.13.1/lib
-├── @google/clasp@2.3.0
-├── @humanmade/cf-to-tf@0.1.3
-├── aws-cdk@1.19.0
-├── commitizen@4.0.3
-├── cz-conventional-changelog@3.0.2
-├── firebase-tools@7.11.0
-├── now@16.7.0
-└── npm@6.13.7
-```
-
-### Java
-
-AdoptOpenJdk  
-~~jenvでバージョン管理~~ asdfに移行したい
-
-```sh
-brew cask install adoptopenjdk
-brew install jenv
-```
-
-### Scala
-
-Javaを導入後、sbtでバージョン管理
-
-```sh
-brew cask install adoptopenjdk
-brew install scala
-brew install sbt
-```
-
-## keyboard settings
-
-ErgoDashを使用  
-QMKでkeymapを反映させます。  
-<https://github.com/t-mario-y/qmk_firmware/blob/master/keyboards/ergodash/rev1/keymaps/t-mario-y/keymap.c>
-
-```sh
-# install
-git clone https://github.com/t-mario-y/qmk_firmware
-cd qmk_firmware
-util/qmk_install.sh
-
-make ergodash/rev1:t-mario-y:avrdude
-```
-
-TODO：`qmk_firmware/util/macos_install.sh`で入ってくるものが多い。  
-
-## TODO
-
-Chrome settings(拡張機能)
+JetBrains Mono
+macOSはcaskが使える。
