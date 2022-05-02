@@ -1,4 +1,6 @@
+.idea/**
+
 Brewfile.lock.json
 Brewfile.dump.rb
 
-.idea/**
+.zsh/local.zsh

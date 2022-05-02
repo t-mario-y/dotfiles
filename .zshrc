@@ -1,5 +1,4 @@
-# Created by newuser for 5.8
-# ~/.zshrc
+# dotfilesで管理する ~/.zshrc
 autoload -Uz compinit
 compinit
 
@@ -12,19 +11,36 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 alias ls='ls -GF'
+alias d='docker'
+alias dc='docker-compose'
+alias tf='terraform'
 alias ghq-cd='ghq get --look $(ghq list | fzf)'
 
 # starship
 eval "$(starship init zsh)"
 
-# fzf brewでインストールした時に追加された
+# fzfをインストールする際に追加される。
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# asdfの補完scriptだが、うまく動いていない?
-. /home/linuxbrew/.linuxbrew/opt/asdf/libexec/asdf.sh
+# homebrewでインストールしたGitを使用するため、PATHに追加する。
+# TODO: バージョンを決め打ちしている。
+export PATH=$(brew --prefix)/Cellar/git/2.36.0/bin:$PATH
 
-# WSL2環境に用意されたclip.exe をpbcopyとして扱う
-alias pbcopy='clip.exe'
+# brew install で入ったgrep(ggrep)をgrepとして使う。
+# brew info grep の結果をPATHに追加する。
+# 参考: https://www.rasukarusan.com/entry/2019/04/06/001947
+export PATH=$(brew --prefix grep)/libexec/gnubin:$PATH
 
-# WSL2で動くUbuntuのhomebrewで入れたGitのパスを参照する。
-export PATH=/home/linuxbrew/.linuxbrew/Cellar/git/2.36.0/bin:$PATH
+# 環境差分の.zshrcを読み込む
+if [ "$(uname)" = 'Darwin' ]; then
+  source ~/dotfiles/.zsh/darwin.zsh
+else
+  if [[ "$(uname -r)" = *microsoft* ]]; then
+    source ~/dotfiles/.zsh/wsl2.zsh
+  fi
+fi
+
+# git管理しない.zshrcを読み込む
+if [ -f ~/dotfiles/.zsh/local.zsh ]; then
+  source ~/dotfiles/.zsh/local.zsh
+fi
