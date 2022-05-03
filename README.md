@@ -7,7 +7,7 @@
 gitおよびbashが使用できる環境で実行する。
 
 ```shell script
-# 最初にシンボリックリンクを貼っておく。
+# 最初にシンボリックリンクを張る。
 cd ~/
 git clone https://github.com/t-mario-y/dotfiles
 cd dotfiles
