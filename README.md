@@ -13,7 +13,7 @@ git clone https://github.com/t-mario-y/dotfiles
 cd dotfiles
 bash bin/symlink.sh
 
-# zshをインストールして、ログインシェルに設定する。
+# linux/WSL2: zshをインストールして、ログインシェルに設定する。
 sudo apt-get install zsh
 chsh -s $(which zsh)
 
@@ -26,22 +26,6 @@ gh auth login
 ```
 
 ## 同期するツール群
-
-### zsh
-
-- ~/.zshrc
-- ~/.zsh_history
-
-分離のアイデア
-
-alias
-function
-toolが自動的に書き込んでくる情報
-
-### Starship
-
-`~/.config/starship.toml`  
-Nerd fontを使わないことによる一部文字の置き換え
 
 ### Alacritty
 
@@ -61,27 +45,11 @@ cp ~/dotfiles/alacritty/alacritty.*.yml /mnt/c/Users/$USER_NAME_WINDOWS/AppData/
 diff ~/dotfiles/alacritty/alacritty.common.yml /mnt/c/Users/$USER_NAME_WINDOWS/AppData/Roaming/alacritty/alacritty.common.yml
 ```
 
-### Homebrew
+### dotfiles管理対象外のもの
 
-~`Brewfile`を使ってbrew bundleする。~
-ファイル分割の読み込みが簡単にはできなかった。(homebrew-fileなら可能だがmacOSしか対応していない)
-ansibleを使いつつYAMLをガッチャンコすると良さそう。
-ひとまずbrew install を並べたshell scriptにしておく。
-環境の同期は`brew bundle dump --force --file=~/dotfiles/Brewfile.dump.rb`で吐き出した結果とYAMLを比べるように。
+GUIツールのセットアップは、macOS/Windowsの手順の差分が大きいため管理していない。
 
-### git
-
-`.gitconfig`
-
-### (TODO) lazygit
-
-`~/.config/lazygit/config.yml` に設定ファイルがある。今のところ凝った設定はしていないがgit-deltaを使いたいと思ったときに同期する。
-
-### 手動でインストールが必要
-
-接続元であるmacOS/Windowsの環境差分は吸収していない。
-
-#### IntelliJ IDEA
+#### JetBrains IDEs
 
 [JetBrains Toolbox](https://www.jetbrains.com/ja-jp/toolbox-app/)
 setting syncはGitHubリポジトリで行う。
@@ -93,4 +61,3 @@ setting syncはGitHubリポジトリで行う。
 #### フォント
 
 JetBrains Mono
-macOSはcaskが使える。
