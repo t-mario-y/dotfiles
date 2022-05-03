@@ -25,6 +25,16 @@ eval "$(starship init zsh)"
 # asdfをインストールする際に追加される。
 . $(brew --prefix asdf)/libexec/asdf.sh
 
+# homebrewでinstallしたパッケージのcompletionを設定する。
+# 参考: https://docs.brew.sh/Shell-Completion
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # homebrewでインストールしたGitを使用するため、PATHに追加する。
 # TODO: バージョンを決め打ちしている。
 export PATH=$(brew --prefix)/Cellar/git/2.36.0/bin:$PATH
