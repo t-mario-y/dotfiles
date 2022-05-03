@@ -19,7 +19,7 @@ chsh -s $(which zsh)
 
 # homebrewをセットアップする。
 bash bin/install_homebrew.sh
-bash bin/brew.sh
+bash bin/install_packages.sh
 
 # gh cliによりGitHub認証を行う。
 gh auth login
