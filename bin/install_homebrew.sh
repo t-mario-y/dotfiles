@@ -2,7 +2,7 @@
 
 set -eu
 
-if which brew > /dev/null 2>&1; then
+if type brew > /dev/null 2>&1; then
   echo 'homebrew is already installed.'
   exit 0
 fi

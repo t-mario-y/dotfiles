@@ -27,8 +27,7 @@ eval "$(starship init zsh)"
 
 # homebrewでinstallしたパッケージのcompletionを設定する。
 # 参考: https://docs.brew.sh/Shell-Completion
-if type brew &>/dev/null
-then
+if type brew > /dev/null 2>&1; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
   autoload -Uz compinit
