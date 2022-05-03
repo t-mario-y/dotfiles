@@ -56,6 +56,14 @@ Nerd fontを使わないことによる一部文字の置き換え
 
 Alacritty本体は環境ごとに入れ方が異なるので手動でインストールするが、設定ファイル`alacritty.yaml`を管理する。
 
+```shell script
+# Windowsに入れたAlacrittyの設定にコピーする
+export USER_NAME_WINDOWS=(windows user name)
+cp ~/dotfiles/alacritty.yml /mnt/c/Users/$USER_NAME_WINDOWS/AppData/Roaming/alacritty/alacritty.yml
+# 一旦は手動diffを取る
+diff ~/dotfiles/alacritty.yml /mnt/c/Users/$USER_NAME_WINDOWS/AppData/Roaming/alacritty/alacritty.yml
+```
+
 ### Homebrew
 
 ~`Brewfile`を使ってbrew bundleする。~
