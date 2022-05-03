@@ -17,12 +17,8 @@ bash bin/symlink.sh
 sudo apt-get install zsh
 chsh -s $(which zsh)
 
-# zshを起動してhomebrewでツール群をインストールする
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-# homebrewのインストールガイドに従い実行する。
-sudo apt-get install build-essential
-brew install gcc
-
+# homebrewをセットアップする。
+bash bin/install_homebrew.sh
 bash bin/brew.sh
 
 # .gitconfig
