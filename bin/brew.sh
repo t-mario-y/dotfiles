@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eux
+set -eu
 
 brew tap github/gh
 brew tap homebrew/bundle

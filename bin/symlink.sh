@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eux
+set -eu
 
 ln -snfv ~/dotfiles/.zshrc     ~/.zshrc
 ln -snfv ~/dotfiles/.zprofile  ~/.zprofile
