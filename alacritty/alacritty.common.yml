@@ -137,8 +137,8 @@ font:
     style: Italic
 
   # Point size
-  # Windows, 4K/27inch, scaling 125%
-  size: 12
+  # OSやディスプレイによって適切な値が異なるため、alacritty.local.ymlによって上書きされることを想定する。
+  size: 16
 
   # Offset is the extra space around each character.
   # - `offset.y` can be thought of as modifying the line spacing
@@ -290,7 +290,6 @@ colors:
     magenta: "0xe07de0"
     cyan: "0x5ffdff"
     white: "0xfeffff"
-
 # Dim colors
 #
 # If the dim colors are not set, they will be calculated automatically based
@@ -414,11 +413,9 @@ colors:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-shell:
-  # (Windows)WSL C:\\Windows\\System32\\wsl.exe ではなく ubuntuを直接起動すればログインシェルや場所を反映する
-  # Win/mac設定を共用する場合、この部分を外部読み込みにしておくこと
-  program: ubuntu2004.exe
-  # Directory the shell is started in. If tg1his is unset, or `None`, the working directory of the parent process will be used.
+# 環境差異があるため、alacritty.local.ymlによって上書きされることを想定する。
+# shell:
+
 # Send ESC (\x1b) before characters when alt is pressed.
 #alt_send_esc: true
 

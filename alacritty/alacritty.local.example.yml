@@ -1,0 +1,17 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+# Font configuration
+font:
+  size: 12
+
+# Shell
+#
+# You can set `shell.program` to the path of your favorite shell, e.g.
+# `/bin/fish`. Entries in `shell.args` are passed unmodified as arguments to the
+# shell.
+#
+# Default:
+#   - (macOS) /bin/bash --login
+#   - (Linux/BSD) user login shell
+#   - (Windows) powershell
+shell:
+  # macOSではまだ設定しない。

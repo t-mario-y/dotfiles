@@ -5,3 +5,4 @@ Brewfile.dump.rb
 
 .zsh/local.zsh
 .gitconfig.local
+alacritty/alacritty.local.yml
