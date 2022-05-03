@@ -21,9 +21,6 @@ chsh -s $(which zsh)
 bash bin/install_homebrew.sh
 bash bin/brew.sh
 
-# .gitconfig
-# git管理しない情報を記入する。
-touch ~/.gitconfig.local
 # gh cliによりGitHub認証を行う。
 gh auth login
 ```

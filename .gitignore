@@ -4,3 +4,4 @@ Brewfile.lock.json
 Brewfile.dump.rb
 
 .zsh/local.zsh
+.gitconfig.local
