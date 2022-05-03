@@ -21,8 +21,6 @@ chsh -s $(which zsh)
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 # homebrewのインストールガイドに従い実行する。
 sudo apt-get install build-essential
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zprofile
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew install gcc
 
 bash bin/brew.sh
@@ -62,6 +60,9 @@ export USER_NAME_WINDOWS=(windows user name)
 cp ~/dotfiles/alacritty.yml /mnt/c/Users/$USER_NAME_WINDOWS/AppData/Roaming/alacritty/alacritty.yml
 # 一旦は手動diffを取る
 diff ~/dotfiles/alacritty.yml /mnt/c/Users/$USER_NAME_WINDOWS/AppData/Roaming/alacritty/alacritty.yml
+
+# macOSに入れたAlacrittyの設定はシンボリックで管理する。
+ln -snfv ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 ```
 
 ### Homebrew
@@ -85,6 +86,7 @@ ansibleを使いつつYAMLをガッチャンコすると良さそう。
 接続元であるmacOS/Windowsの環境差分は吸収していない。
 
 #### IntelliJ IDEA
+
 [JetBrains Toolbox](https://www.jetbrains.com/ja-jp/toolbox-app/)
 setting syncはGitHubリポジトリで行う。
 
