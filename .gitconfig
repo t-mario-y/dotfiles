@@ -6,4 +6,4 @@
 	rebase = false
 [include] # 公開リポジトリに置かない情報をincludeする。
 	path = ~/dotfiles/.gitconfig.local
-	# user.mail
+	# user.email
