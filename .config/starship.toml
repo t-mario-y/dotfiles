@@ -23,7 +23,7 @@ disabled = false
 symbol = "🌍 "
 
 [nodejs]
-symbol = "🪢 "
+symbol = "🧵 "
 
 [git_branch]
 symbol = "🌱 "
