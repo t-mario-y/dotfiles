@@ -15,4 +15,7 @@ yes | "$(brew --prefix)"/opt/fzf/install
 # brew installをまとめるとToo many open filesで失敗する。依存が多いawscliを分離して様子を見る。
 brew install awscli
 
+# tmux setup
+brew install tmux
+
 brew cleanup

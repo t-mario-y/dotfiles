@@ -14,4 +14,9 @@ font:
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
-  # macOSではまだ設定しない。
+  # macOSのzshでtmuxを使う場合の設定例
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach-session -t0 || tmux new-session"

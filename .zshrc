@@ -14,7 +14,7 @@ alias ls='ls -GF'
 alias d='docker'
 alias dc='docker-compose'
 alias tf='terraform'
-alias ghq-cd='ghq get --look $(ghq list | fzf)'
+alias ghq-cd='ghq get --look $(ghq list | fzf-tmux -p 60%,40%)'
 
 # starship
 eval "$(starship init zsh)"
