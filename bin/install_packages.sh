@@ -17,5 +17,9 @@ brew install awscli
 
 # tmux setup
 brew install tmux
+TPM_PATH=~/.tmux/plugins/tpm
+if [ ! -e $TPM_PATH ]; then
+  git clone https://github.com/tmux-plugins/tpm $TPM_PATH
+fi
 
 brew cleanup
