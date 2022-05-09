@@ -15,6 +15,7 @@ alias d='docker'
 alias dc='docker-compose'
 alias tf='terraform'
 alias ghq-cd='ghq get --look $(ghq list | fzf-tmux -p 60%,40%)'
+alias git-switch-local='git branch | fzf-tmux -p | xargs git switch'
 
 # starship
 eval "$(starship init zsh)"
