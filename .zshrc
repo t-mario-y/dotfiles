@@ -46,10 +46,10 @@ export PATH=$(brew --prefix grep)/libexec/gnubin:$PATH
 # 環境差分の.zshrcを読み込む
 if [ "$(uname)" = 'Darwin' ]; then
   source ~/dotfiles/.zsh/darwin.zsh
-else
-  if [[ "$(uname -r)" = *microsoft* ]]; then
-    source ~/dotfiles/.zsh/wsl2.zsh
-  fi
+fi
+
+if [ "$(uname)" = 'Linux' ] && [[ "$(uname -r)" = *microsoft* ]]; then
+  source ~/dotfiles/.zsh/wsl2.zsh
 fi
 
 # git管理しない.zshrcを読み込む
