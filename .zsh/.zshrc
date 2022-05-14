@@ -39,11 +39,6 @@ fi
 # TODO: バージョンを決め打ちしている。
 export PATH=$(brew --prefix)/Cellar/git/2.36.0/bin:$PATH
 
-# brew install で入ったgrep(ggrep)をgrepとして使う。
-# brew info grep の結果をPATHに追加する。
-# 参考: https://www.rasukarusan.com/entry/2019/04/06/001947
-export PATH=$(brew --prefix grep)/libexec/gnubin:$PATH
-
 # 環境差分の.zshrcを読み込む
 if [ "$(uname)" = 'Darwin' ]; then
   source ~/dotfiles/.zsh/darwin.zsh

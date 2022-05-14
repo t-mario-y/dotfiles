@@ -18,12 +18,12 @@ FORMULAE=(
   ghq
   git
   git-delta
-  grep
   hadolint
   jq
   lazygit
   shellcheck
   starship
+  ripgrep
   tree
   yq
 )
