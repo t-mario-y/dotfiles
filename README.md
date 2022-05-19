@@ -11,15 +11,15 @@ gitおよびbashが使用できる環境で実行する。
 cd ~/
 git clone https://github.com/t-mario-y/dotfiles
 cd dotfiles
-bash bin/symlink.sh
+bin/symlink.sh
 
 # linux/WSL2: zshをインストールして、ログインシェルに設定する。
 sudo apt-get install zsh
 chsh -s $(which zsh)
 
 # homebrewをセットアップする。
-bash bin/install_homebrew.sh
-bash bin/install_packages.sh
+bin/install_homebrew.sh
+bin/install_packages.sh
 
 # gh cliによりGitHub認証を行う。
 gh auth login
