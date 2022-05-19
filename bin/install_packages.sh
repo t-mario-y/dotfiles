@@ -23,6 +23,7 @@ FORMULAE=(
   jq
   kubectl
   lazygit
+  navi
   shellcheck
   starship
   ripgrep
