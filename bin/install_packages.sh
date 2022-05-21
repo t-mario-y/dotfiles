@@ -13,7 +13,6 @@ FORMULAE=(
   asdf
   bat
   coreutils
-  eth-p/software/bat-extras-batgrep
   gawk
   gh
   ghq
