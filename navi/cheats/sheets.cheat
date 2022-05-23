@@ -1,0 +1,28 @@
+% jq
+
+# YAML to JSON
+yq e <yaml_file> --output-format json | jq
+
+$yaml_file: fd --hidden ".*\.yml" .
+
+% Rails
+
+# launch Rails server
+bin/rails server --port=3001
+
+# launch Rails console with RESQUE_INLINE
+env RESQUE_INLINE=1 DISABLE_SPRING=1 bin/rails console
+
+# launch Resque process with rake
+env QUEUE="*" TERM_CHILD=1 bin/rake environment resque:work
+
+# launch debugging session with ruby-debug-ide
+bundle exec rdebug-ide --host 0.0.0.0 --port <attached_port> --dispatcher-port <attached_port> -- bin/rails server --port=3001
+
+% RSpec
+
+# Run specs for select git diff files
+bundle exec rspec -fd --fail-fast <spec_files>
+
+# TODO: 複数選択できない(navi内部でさらにfzfを扱いたい)
+$spec_files: git diff upstream/develop...  --name-only | grep '.*spec\.rb'
