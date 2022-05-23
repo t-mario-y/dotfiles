@@ -13,6 +13,7 @@ FORMULAE=(
   asdf
   bat
   coreutils
+  fd
   gawk
   gh
   ghq
