@@ -1,9 +1,9 @@
 % jq
 
+$ yaml_file: fd --hidden ".*\.yml" .
+
 # YAML to JSON
 yq e <yaml_file> --output-format json | jq
-
-$yaml_file: fd --hidden ".*\.yml" .
 
 % Rails
 
@@ -21,8 +21,8 @@ bundle exec rdebug-ide --host 0.0.0.0 --port <attached_port> --dispatcher-port <
 
 % RSpec
 
+$ spec_files: cat <(git diff  --name-only) <(git diff upstream/develop... --name-only) | grep '.*spec\.rb' --- --multi
+
 # Run specs for select git diff files
 bundle exec rspec -fd --fail-fast <spec_files>
 
-# TODO: 複数選択できない(navi内部でさらにfzfを扱いたい)
-$spec_files: git diff upstream/develop...  --name-only | grep '.*spec\.rb'
