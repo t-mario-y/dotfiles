@@ -42,6 +42,8 @@ export PATH=$(brew --prefix)/Cellar/git/2.36.0/bin:$PATH
 source <(kubectl completion zsh)
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+eval "$(navi widget zsh)"
+
 # 環境差分の.zshrcを読み込む
 if [ "$(uname)" = 'Darwin' ]; then
   source ~/dotfiles/.zsh/darwin.zsh
