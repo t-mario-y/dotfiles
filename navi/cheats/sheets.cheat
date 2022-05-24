@@ -51,3 +51,8 @@ git <merge_conflict_process> --abort
 
 # continue merge conflict process
 git <merge_conflict_process> --continue
+
+% docker
+
+# List containers in JSON format
+docker container ls -a --format '{"ID":"{{ .ID }}", "Image": "{{ .Image }}", "Names":"{{ .Names }}"}' | jq
