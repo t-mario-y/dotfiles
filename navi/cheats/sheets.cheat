@@ -29,25 +29,25 @@ $ spec_files: cat <(git diff  --name-only) <(git diff upstream/develop... --name
 # Run specs for select git diff files
 bundle exec rspec -fd --fail-fast <spec_files>
 
-% Git
+% Git, custom
 
-$ branch: git branch --format="%(refname:short)"
+$ local_branch: git branch --format="%(refname:short)"
 $ merge_conflict_process: echo 'rebase\nmerge\ncherry-pick'
 
 # pull upstream branch
-git pull upstream <branch>
+git pull upstream <local_branch>
 
 # rebase from upstream branch
-git rebase upstream/<branch>
+git rebase upstream/<local_branch>
 
 # merge upstream branch
-git merge --no-ff upstream/<branch>
+git merge --no-ff upstream/<local_branch>
 
 # interactive rebase from upstream branch
-git rebase -i upstream/<branch>
+git rebase -i upstream/<local_branch>
 
 # switch local branch
-git switch <branch>
+git switch <local_branch>
 
 # abort merge conflict process
 git <merge_conflict_process> --abort
