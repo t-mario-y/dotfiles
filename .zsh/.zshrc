@@ -35,6 +35,8 @@ if type brew > /dev/null 2>&1; then
   compinit
 fi
 
+export LC_ALL=en_US.UTF-8
+
 # homebrewでインストールしたGitを使用するため、PATHに追加する。
 # TODO: バージョンを決め打ちしている。
 export PATH=$(brew --prefix)/Cellar/git/2.36.0/bin:$PATH
