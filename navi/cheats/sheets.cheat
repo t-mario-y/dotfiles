@@ -62,6 +62,9 @@ git <merge_conflict_process> --abort
 # continue merge conflict process
 git <merge_conflict_process> --continue
 
+# cd to repository managed by ghq
+cd $(ghq list | fzf-tmux -p | xargs ghq list --full-path --exact)
+
 % docker
 
 # List containers in JSON format
