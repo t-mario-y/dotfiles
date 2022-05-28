@@ -7,6 +7,9 @@ yq e <yaml_file> --output-format json | jq
 
 % Rails
 
+# migrate database
+bundle exec rails db:migrate RAILS_ENV=development && bundle exec rails db:migrate RAILS_ENV=test
+
 # launch Rails server
 bin/rails server --port=3001
 
@@ -21,6 +24,7 @@ env QUEUE="*" TERM_CHILD=1 bin/rake environment resque:work
 env RESQUE_INLINE=1 DISABLE_SPRING=1 bin/rails console
 
 % Rails, debug
+
 # launch Rails server with ruby-debug-ide
 bundle exec rdebug-ide --host 0.0.0.0 --port 1235 --dispatcher-port 1235 -- bin/rails server --port=3001
 
@@ -62,3 +66,8 @@ git <merge_conflict_process> --continue
 
 # List containers in JSON format
 docker container ls -a --format '{"ID":"{{ .ID }}", "Image": "{{ .Image }}", "Names":"{{ .Names }}"}' | jq
+
+% VSCode
+
+# select and open files from uncommitted
+cat <(git diff --name-only --staged) <(git diff --name-only) | uniq | fzf-tmux -p --multi --select-1 --exit-0 | xargs code
