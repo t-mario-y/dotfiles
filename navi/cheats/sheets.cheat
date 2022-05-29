@@ -56,10 +56,10 @@ git rebase -i upstream/<local_branch>
 # switch local branch
 git switch <local_branch>
 
-# abort merge conflict process
+# abort merge conflict process(rebase, merge, cherry-pick)
 git <merge_conflict_process> --abort
 
-# continue merge conflict process
+# continue merge conflict process(rebase, merge, cherry-pick)
 git <merge_conflict_process> --continue
 
 # cd to repository managed by ghq
