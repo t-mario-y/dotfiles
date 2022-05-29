@@ -47,6 +47,10 @@ git pull upstream <local_branch>
 # rebase from upstream branch
 git rebase upstream/<local_branch>
 
+# interactive rebase from current commit
+git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n10 | \
+  fzf-tmux -p --ansi | awk '{print $2}' | xargs git rebase --interactive
+
 # merge upstream branch
 git merge --no-ff upstream/<local_branch>
 
@@ -81,3 +85,6 @@ cat <(git diff --name-only --staged) <(git diff --name-only) | uniq | fzf-tmux -
 cat <(gh search prs --reviewed-by=@me --state=open) <(gh search prs --assignee=@me --state=open) <(gh search prs --author=@me --state=open) | \
   sort - | uniq | fzf-tmux -p | \
   cut -f2 | xargs -I {} gh pr view -w {}
+
+# view repository on browser
+gh repo view -w
