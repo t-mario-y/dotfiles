@@ -38,33 +38,33 @@ env RESQUE_INLINE=1 bundle exec rdebug-ide --host 0.0.0.0 --port 1235 --dispatch
 
 % Git, custom
 
-$ local_branch: git branch --format="%(refname:short)"
-$ merge_conflict_process: echo 'rebase\nmerge\ncherry-pick'
+$ select_local_branch_name: git branch --format="%(refname:short)"
+$ select_merge_conflict_process: echo 'rebase\nmerge\ncherry-pick'
 
 # pull upstream branch
-git pull upstream <local_branch>
+git pull upstream <select_local_branch_name>
 
 # rebase from upstream branch
-git rebase upstream/<local_branch>
+git rebase upstream/<select_local_branch_name>
 
 # interactive rebase from current commit
 git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n10 | \
   fzf-tmux -p --ansi | awk '{print $2}' | xargs git rebase --interactive
 
 # merge upstream branch
-git merge --no-ff upstream/<local_branch>
+git merge --no-ff upstream/<select_local_branch_name>
 
 # interactive rebase from upstream branch
-git rebase -i upstream/<local_branch>
+git rebase -i upstream/<select_local_branch_name>
 
 # switch local branch
-git switch <local_branch>
+git switch <select_local_branch_name>
 
 # abort merge conflict process(rebase, merge, cherry-pick)
-git <merge_conflict_process> --abort
+git <select_merge_conflict_process> --abort
 
 # continue merge conflict process(rebase, merge, cherry-pick)
-git <merge_conflict_process> --continue
+git <select_merge_conflict_process> --continue
 
 # cd to repository managed by ghq
 cd $(ghq list | fzf-tmux -p | xargs ghq list --full-path --exact)
@@ -74,6 +74,9 @@ git add -N . && git reset --hard HEAD
 
 # soft reset to HEAD
 git reset --soft HEAD
+
+# print current branch name
+git symbolic-ref --short HEAD
 
 % docker
 
