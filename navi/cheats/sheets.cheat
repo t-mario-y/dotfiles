@@ -69,6 +69,12 @@ git <merge_conflict_process> --continue
 # cd to repository managed by ghq
 cd $(ghq list | fzf-tmux -p | xargs ghq list --full-path --exact)
 
+# hard reset to HEAD
+git add -N . && git reset --hard HEAD
+
+# soft reset to HEAD
+git reset --soft HEAD
+
 % docker
 
 # List containers in JSON format
