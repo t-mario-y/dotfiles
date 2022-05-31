@@ -49,7 +49,7 @@ git rebase upstream/<select_local_branch_name>
 
 # interactive rebase from current commit
 git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n10 | \
-  fzf-tmux -p --ansi | awk '{print $2}' | xargs git rebase --interactive
+  fzf-tmux -p --ansi --reverse | awk '{print $2}' | xargs git rebase --interactive
 
 # merge upstream branch
 git merge --no-ff upstream/<select_local_branch_name>
@@ -67,7 +67,7 @@ git <select_merge_conflict_process> --abort
 git <select_merge_conflict_process> --continue
 
 # cd to repository managed by ghq
-cd $(ghq list | fzf-tmux -p | xargs ghq list --full-path --exact)
+cd $(ghq list | fzf-tmux -p --reverse | xargs ghq list --full-path --exact)
 
 # hard reset to HEAD
 git add -N . && git reset --hard HEAD
@@ -92,7 +92,7 @@ cat <(git diff --name-only --staged) <(git diff --name-only) | uniq | fzf-tmux -
 # search Pull Request and view on browser
 ; TODO: カレントディレクトリ以外のPull Requestを探せるが、開くことができない
 cat <(gh search prs --reviewed-by=@me --state=open) <(gh search prs --assignee=@me --state=open) <(gh search prs --author=@me --state=open) | \
-  sort - | uniq | fzf-tmux -p | \
+  sort - | uniq | fzf-tmux -p --reverse | \
   cut -f2 | xargs -I {} gh pr view -w {}
 
 # view repository on browser
