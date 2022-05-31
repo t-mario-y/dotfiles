@@ -89,6 +89,7 @@ docker container ls -a --format '{"ID":"{{ .ID }}", "Image": "{{ .Image }}", "Na
 cat <(git diff --name-only --staged) <(git diff --name-only) | uniq | fzf-tmux -p --multi --select-1 --exit-0 | xargs code
 
 % GitHub CLI
+
 # search Pull Request and view on browser
 ; TODO: カレントディレクトリ以外のPull Requestを探せるが、開くことができない
 cat <(gh search prs --reviewed-by=@me --state=open) <(gh search prs --assignee=@me --state=open) <(gh search prs --author=@me --state=open) | \
@@ -97,3 +98,8 @@ cat <(gh search prs --reviewed-by=@me --state=open) <(gh search prs --assignee=@
 
 # view repository on browser
 gh repo view -w
+
+$ dotfiles
+
+# update environment
+cd ~/dotfiles && bin/install_packages.sh && bin/symlink.sh && cd -
