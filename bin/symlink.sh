@@ -2,9 +2,9 @@
 
 set -eu
 
-ln -snfv ~/dotfiles/.zsh/.zshrc     ~/.zshrc
-ln -snfv ~/dotfiles/.zsh/.zprofile  ~/.zprofile
-ln -snfv ~/dotfiles/.gitconfig ~/.gitconfig
+ln -snfv ~/dotfiles/.zsh/.zshrc      ~/.zshrc
+ln -snfv ~/dotfiles/.zsh/.zprofile   ~/.zprofile
+ln -snfv ~/dotfiles/.gitconfig       ~/.gitconfig
 ln -snfv ~/dotfiles/.tmux/.tmux.conf ~/.tmux.conf
 mkdir -p ~/.config
 ln -snfv ~/dotfiles/.config/starship.toml ~/.config/starship.toml
