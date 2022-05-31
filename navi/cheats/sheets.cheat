@@ -1,6 +1,6 @@
 % jq
 
-$ yaml_file: fd --hidden ".*\.yml" .
+$ yaml_file: fd --hidden ".*\.y[a]ml" .
 
 # YAML to JSON
 yq e <yaml_file> --output-format json | jq
