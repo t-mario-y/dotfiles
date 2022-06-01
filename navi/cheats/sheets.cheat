@@ -99,7 +99,7 @@ cat <(gh search prs --reviewed-by=@me --state=open) <(gh search prs --assignee=@
 # view repository on browser
 gh repo view -w
 
-$ dotfiles
+% dotfiles
 
 # update environment
-cd ~/dotfiles && bin/install_packages.sh && bin/symlink.sh && cd -
+cd ~/dotfiles && git pull && bin/install_packages.sh && bin/symlink.sh && cd -
