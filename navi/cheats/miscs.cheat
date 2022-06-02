@@ -5,41 +5,10 @@ $ yaml_file: fd --hidden ".*\.y[a]ml" .
 # YAML to JSON
 yq e <yaml_file> --output-format json | jq
 
-% Rails
-
-# migrate database
-bundle exec rails db:migrate RAILS_ENV=development && bundle exec rails db:migrate RAILS_ENV=test
-
-# launch Rails server
-bin/rails server --port=3001
-
-% Resque
-
-# launch Resque process with rake
-env QUEUE="*" TERM_CHILD=1 bin/rake environment resque:work
-
-% Rails, Resque
-
-# launch Rails console with RESQUE_INLINE
-env RESQUE_INLINE=1 DISABLE_SPRING=1 bin/rails console
-
-% Rails, debug
-
-# launch Rails server with ruby-debug-ide
-bundle exec rdebug-ide --host 0.0.0.0 --port 1235 --dispatcher-port 1235 -- bin/rails server --port=3001
-
-% Rails, Resque, debug
-
-# launch Rails console with ruby-debug-ide
-env RESQUE_INLINE=1 DISABLE_SPRING=1 bundle exec rdebug-ide --host 0.0.0.0 --port 1236 --dispatcher-port 1236 -- bin/rails console
-
-# launch Rails server with RESQUE_INLINE with ruby-debug-ide
-env RESQUE_INLINE=1 bundle exec rdebug-ide --host 0.0.0.0 --port 1235 --dispatcher-port 1235 -- bin/rails server --port=3001
-
 % Git, custom
 
 $ select_local_branch_name: git branch --format="%(refname:short)"
-$ select_merge_conflict_process: echo 'rebase\nmerge\ncherry-pick\nrevert'
+$ select_merge_conflict_process: echo 'rebase\nmerge\ncherry-pick\nrevert' --- --fzf-overrides --reverse
 
 # pull upstream branch
 git pull upstream <select_local_branch_name>
