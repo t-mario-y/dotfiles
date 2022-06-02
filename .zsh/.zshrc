@@ -69,15 +69,23 @@ bindkey -r "^P" # up-line-or-history
 # ZLE
 # (want to share very long command) → echo "(want to share very long command)" | code -
 function print_buffer_to_vscode() {
-  BUFFER=" echo \"${BUFFER}\" | code -"
+  if [ "$BUFFER" = "" ]; then
+    return 0
+  fi
+  BUFFER=" echo \"$BUFFER\" | code -"
+  zle accept-line
 }
 
 zle -N print_buffer_to_vscode
-bindkey "^P" print_current_buffer_to_vscode
+bindkey "^P" print_buffer_to_vscode
 
 # (command) → command | code -
 function open_result_to_vscode() {
-  BUFFER=" ${BUFFER} | code -"
+  if [ "$BUFFER" = "" ]; then
+    return 0
+  fi
+  BUFFER=" $BUFFER | code -"
+  zle accept-line
 }
 
 zle -N open_result_to_vscode
