@@ -5,48 +5,6 @@ $ yaml_file: fd --hidden ".*\.y[a]ml" .
 # YAML to JSON
 yq e <yaml_file> --output-format json | jq
 
-% Git, custom
-
-$ select_local_branch_name: git branch --format="%(refname:short)"
-$ select_merge_conflict_process: echo 'rebase\nmerge\ncherry-pick\nrevert' --- --fzf-overrides --reverse
-
-# pull upstream branch
-git pull upstream <select_local_branch_name>
-
-# rebase from upstream branch
-git rebase upstream/<select_local_branch_name>
-
-# interactive rebase from current commit
-git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n10 | \
-  fzf-tmux -p --ansi --reverse | awk '{print $2}' | xargs git rebase --interactive
-
-# merge upstream branch
-git merge --no-ff upstream/<select_local_branch_name>
-
-# interactive rebase from upstream branch
-git rebase -i upstream/<select_local_branch_name>
-
-# switch local branch
-git switch <select_local_branch_name>
-
-# abort merge conflict process(rebase, merge, cherry-pick, revert)
-git <select_merge_conflict_process> --abort
-
-# continue merge conflict process(rebase, merge, cherry-pick, revert)
-git <select_merge_conflict_process> --continue
-
-# cd to repository managed by ghq
-cd $(ghq list | fzf-tmux -p --reverse | xargs ghq list --full-path --exact)
-
-# hard reset to HEAD
-git add -N . && git reset --hard HEAD
-
-# soft reset to HEAD
-git reset --soft HEAD
-
-# print current branch name
-git symbolic-ref --short HEAD
-
 % docker
 
 # List containers in JSON format
@@ -56,17 +14,6 @@ docker container ls -a --format '{"ID":"{{ .ID }}", "Image": "{{ .Image }}", "Na
 
 # select and open files from uncommitted
 cat <(git diff --name-only --staged) <(git diff --name-only) | uniq | fzf-tmux -p --multi --select-1 --exit-0 | xargs code
-
-% GitHub CLI
-
-# search Pull Request and view on browser
-; TODO: カレントディレクトリ以外のPull Requestを探せるが、開くことができない
-cat <(gh search prs --reviewed-by=@me --state=open) <(gh search prs --assignee=@me --state=open) <(gh search prs --author=@me --state=open) | \
-  sort - | uniq | fzf-tmux -p --reverse | \
-  cut -f2 | xargs -I {} gh pr view -w {}
-
-# view repository on browser
-gh repo view -w
 
 % dotfiles
 
