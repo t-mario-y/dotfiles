@@ -2,13 +2,16 @@
 autoload -Uz compinit
 compinit
 
-setopt IGNOREEOF
+setopt ignore_eof
 setopt no_flow_control
-setopt share_history
-setopt histignorealldups
+
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
-SAVEHIST=10000
+SAVEHIST=100000
+HISTORY_IGNORE="(pwd|exit)"
+setopt share_history
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
 
 alias ls='ls -GF'
 alias d='docker'
