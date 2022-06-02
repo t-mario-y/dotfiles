@@ -62,3 +62,15 @@ fi
 if [ -f ~/dotfiles/.zsh/local.zsh ]; then
   source ~/dotfiles/.zsh/local.zsh
 fi
+
+bindkey -r "^N" # down-line-or-history
+bindkey -r "^P" # up-line-or-history
+
+# ZLE
+# (want to share very long command) → echo "(want to share very long command)" | code -
+function fuzzy_find_history_and_print_to_vscode() {
+  BUFFER="echo \"${BUFFER}\" | code -"
+}
+
+zle -N fuzzy_find_history_and_print_to_vscode
+bindkey "^N" fuzzy_find_history_and_print_to_vscode
