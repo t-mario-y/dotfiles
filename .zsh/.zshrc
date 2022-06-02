@@ -68,9 +68,17 @@ bindkey -r "^P" # up-line-or-history
 
 # ZLE
 # (want to share very long command) → echo "(want to share very long command)" | code -
-function fuzzy_find_history_and_print_to_vscode() {
-  BUFFER="echo \"${BUFFER}\" | code -"
+function print_buffer_to_vscode() {
+  BUFFER=" echo \"${BUFFER}\" | code -"
 }
 
-zle -N fuzzy_find_history_and_print_to_vscode
-bindkey "^N" fuzzy_find_history_and_print_to_vscode
+zle -N print_buffer_to_vscode
+bindkey "^P" print_current_buffer_to_vscode
+
+# (command) → command | code -
+function open_result_to_vscode() {
+  BUFFER=" ${BUFFER} | code -"
+}
+
+zle -N open_result_to_vscode
+bindkey "^N" open_result_to_vscode
