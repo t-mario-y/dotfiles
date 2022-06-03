@@ -1,6 +1,6 @@
 % Git, custom
 
-$ select_local_branch_name: git branch --format="%(refname:short)"
+$ select_local_branch_name: git branch --format="%(refname:short)" --- --fzf-overrides --reverse
 $ select_merge_conflict_process: echo 'rebase\nmerge\ncherry-pick\nrevert' --- --fzf-overrides --reverse
 
 # pull upstream branch
@@ -9,7 +9,7 @@ git pull upstream <select_local_branch_name>
 # rebase from upstream branch
 git rebase upstream/<select_local_branch_name>
 
-# interactive rebase from current commit
+# interactive rebase from recent commit
 git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n10 | \
   fzf-tmux -p --ansi --reverse | awk '{print $2}' | xargs git rebase --interactive
 

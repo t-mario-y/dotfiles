@@ -19,3 +19,8 @@ cat <(git diff --name-only --staged) <(git diff --name-only) | uniq | fzf-tmux -
 
 # update environment
 cd ~/dotfiles && git pull && bin/install_packages.sh && bin/symlink.sh && cd -
+
+% tmux
+
+# launch or attach
+tmux attach-session -t0 || tmux new-session
