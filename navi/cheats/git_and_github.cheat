@@ -40,7 +40,7 @@ git reset --soft HEAD
 # print current branch name
 git symbolic-ref --short HEAD
 
-% GitHub CLI
+% GitHub
 
 # search Pull Request and view on browser
 ; TODO: カレントディレクトリ以外のPull Requestを探せるが、開くことができない
