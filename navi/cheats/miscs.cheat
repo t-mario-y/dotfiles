@@ -1,9 +1,14 @@
 % jq
 
-$ yaml_file: fd --hidden ".*\.y[a]ml" .
+$ yaml_file: fd --hidden ".*\.y[a]ml$" .
 
 # YAML to JSON
 yq e <yaml_file> --output-format json | jq
+
+$ log_file: fd --no-ignore ".*\.log$" .
+
+# show JSON string logs to JSON
+tail --lines=100 --follow <log_file> | jq -R 'fromjson?'
 
 % docker
 
