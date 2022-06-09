@@ -13,7 +13,10 @@ tail --lines=100 --follow <log_file> | jq -R 'fromjson?'
 % docker
 
 # List containers in JSON format
-docker container ls -a --format '{"ID":"{{ .ID }}", "Image": "{{ .Image }}", "Names":"{{ .Names }}"}' | jq
+docker container ls -a --format '{"id":"{{ .ID }}", "image": "{{ .Image }}", "name": "{{ .Names }}", "ports": "{{ .Ports }}", "status": "{{ .Status }}" }' | jq
+
+# List images in JSON format
+docker images --format '{"id": "{{ .ID }}", "repo": "{{ .Repository }}", "tag": "{{ .Tag }}", "created_at": "{{ .CreatedAt }}", "size": "{{ .Size }}"}' | jq
 
 % VSCode
 
@@ -29,3 +32,8 @@ cd ~/dotfiles && git pull && bin/install_packages.sh && bin/symlink.sh && cd -
 
 # launch or attach
 tmux attach-session -t0 || tmux new-session
+
+% homebrew
+
+# inspect dependency between formula
+brew list | xargs -I{} sh -c 'brew uses --installed {} | wc -l | xargs printf "%20s is used by %2d formulae.\n" {}'
