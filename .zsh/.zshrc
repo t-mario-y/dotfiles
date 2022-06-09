@@ -14,10 +14,8 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
 alias ls='ls -GF'
-alias d='docker'
 alias dc='docker-compose'
 alias tf='terraform'
-alias ghq-cd='cd $(ghq list | fzf-tmux -p | xargs ghq list --full-path --exact)'
 alias git-switch-local='git branch | fzf-tmux -p | xargs git switch'
 
 # starship
