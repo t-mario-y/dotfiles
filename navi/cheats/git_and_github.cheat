@@ -40,6 +40,9 @@ git reset --soft HEAD
 # print current branch name
 git symbolic-ref --short HEAD
 
+# push --force-with-lease
+git push --force-with-lease
+
 % GitHub
 
 # search Pull Request and view on browser
