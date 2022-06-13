@@ -43,6 +43,9 @@ git symbolic-ref --short HEAD
 # push --force-with-lease
 git push --force-with-lease
 
+# list local config
+git config --local --list
+
 % GitHub
 
 # search Pull Request and view on browser
