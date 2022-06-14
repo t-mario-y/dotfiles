@@ -37,3 +37,6 @@ tmux attach-session -t0 || tmux new-session
 
 # inspect dependency between formula
 brew list | xargs -I{} sh -c 'brew uses --installed {} | wc -l | xargs printf "%20s is used by %2d formulae.\n" {}'
+
+# print dependency by tree
+brew deps --installed --tree
