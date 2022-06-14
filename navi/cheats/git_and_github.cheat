@@ -10,8 +10,11 @@ git pull upstream <select_local_branch_name>
 git rebase upstream/<select_local_branch_name>
 
 # interactive rebase from recent commit
-git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n10 | \
+git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n100 | \
   fzf-tmux -p --ansi --reverse | awk '{print $2}' | xargs git rebase --interactive
+
+# show log graph by oneline
+git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n100
 
 # merge upstream branch
 git merge --no-ff upstream/<select_local_branch_name>
