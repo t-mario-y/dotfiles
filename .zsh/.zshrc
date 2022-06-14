@@ -16,7 +16,6 @@ setopt hist_ignore_space
 alias ls='ls -GF'
 alias dc='docker-compose'
 alias tf='terraform'
-alias git-switch-local='git branch | fzf-tmux -p | xargs git switch'
 
 # starship
 eval "$(starship init zsh)"
