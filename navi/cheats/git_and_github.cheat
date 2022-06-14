@@ -1,4 +1,4 @@
-% Git, custom
+% Git(custom)
 
 $ select_local_branch_name: git branch --format="%(refname:short)" --- --fzf-overrides --reverse
 $ select_merge_conflict_process: echo 'rebase\nmerge\ncherry-pick\nrevert' --- --fzf-overrides --reverse
@@ -45,6 +45,9 @@ git symbolic-ref --short HEAD
 
 # push --force-with-lease
 git push --force-with-lease
+
+# commit amend without confirmation
+git commit --amend --no-edit
 
 # list local config
 git config --local --list
