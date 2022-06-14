@@ -70,7 +70,7 @@ function print_buffer_to_vscode() {
   if [ "$BUFFER" = "" ]; then
     return 0
   fi
-  BUFFER=" echo \"$BUFFER\" | code -"
+  BUFFER=" echo '$BUFFER' | code -"
   zle accept-line
 }
 
