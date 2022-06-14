@@ -22,6 +22,7 @@ cloudbuild
 cloudwatch
 clusterops
 codebuild
+compgen
 Cyclomatic
 Dangerfile
 datadog
@@ -109,6 +110,7 @@ systemvars
 templatefile
 tfnotify
 tfstate
+tldr
 trivy
 typeof
 upsert

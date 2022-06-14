@@ -40,3 +40,11 @@ brew list | xargs -I{} sh -c 'brew uses --installed {} | wc -l | xargs printf "%
 
 # print dependency by tree
 brew deps --installed --tree
+
+% tldr-pages
+# print tldr pages from available commands
+compgen -c | grep "^[a-z].*" | sort | uniq | fzf --reverse | xargs tldr
+
+% navi
+# integrate with tldr-pages from available commands
+compgen -c | grep "^[a-z].*" | sort | uniq | fzf --reverse | xargs navi --tldr
