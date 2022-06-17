@@ -11,7 +11,7 @@ git rebase upstream/<select_local_branch_name>
 
 # interactive rebase from recent commit
 git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n100 | \
-  fzf-tmux -p --ansi --reverse | awk '{print $2}' | xargs git rebase --interactive
+  fzf-tmux -p -w90% --ansi --reverse | awk '{print $2}' | xargs git rebase --interactive
 
 # show log graph by oneline
 git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n100
@@ -57,7 +57,7 @@ git config --local --list
 # search Pull Request and view on browser
 ; TODO: カレントディレクトリ以外のPull Requestを探せるが、開くことができない
 cat <(gh search prs --reviewed-by=@me --state=open) <(gh search prs --assignee=@me --state=open) <(gh search prs --author=@me --state=open) | \
-  sort | uniq | fzf-tmux -p --reverse | \
+  sort | uniq | fzf-tmux -p -w90% --reverse | \
   cut -f2 | xargs -I {} gh pr view -w {}
 
 # view repository on browser

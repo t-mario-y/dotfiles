@@ -21,7 +21,7 @@ docker images --format '{"id": "{{ .ID }}", "repo": "{{ .Repository }}", "tag": 
 % VSCode
 
 # select and open files from uncommitted
-cat <(git diff --name-only --staged) <(git diff --name-only) | sort | uniq | fzf-tmux -p --multi --select-1 --exit-0 | xargs code
+cat <(git diff --name-only --staged) <(git diff --name-only) | sort | uniq | fzf-tmux -p -w90% --multi --reverse --select-1 --exit-0 | xargs code
 
 % dotfiles
 
