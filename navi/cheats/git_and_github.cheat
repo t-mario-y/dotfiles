@@ -52,6 +52,9 @@ git commit --amend --no-edit
 # list local config
 git config --local --list
 
+# print diff files compared to upstream develop branch
+cat <(git diff HEAD --name-only) <(git diff upstream/develop... --name-only) | sort | uniq
+
 % GitHub
 
 # search Pull Request and view on browser
