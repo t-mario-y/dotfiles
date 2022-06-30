@@ -16,9 +16,6 @@ chsh -s $(which zsh)
 
 # パッケージインストール
 bin/install_homebrew.sh && bin/install_packages.sh && bin/symlink.sh
-
-# GitHub CLIにより認証する。
-gh auth login
 ```
 
 ### Continuous update
