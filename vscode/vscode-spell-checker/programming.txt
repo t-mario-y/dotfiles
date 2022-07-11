@@ -2,7 +2,9 @@ adoptopenjdk
 akka
 Alacritty
 amazonaws
+autofetch
 awscli
+azuretools
 backoff
 bazel
 bazelisk
@@ -36,6 +38,7 @@ dynamodb
 entrypoint
 erblint
 errcheck
+esbenp
 eslintignore
 esnext
 fargate
@@ -45,6 +48,7 @@ Firestore
 Flink
 Fluentd
 formik
+foxundermoon
 gcloud
 gitflow
 gofmt
@@ -65,6 +69,7 @@ kubernetes
 kustomize
 lazygit
 lcov
+libexec
 litestream
 localstack
 localstorage
@@ -98,10 +103,13 @@ scalamock
 scalastyle
 scalatest
 scrapbox
+scrollback
 Serializable
 serializers
 serviceaccount
 sftp
+shellformat
+Smoooooth
 solargraph
 sprintf
 sqlite
@@ -113,6 +121,7 @@ tfnotify
 tfstate
 tldr
 trivy
+typecheck
 typeof
 upsert
 VARCHAR
