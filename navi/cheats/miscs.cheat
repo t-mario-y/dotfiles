@@ -10,6 +10,10 @@ $ log_file: fd --no-ignore ".*\.log$" .
 # show JSON string logs to JSON
 tail --lines=100 --follow <log_file> | jq -R 'fromjson?'
 
+% Node.js
+# node -e instead of jq
+echo '{"name": "Mario"}' | node -e 'console.log(JSON.parse(fs.readFileSync("/dev/stdin", "utf-8")).name);'
+
 % docker
 
 # list containers in JSON format
