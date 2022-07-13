@@ -18,10 +18,10 @@ docker container ls -a --format '{"id":"{{ .ID }}", "image": "{{ .Image }}", "na
 # list images in JSON format
 docker images --format '{"id": "{{ .ID }}", "repo": "{{ .Repository }}", "tag": "{{ .Tag }}", "created_at": "{{ .CreatedAt }}", "size": "{{ .Size }}"}' | jq
 
-# run and attach to sh
+# run and attach with bash
 RUN_CONTAINER_AND_ATTACH_TO_SHELL_COMMAND=$(docker image ls --format={{.Repository}}:{{.Tag}} | \
   fzf-tmux -p --reverse --select-1 --exit-0 | \
-  xargs -I{} echo docker run --rm -it --entrypoint=sh {}) \
+  xargs -I{} echo docker run --rm -it --entrypoint=bash {}) \
   && eval $RUN_CONTAINER_AND_ATTACH_TO_SHELL_COMMAND
 
 % VSCode
