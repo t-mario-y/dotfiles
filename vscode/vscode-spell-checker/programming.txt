@@ -79,6 +79,7 @@ navi
 nextjs
 nodenv
 oidc
+openapi
 openjdk
 pino
 pipenv
@@ -123,6 +124,7 @@ tldr
 trivy
 typecheck
 typeof
+unscope
 upsert
 VARCHAR
 vcpus
