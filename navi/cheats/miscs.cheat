@@ -59,5 +59,8 @@ bash -c "compgen -c" | grep "^[a-z].*" | sort | uniq | fzf --reverse | xargs tld
 # integrate with tldr-pages from available commands
 bash -c "compgen -c" | grep "^[a-z].*" | sort | uniq | fzf --reverse | xargs navi --tldr
 
+# integrate with tldr-pages from input command
+navi --tldr <input_command>
+
 % kill process
 lsof -P -i:<port_number> | fzf --exit-0 | awk "{print $2}" | xargs kill -9
