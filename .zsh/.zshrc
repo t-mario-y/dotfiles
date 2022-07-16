@@ -69,7 +69,15 @@ function print_buffer_to_vscode() {
   if [ "$BUFFER" = "" ]; then
     return 0
   fi
-  BUFFER=" echo '$BUFFER' | code -"
+  # TODO: back slash escape and write tests
+  BUFFER=$(echo $BUFFER | node -e '
+    const input = fs.readFileSync("/dev/stdin", "utf-8")
+      .replaceAll(`"`, `\\"`)
+      .replaceAll(`!`, `\\!`)
+      .replaceAll("`", "\\`");
+    console.log(input);'
+  )
+  BUFFER=" echo \"$BUFFER\" | code -"
   zle accept-line
 }
 
