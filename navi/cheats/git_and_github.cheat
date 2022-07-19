@@ -49,8 +49,9 @@ git push --force-with-lease
 # commit amend without confirmation
 git commit --amend --no-edit
 
-# list local config
-git config --local --list
+# print config
+git config --list <local_or_global_or_all>
+$ local_or_global_or_all: echo '--global\n--local\n' --- --fzf-overrides --reverse
 
 # print diff files compared to upstream develop branch
 cat <(git diff HEAD --name-only) <(git diff upstream/develop... --name-only) | sort | uniq
