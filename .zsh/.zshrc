@@ -72,9 +72,9 @@ function print_buffer_to_vscode() {
   # TODO: back slash escape and write tests
   BUFFER=$(echo $BUFFER | node -e '
     const input = fs.readFileSync("/dev/stdin", "utf-8")
-      .replaceAll(`"`, `\\"`)
-      .replaceAll(`!`, `\\!`)
-      .replaceAll("`", "\\`");
+      .replace(/"/g, `\\"`)
+      .replace(/!/g, "\\!")
+      .replace(/`/g, "\\`");
     console.log(input);'
   )
   BUFFER=" echo \"$BUFFER\" | code -"
