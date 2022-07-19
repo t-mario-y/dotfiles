@@ -131,5 +131,6 @@ vcpus
 vercel
 webp
 wkhtmltopdf
+WORKDIR
 xargs
 xlarge
