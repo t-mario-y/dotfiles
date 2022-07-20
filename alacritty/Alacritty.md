@@ -8,6 +8,7 @@
 ln -snfv ~/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 # Windowsでは下記の手順を取る。
+# - scoopを使用してインストールする。https://github.com/ScoopInstaller/Extras/blob/master/bucket/alacritty.json
 # - Windows側の設定フォルダに設定ファイルを丸ごと置く。
 # - alacritty.ymlのimportパスを修正する。
 export USER_NAME_WINDOWS=(windows user name)
