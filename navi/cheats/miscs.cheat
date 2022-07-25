@@ -28,6 +28,12 @@ RUN_CONTAINER_AND_ATTACH_TO_SHELL_COMMAND=$(docker image ls --format={{.Reposito
   xargs -I{} echo docker run --rm -it --entrypoint=bash {}) \
   && eval $RUN_CONTAINER_AND_ATTACH_TO_SHELL_COMMAND
 
+# system prune --all
+docker system prune --all
+
+# image prune --all
+docker image prune --all
+
 % dotfiles
 
 # update environment
@@ -66,3 +72,7 @@ du -hs
 
 # human-readable
 du -h 
+
+% delta
+# cool diff(input two files)
+delta --line-numbers 
