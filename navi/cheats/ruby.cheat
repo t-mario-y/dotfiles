@@ -38,7 +38,7 @@ $ select_rspec_file: cat <(git diff HEAD --name-only) <(git diff upstream/develo
 bundle exec rspec -fd --order=defined --dry-run <select_rspec_file>
 
 # run for input file
-bundle exec rspec -fd --fail-fast <input_rspec_file>
+bundle exec rspec -fd --fail-fast 
 
 # show filtered test log
 tail --lines=100 --follow log/test.log | grep -v 'TRUNCATE TABLE'
