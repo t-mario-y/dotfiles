@@ -73,6 +73,7 @@ libexec
 litestream
 localstack
 localstorage
+ltsv
 mkdir
 mypy
 navi
@@ -91,6 +92,7 @@ prettierignore
 protobuf
 pyenv
 pytest
+railtie
 Rakefile
 rdebug
 readline
