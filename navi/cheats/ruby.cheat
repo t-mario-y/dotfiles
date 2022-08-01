@@ -42,3 +42,20 @@ bundle exec rspec -fd --fail-fast
 
 # show filtered test log
 tail --lines=100 --follow log/test.log | grep -v 'TRUNCATE TABLE'
+
+% Bundler
+
+# list config all
+bundle config
+
+# list gems
+bundle list
+
+# show gem path
+bundle show 
+
+# execute gem
+bundle exec 
+
+# example: select installed gem one liner
+bundle list | fzf-tmux --exit-0 | node -e 'console.log([...fs.readFileSync("/dev/stdin", "utf-8").matchAll(/.{4}(.*) \(.*/g)][0][1]);' | xargs bundle show
