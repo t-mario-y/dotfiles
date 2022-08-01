@@ -116,6 +116,7 @@ Smoooooth
 solargraph
 sprintf
 sqlite
+storyshot
 submodule
 submodules
 systemvars
