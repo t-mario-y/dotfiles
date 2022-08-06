@@ -46,6 +46,9 @@ git symbolic-ref --short HEAD
 # push --force-with-lease
 git push --force-with-lease
 
+# push --no-verify
+git push --no-verify
+
 # commit amend without confirmation
 git commit --amend --no-edit
 
