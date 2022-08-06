@@ -4,6 +4,7 @@ Alacritty
 amazonaws
 autofetch
 awscli
+axios
 azuretools
 backoff
 bazel
@@ -81,6 +82,7 @@ nextjs
 nodenv
 oidc
 openapi
+openapitools
 openjdk
 pino
 pipenv
