@@ -65,7 +65,7 @@ git fetch --all
 # add remote repository(ex: <someones_github_account> <repo_URL>)
 git remote add 
 
-# remove remote repository()
+# remove remote repository
 git remote | fzf-tmux -p --reverse | git remote remove 
 
 # push to remote repository
