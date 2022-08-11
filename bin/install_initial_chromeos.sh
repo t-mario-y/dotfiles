@@ -6,6 +6,9 @@ sudo apt-get update
 apt-get upgrade -y
 sudo apt-get install -y --no-install-recommends \
   zsh \
+  # for VSCode settings sync
+  gnome-keyring \
+  # 日本語入力
   fcitx-config-gtk \
   fcitx-mozc \
   fonts-ipafont \
