@@ -1,4 +1,5 @@
 # dotfilesで管理する ~/.zshrc
+# TODO: quit homebrew dependency on common .zshrc
 autoload -Uz compinit
 compinit
 
