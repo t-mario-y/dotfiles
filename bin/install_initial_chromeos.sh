@@ -8,6 +8,7 @@ sudo apt-get install -y --no-install-recommends \
   zsh \
   # for VSCode settings sync
   gnome-keyring \
+  seahorse \
   # 日本語入力
   fcitx-config-gtk \
   fcitx-mozc \
