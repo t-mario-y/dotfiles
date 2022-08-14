@@ -3,7 +3,7 @@
 set -eu
 
 sudo apt-get update
-apt-get upgrade -y
+sudo apt-get upgrade -y
 sudo apt-get install -y --no-install-recommends \
   build-essential \
   ca-certificates \
