@@ -74,7 +74,8 @@ asdf install nodejs lts
 asdf global nodejs lts
 
 # docker
-sudo apt-get install \
+sudo apt-get update
+sudo apt-get install -y \
   ca-certificates \
   curl \
   gnupg \
@@ -84,7 +85,9 @@ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get install --no-install-recommends -y \
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+sudo apt-get update
+sudo apt-get install -y \
   docker-ce \
   docker-ce-cli \
   containerd.io \
