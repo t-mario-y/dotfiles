@@ -15,9 +15,9 @@ alias ls='ls -GF'
 
 export LC_ALL=en_US.UTF-8
 
-# TODO: Control + N conflicts VSCode 'Open file'
 bindkey -r "^N" # down-line-or-history
 bindkey -r "^P" # up-line-or-history
+bindkey -r "^O" # accept-line-and-down-history
 
 # ZLE
 # (want to share very long command) → echo "(want to share very long command)" | code -
@@ -38,7 +38,7 @@ function print_buffer_to_vscode() {
 }
 
 zle -N print_buffer_to_vscode
-bindkey "^P" print_buffer_to_vscode
+bindkey "^O" print_buffer_to_vscode
 
 # (command) → command | code -
 function open_result_to_vscode() {
