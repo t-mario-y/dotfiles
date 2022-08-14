@@ -66,9 +66,7 @@ asdf global ghq 1.3.0
 bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
 
 # starship
-# TODO: can not execute continuously line because of 'sudo su'
-sudo su
-sh -c "$(curl -fsSL https://starship.rs/install.sh)" -y --force
+sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)" -y --force
 
 # Node.js
 asdf plugin add nodejs
