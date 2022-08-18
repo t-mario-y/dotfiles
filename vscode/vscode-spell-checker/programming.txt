@@ -3,6 +3,7 @@ akka
 Alacritty
 amazonaws
 autofetch
+autoloader
 awscli
 axios
 azuretools
