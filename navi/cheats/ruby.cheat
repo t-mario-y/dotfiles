@@ -59,3 +59,6 @@ bundle exec
 
 # example: select installed gem one liner
 bundle list | fzf-tmux --exit-0 | node -e 'console.log([...fs.readFileSync("/dev/stdin", "utf-8").matchAll(/.{4}(.*) \(.*/g)][0][1]);' | xargs bundle show
+
+# update input gem only
+bundle update --conservative 
