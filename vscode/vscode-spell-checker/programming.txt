@@ -51,6 +51,7 @@ Flink
 Fluentd
 formik
 foxundermoon
+fromjson
 gcloud
 gitflow
 gofmt
