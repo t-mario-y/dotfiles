@@ -27,6 +27,7 @@ cloudwatch
 clusterops
 codebuild
 compgen
+constantize
 Cyclomatic
 Dangerfile
 datadog
@@ -76,6 +77,7 @@ libexec
 litestream
 localstack
 localstorage
+Loggable
 ltsv
 mkdir
 mypy
@@ -102,6 +104,7 @@ rdebug
 readline
 readonly
 reduxjs
+referer
 resque
 Ricty
 ripgrep
