@@ -3,6 +3,7 @@ akka
 Alacritty
 amazonaws
 autofetch
+autoload
 autoloader
 awscli
 axios
@@ -60,6 +61,7 @@ golint
 grpc
 gserviceaccount
 hadolint
+Hankaku
 hashicorp
 Horusec
 hotfix
@@ -67,10 +69,12 @@ innodb
 IntelliJ
 jenv
 joda
+keyreq
 kube
 kubectl
 kubernetes
 kustomize
+kwargs
 lazygit
 lcov
 libexec
@@ -79,6 +83,7 @@ localstack
 localstorage
 Loggable
 ltsv
+middlewares
 mkdir
 mypy
 navi
@@ -119,10 +124,12 @@ serializers
 serviceaccount
 sftp
 shellformat
+sjis
 Smoooooth
 solargraph
 sprintf
 sqlite
+storyname
 storyshot
 submodule
 submodules
@@ -131,6 +138,7 @@ templatefile
 tfnotify
 tfstate
 tldr
+tracefile
 trivy
 typecheck
 typeof
@@ -144,3 +152,4 @@ wkhtmltopdf
 WORKDIR
 xargs
 xlarge
+zenkaku
