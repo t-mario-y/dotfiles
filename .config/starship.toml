@@ -24,6 +24,10 @@ symbol = "🌍 "
 
 [nodejs]
 symbol = "🧵 "
+disabled = true
 
 [git_branch]
 symbol = "🌱 "
+
+[ruby]
+disabled = true
