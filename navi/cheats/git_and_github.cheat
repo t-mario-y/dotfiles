@@ -75,7 +75,7 @@ git remote | fzf-tmux -p --reverse | xargs -I{} git push --set-upstream {} $(git
 
 # search Pull Request and view on browser
 ; TODO: カレントディレクトリ以外のPull Requestを探せるが、開くことができない
-cat <(gh search prs --reviewed-by=@me --state=open) <(gh search prs --assignee=@me --state=open) <(gh search prs --author=@me --state=open) | \
+cat <(gh search prs --involves=@me --state=open) | \
   sort | uniq | fzf-tmux -p -w90% --reverse | \
   cut -f2 | xargs -I {} gh pr view -w {}
 
