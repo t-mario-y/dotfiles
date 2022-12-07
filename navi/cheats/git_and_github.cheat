@@ -20,7 +20,7 @@ git log --graph --color=always --abbrev-commit --decorate --date=relative --pret
 git merge --no-ff upstream/<select_local_branch_name>
 
 # interactive rebase from upstream branch
-git rebase -i upstream/<select_local_branch_name>
+git rebase --interactive upstream/<select_local_branch_name>
 
 # switch local branch
 git switch <select_local_branch_name>
