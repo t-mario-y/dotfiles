@@ -24,7 +24,7 @@ sudo apt update
 sudo apt install gh
 
 # aptで管理するtmuxが古いため、自前でビルドする。
-sudp apt-get remove tmux
+sudo apt-get remove -y tmux
 sudo apt-get install -y --no-install-recommends \
   bison \
   build-essential \
