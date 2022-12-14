@@ -21,7 +21,8 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update
 sudo apt install gh
 
-# tmux
+# aptで管理するtmuxが古いため、自前でビルドする。
+sudp apt-get remove tmux
 sudo apt-get install -y --no-install-recommends \
   bison \
   build-essential \
@@ -37,7 +38,7 @@ cd tmux-3.3a
   CFLAGS="-I${ROOT_DIR}/.local/include -I${ROOT_DIR}/.local/include/ncurses" \
   LDFLAGS="-L${ROOT_DIR}/.local/include -L${ROOT_DIR}/.local/include/ncurses -L${ROOT_DIR}/.local/lib"
 make
-make install
+sudo make install
 cd ..
 rm tmux-3.3a.tar.gz
 rm -rf tmux-3.3a
