@@ -74,8 +74,8 @@ sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)" -y --force
 
 # Node.js
 asdf plugin add nodejs
-asdf install nodejs lts
-asdf global nodejs lts
+asdf install nodejs 18.12.0
+asdf global nodejs 18.12.0
 
 # docker
 sudo apt-get update
