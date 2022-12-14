@@ -78,6 +78,7 @@ asdf global nodejs lts
 # docker
 sudo apt-get update
 sudo apt-get install -y \
+  apt-transport-https \
   ca-certificates \
   curl \
   gnupg \
@@ -95,7 +96,7 @@ sudo apt-get install -y \
   containerd.io \
   docker-compose-plugin
 
-# dockerをsudoなしで実行するためのステップ。ChromeOSの再起動が必要。
+# dockerをsudoなしで実行するためのステップ。ChromeOS & Linuxの再起動が必要。
 sudo usermod -aG docker "$(whoami)"
 
 # lazygit
