@@ -58,6 +58,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes | ~/.fzf/install
 
 # ghq
+sudo apt-get install -y --no-install-recommends unzip
 asdf plugin add ghq
 asdf install ghq 1.3.0
 asdf global ghq 1.3.0
