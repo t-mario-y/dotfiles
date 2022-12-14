@@ -94,6 +94,7 @@ ltsv
 marketo
 middlewares
 mkdir
+multipass
 mypy
 navi
 nextjs
