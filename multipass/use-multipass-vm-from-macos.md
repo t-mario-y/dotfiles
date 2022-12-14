@@ -23,7 +23,7 @@ multipass purge
 
 ```sh
 multipass shell multipass-vm
-ssh -i <IPv4アドレス>@<ユーザ名(デフォルトはubuntu)> ~/.ssh/<作成した公開鍵> -o StrictHostKeyChecking=no
+ssh <ユーザ名(デフォルトはubuntu)>@<IPv4アドレス> -i ~/.ssh/<作成した秘密鍵> -o StrictHostKeyChecking=no
 ```
 
 `~/.ssh/config`の設定例は下記の通り。
