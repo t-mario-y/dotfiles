@@ -12,6 +12,7 @@ sudo apt-get install -y --no-install-recommends \
   tree
 
 # asdf
+# TODO: 冪等ではないスクリプト。type asdf などを使って初回が失敗しても通るようにする
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 
 # GitHub cli
@@ -19,6 +20,7 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt update
+# TODO: apt-getではないので冪等ではない
 sudo apt install gh
 
 # aptで管理するtmuxが古いため、自前でビルドする。
