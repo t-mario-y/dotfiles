@@ -56,6 +56,7 @@ bindkey "^N" open_result_to_vscode
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # asdfをインストールする際に追加される。
+# TODO: macOS(homebrew)ではパスが異なる
 . $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
 
