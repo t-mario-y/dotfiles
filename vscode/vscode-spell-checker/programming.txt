@@ -3,6 +3,7 @@ akka
 Alacritty
 amazonaws
 approvable
+arproxy
 autofetch
 autoload
 autoloader
@@ -77,6 +78,7 @@ intellij
 jbuilder
 jenv
 joda
+kconv
 keyreq
 kube
 kubectl
@@ -151,6 +153,7 @@ submodule
 submodules
 systemvars
 templatefile
+testsuites
 tfnotify
 tfstate
 tldr
