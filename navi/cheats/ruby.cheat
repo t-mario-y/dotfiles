@@ -48,14 +48,14 @@ bundle config
 # list gems
 bundle list
 
-# show gem path
-bundle show 
-
 # execute gem
 bundle exec 
 
-# example: select installed gem one liner
+# bundle show(print gem path) interactive
 bundle list | fzf-tmux --exit-0 | node -e 'console.log([...fs.readFileSync("/dev/stdin", "utf-8").matchAll(/.{4}(.*) \(.*/g)][0][1]);' | xargs bundle show
 
 # update input gem only
 bundle update --conservative 
+
+# show gems dependency(verbose)
+bundle exec gem dependency --reverse-dependencies
