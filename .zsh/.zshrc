@@ -69,8 +69,8 @@ eval "$(starship init zsh)"
 
 # tmux(install manually)
 export PATH="${PATH}:/.local/bin"
+# tmuxのデフォルトをzshに固定する
+export ZSH_PATH_FOR_TMUX="$(which zsh)"
 
 autoload -Uz compinit && compinit
 
-# tmuxのデフォルトをzshに固定する
-export ZSH_PATH_FOR_TMUX="$(which zsh)"
