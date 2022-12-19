@@ -60,8 +60,7 @@ bindkey "^N" open_result_to_vscode
 . $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
 
-# navi(install manually)
-export PATH="${PATH}:$HOME/.cargo/bin"
+# navi
 eval "$(navi widget zsh)"
 
 # starship
