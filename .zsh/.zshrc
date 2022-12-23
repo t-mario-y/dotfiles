@@ -86,4 +86,3 @@ if [ -f ~/dotfiles/.zsh/local.zsh ]; then
 fi
 
 autoload -Uz compinit && compinit
-
