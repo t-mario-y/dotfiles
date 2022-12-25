@@ -15,6 +15,19 @@ alias ls='ls -GF'
 
 export LC_ALL=en_US.UTF-8
 
+# OS specific config
+if [ "$(uname)" = 'Darwin' ]; then
+  source ~/dotfiles/.zsh/darwin.zsh
+fi
+
+if [ "$(uname)" = 'Linux' ] && [[ "$(uname -r)" = *microsoft* ]]; then
+  source ~/dotfiles/.zsh/wsl2.zsh
+fi
+
+if [ -f ~/dotfiles/.zsh/local.zsh ]; then
+  source ~/dotfiles/.zsh/local.zsh
+fi
+
 bindkey -r "^N" # down-line-or-history
 bindkey -r "^P" # up-line-or-history
 bindkey -r "^O" # accept-line-and-down-history
@@ -71,18 +84,5 @@ eval "$(starship init zsh)"
 export PATH="${PATH}:/.local/bin"
 # tmuxのデフォルトをzshに固定する
 export ZSH_PATH_FOR_TMUX="$(which zsh)"
-
-# 環境差分の.zshrcをロードする。
-if [ "$(uname)" = 'Darwin' ]; then
-  source ~/dotfiles/.zsh/darwin.zsh
-fi
-
-if [ "$(uname)" = 'Linux' ] && [[ "$(uname -r)" = *microsoft* ]]; then
-  source ~/dotfiles/.zsh/wsl2.zsh
-fi
-
-if [ -f ~/dotfiles/.zsh/local.zsh ]; then
-  source ~/dotfiles/.zsh/local.zsh
-fi
 
 autoload -Uz compinit && compinit
