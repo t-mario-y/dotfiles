@@ -45,7 +45,7 @@ cd ~/dotfiles && git pull && bin/install_packages.sh && bin/symlink.sh && cd -
 tmux attach-session -t0 || tmux new-session
 
 # kill all session and start
-tmux kill-session & tmux new-session
+tmux kill-session -a && tmux new-session
 
 % homebrew
 

@@ -11,6 +11,7 @@ awscli
 axios
 azuretools
 backoff
+backquote
 bazel
 bazelisk
 bigquery
@@ -62,6 +63,7 @@ formik
 foxundermoon
 fromjson
 gcloud
+getopts
 gitflow
 gocoverage
 gocovmerge
@@ -106,6 +108,7 @@ oidc
 openapi
 openapitools
 openjdk
+optparse
 pino
 pipenv
 POSIX
