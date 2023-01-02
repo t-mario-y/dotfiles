@@ -13,6 +13,7 @@ sudo apt-get install -y --no-install-recommends \
 
 # asdf
 # TODO: 冪等ではないスクリプト。type asdf などを使って初回が失敗しても通るようにする
+# asdf add <plugin> もnon-zeroでexitしてしまう。
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 
 # GitHub cli
