@@ -32,6 +32,7 @@ cloudwatch
 clusterops
 codebuild
 codeql
+compat
 compgen
 constantize
 Cyclomatic
