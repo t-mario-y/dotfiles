@@ -9,6 +9,7 @@ sudo apt-get install -y --no-install-recommends \
   ca-certificates \
   curl \
   git \
+  lsb-release \
   tree
 
 # asdf
@@ -106,3 +107,12 @@ sudo usermod -aG docker "$(whoami)"
 asdf plugin add lazygit
 asdf install lazygit 0.36.0
 asdf global lazygit 0.36.0
+
+# yq
+asdf plugin-add yq https://github.com/beardix/asdf-yq.git
+asdf install yq v4.30.6
+asdf global yq v4.30.6
+
+sudo apt-get install jq -y
+sudo apt install bat
+sudo apt install shellcheck

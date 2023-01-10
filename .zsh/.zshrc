@@ -24,6 +24,13 @@ if [ "$(uname)" = 'Linux' ] && [[ "$(uname -r)" = *microsoft* ]]; then
   source ~/dotfiles/.zsh/wsl2.zsh
 fi
 
+if type lsb_release > /dev/null 2>&1; then
+  LINUX_DISTRO="$(lsb_release --id --short)"
+  if [ "$LINUX_DISTRO" = 'Ubuntu' ]|| [ "$LINUX_DISTRO" = 'Debian' ]; then
+    alias bat='batcat'
+  fi
+fi
+
 if [ -f ~/dotfiles/.zsh/local.zsh ]; then
   source ~/dotfiles/.zsh/local.zsh
 fi
