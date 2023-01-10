@@ -10,10 +10,9 @@ brew upgrade
 
 FORMULAE=(
   awscli
-  asdf
   bat
   coreutils
-  fd
+  fzf
   gawk
   gh
   ghq
@@ -24,9 +23,10 @@ FORMULAE=(
   kubectl
   lazygit
   navi
+  ripgrep
   shellcheck
   starship
-  ripgrep
+  tmux
   tree
   yq
 )
@@ -48,12 +48,10 @@ else
   ./"${KREW}" install krew
 fi
 
-# fzfはキーバインドを行うスクリプトを別途インストールするため、処理を分ける。
-brew install fzf
+# fzf install script
 yes | "$(brew --prefix)"/opt/fzf/install
 
-# tmux setup
-brew install tmux
+# tmux install script
 TPM_PATH=~/.tmux/plugins/tpm
 if [ ! -e $TPM_PATH ]; then
   git clone https://github.com/tmux-plugins/tpm $TPM_PATH
