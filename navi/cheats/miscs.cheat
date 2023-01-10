@@ -86,3 +86,7 @@ $ any_file_2: fd --no-ignore
 % comm
 # print lines only in one file(with -13 or -23)
 comm -3 <(cat <any_file_1> | sort) <(cat <any_file_2> | sort)
+
+% code CLI
+# open code from stdin with line number
+ echo '' | xargs code --goto -
