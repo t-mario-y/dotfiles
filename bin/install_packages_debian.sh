@@ -113,6 +113,11 @@ asdf plugin-add yq https://github.com/beardix/asdf-yq.git
 asdf install yq v4.30.6
 asdf global yq v4.30.6
 
+# hadolint
+asdf plugin add hadolint https://github.com/looztra/asdf-hadolint.git
+asdf install hadolint 2.9.3
+asdf global hadolint 2.9.3
+
 sudo apt-get install jq -y
 sudo apt install bat
 sudo apt install shellcheck
