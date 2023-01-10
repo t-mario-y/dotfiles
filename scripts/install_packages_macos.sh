@@ -12,6 +12,7 @@ FORMULAE=(
   awscli
   bat
   coreutils
+  copyq
   fzf
   gawk
   gh
@@ -22,6 +23,7 @@ FORMULAE=(
   jq
   kubectl
   lazygit
+  multipass
   navi
   ripgrep
   shellcheck
