@@ -11,6 +11,7 @@ awscli
 axios
 azuretools
 backoff
+backquote
 bazel
 bazelisk
 bigquery
