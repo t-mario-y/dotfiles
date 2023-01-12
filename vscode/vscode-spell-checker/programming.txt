@@ -40,6 +40,7 @@ Cyclomatic
 Dangerfile
 datadog
 datepicker
+demodulize
 deps
 direnv
 dockerize
@@ -117,6 +118,7 @@ postgres
 postgresql
 preload
 prettierignore
+proot
 protobuf
 pyenv
 pytest
@@ -169,6 +171,7 @@ typecheck
 typeof
 unscope
 upsert
+uroot
 VARCHAR
 vcpus
 vercel
@@ -178,3 +181,4 @@ WORKDIR
 xargs
 xlarge
 zenkaku
+zoneinfo
