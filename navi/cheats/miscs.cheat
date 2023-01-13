@@ -89,4 +89,4 @@ comm -3 <(cat <any_file_1> | sort) <(cat <any_file_2> | sort)
 
 % code CLI
 # open code from stdin with line number
- echo '' | xargs code --goto -
+ echo '' | xargs code --goto
