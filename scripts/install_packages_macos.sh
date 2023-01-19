@@ -13,31 +13,20 @@ FORMULAE=(
   bat
   coreutils
   copyq
-  fzf
   gawk
   gh
-  ghq
   git
-  git-delta
-  hadolint
   jq
-  lazygit
   multipass
-  navi
   ripgrep
   shellcheck
-  starship
   tmux
   tree
-  yq
 )
 
 for item in "${FORMULAE[@]}"; do
   brew install "$item"
 done
-
-# fzf install script
-yes | "$(brew --prefix)"/opt/fzf/install
 
 # tmux install script
 TPM_PATH=~/.tmux/plugins/tpm

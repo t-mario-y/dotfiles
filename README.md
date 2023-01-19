@@ -4,18 +4,15 @@
 
 ### Initial setup
 
-gitおよびbashが使用できる環境で実行する。
+gitおよびbashが必要。別途、zshをログインシェルに設定する。
 
 ```shell script
 cd && git clone https://github.com/t-mario-y/dotfiles && cd dotfiles
 scripts/symlink.sh
 
-# linux/WSL2: zshをインストールして、ログインシェルに設定する。
-sudo apt-get install zsh
-chsh -s $(which zsh)
-
-# パッケージインストール
-scripts/install_homebrew.sh && scripts/install_packages.sh && scripts/symlink.sh
+scripts/install_initial_(OS specific).sh
+scripts/install_packages_common.sh
+scripts/install_packages_(OS specific).sh
 ```
 
 ## dotfiles管理対象外のもの
