@@ -40,11 +40,12 @@ docker image prune --all
 cd ~/dotfiles && git pull && bin/symlink.sh && cd -
 
 # update tools(macOS)
-brew update && brew upgrade
+brew update && brew upgrade && brew cleanup
 
 # update tools(Debian)
 sudo apt-get update && sudo apt-get upgrade -y && \
-sudo apt update && sudo apt-get upgrade -y
+sudo apt update && sudo apt-get upgrade -y && \
+sudo apt-get autoremove
 
 # check tool versions managed by asdf
 delta <(asdf latest --all) && <(asdf current)
