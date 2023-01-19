@@ -18,12 +18,6 @@ chsh -s $(which zsh)
 scripts/install_homebrew.sh && scripts/install_packages.sh && scripts/symlink.sh
 ```
 
-### Continuous update
-
-```shell script
-cd ~/dotfiles && scripts/install_packages.sh && scripts/symlink.sh && cd -
-```
-
 ## dotfiles管理対象外のもの
 
 構築手順がプラットフォームごとに異なるものは、手動でインストールを行う。

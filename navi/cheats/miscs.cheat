@@ -36,8 +36,18 @@ docker image prune --all
 
 % dotfiles
 
-# update environment
-cd ~/dotfiles && git pull && bin/install_packages.sh && bin/symlink.sh && cd -
+# update dotfiles repository
+cd ~/dotfiles && git pull && bin/symlink.sh && cd -
+
+# update tools(macOS)
+brew update && brew upgrade
+
+# update tools(Debian)
+sudo apt-get update && sudo apt-get upgrade -y && \
+sudo apt update && sudo apt-get upgrade -y
+
+# check tool versions managed by asdf
+delta <(asdf latest --all) && <(asdf current)
 
 % tmux
 
