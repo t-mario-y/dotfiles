@@ -8,9 +8,10 @@ sudo apt-get install -y --no-install-recommends \
   build-essential \
   ca-certificates \
   curl \
-  git \
   lsb-release \
   tree
+sudo apt-add-repository ppa:git-core/ppa --yes
+sudo apt-get install -y git
 
 if type asdf > /dev/null 2>&1; then
   echo 'asdf is already installed.'
