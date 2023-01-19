@@ -10,6 +10,6 @@ sudo apt-get install -y --no-install-recommends \
   curl \
   lsb-release \
   zsh
-sudo apt-add-repository ppa:git-core/ppa --yes
+sudo apt-add-repository ppa:git-core/ppa -y
 sudo apt-get install -y git
-sudo apt-get autoremove
+sudo apt-get autoremove -y

@@ -45,7 +45,7 @@ brew update && brew upgrade && brew cleanup
 # update tools(Debian)
 sudo apt-get update && sudo apt-get upgrade -y && \
 sudo apt update && sudo apt-get upgrade -y && \
-sudo apt-get autoremove
+sudo apt-get autoremove -y
 
 # check tool versions managed by asdf
 delta <(asdf latest --all) && <(asdf current)

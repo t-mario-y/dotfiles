@@ -5,7 +5,7 @@ set -eu
 sudo apt-get upgrade && sudo apt-get install -y --no-install-recommends \
   jq \
   tree 
-sudo apt-get autoremove
+sudo apt-get autoremove -y
 sudo apt upgrade && sudo apt install -y \
   bat \
   shellcheck
