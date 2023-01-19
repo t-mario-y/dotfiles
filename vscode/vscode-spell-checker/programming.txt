@@ -15,6 +15,7 @@ backquote
 bazel
 bazelisk
 bigquery
+birthdate
 boto
 Brewfile
 browserslist
@@ -161,10 +162,12 @@ struct
 submodule
 submodules
 systemvars
+tbody
 templatefile
 testsuites
 tfnotify
 tfstate
+thead
 tldr
 tracefile
 trivy
