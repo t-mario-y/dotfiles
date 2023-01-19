@@ -34,3 +34,13 @@ scripts/install_homebrew.sh && scripts/install_packages.sh && scripts/symlink.sh
 ### フォント
 
 [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
+
+### Docker
+
+都度、公式のinstall手順(<https://docs.docker.com/engine/install/>)を参照する。
+
+non-root userで実行する際には、下記を実行する。
+
+```shell script
+sudo usermod -aG docker "$(whoami)"
+```
