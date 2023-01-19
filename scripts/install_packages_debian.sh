@@ -132,6 +132,3 @@ sudo apt-get install jq -y
 sudo apt install bat
 sudo apt install shellcheck
 
-# print package versions managed by asdf
-asdf latest --all
-asdf current
