@@ -45,7 +45,7 @@ function print_buffer_to_vscode() {
   if [ "$BUFFER" = "" ]; then
     return 0
   fi
-  # TODO: back slash escape and write tests
+  # TODO: back slash escape
   BUFFER=$(echo $BUFFER | node -e '
     const input = fs.readFileSync("/dev/stdin", "utf-8")
       .replace(/"/g, `\\"`)
