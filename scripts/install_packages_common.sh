@@ -75,3 +75,5 @@ else
   asdf install hadolint 2.9.3
   asdf global hadolint 2.9.3
 fi
+
+npm install -g tldr
