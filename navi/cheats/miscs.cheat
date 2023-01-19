@@ -88,7 +88,7 @@ du -hs
 du -h 
 
 % delta
-# cool diff(input two files)
+# cool diff(input two files with fzh file search)
 delta --line-numbers 
 
 $ any_file_1: fd --no-ignore
