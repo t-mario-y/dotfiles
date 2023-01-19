@@ -2,7 +2,7 @@
 
 set -eu
 
-sudo apt-get upgrade && sudp apt-get install -y --no-install-recommends \
+sudo apt-get upgrade && sudo apt-get install -y --no-install-recommends \
   jq \
   tree 
 sudo apt-get autoremove
