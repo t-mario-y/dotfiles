@@ -8,10 +8,16 @@ sudo apt-get install -y --no-install-recommends \
   build-essential \
   ca-certificates \
   curl \
-  lsb-release \
-  tree
+  lsb-release
 sudo apt-add-repository ppa:git-core/ppa --yes
-sudo apt-get install -y git
+sudo apt-get install -y --no-install-recommends git
+
+sudo apt-get install -y --no-install-recommends \
+  jq \
+  tree 
+sudo apt upgrade && sudo apt install -y \
+  bat \
+  shellcheck
 
 if type asdf > /dev/null 2>&1; then
   echo 'asdf is already installed.'
@@ -127,8 +133,3 @@ else
   asdf install hadolint 2.9.3
   asdf global hadolint 2.9.3
 fi
-
-sudo apt-get install jq -y
-sudo apt install bat
-sudo apt install shellcheck
-
