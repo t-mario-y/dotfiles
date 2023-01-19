@@ -15,6 +15,13 @@ alias ls='ls -GF'
 
 export LC_ALL=en_US.UTF-8
 
+# asdf
+. $HOME/.asdf/asdf.sh
+fpath=(${ASDF_DIR}/completions $fpath)
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # OS specific config
 if [ "$(uname)" = 'Darwin' ]; then
   source ~/dotfiles/.zsh/darwin.zsh
@@ -71,14 +78,6 @@ function open_result_to_vscode() {
 
 zle -N open_result_to_vscode
 bindkey "^N" open_result_to_vscode
-
-# fzfをインストールする際に追加される。
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# asdfをインストールする際に追加される。
-# TODO: macOS(homebrew)ではパスが異なる
-. $HOME/.asdf/asdf.sh
-fpath=(${ASDF_DIR}/completions $fpath)
 
 # navi(install manually)
 export PATH="${PATH}:$HOME/.cargo/bin"
