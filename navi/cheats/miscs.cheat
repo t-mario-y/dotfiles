@@ -48,7 +48,7 @@ sudo apt update && sudo apt-get upgrade -y && \
 sudo apt-get autoremove -y
 
 # check tool versions managed by asdf
-delta <(asdf latest --all) && <(asdf current)
+delta <(asdf latest --all) <(asdf current)
 
 % tmux
 
