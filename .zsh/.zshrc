@@ -1,6 +1,4 @@
-# dotfilesで管理する ~/.zshrc
-autoload -Uz compinit
-compinit
+# dotfilesで管理する ~/.zshrc(homebrewに依存しない)
 
 setopt ignore_eof
 setopt no_flow_control
@@ -14,39 +12,17 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
 alias ls='ls -GF'
-alias dc='docker-compose'
-alias tf='terraform'
-
-# starship
-eval "$(starship init zsh)"
-
-# fzfをインストールする際に追加される。
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# asdfをインストールする際に追加される。
-. $(brew --prefix asdf)/libexec/asdf.sh
-
-# homebrewでinstallしたパッケージのcompletionを設定する。
-# 参考: https://docs.brew.sh/Shell-Completion
-if type brew > /dev/null 2>&1; then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
-fi
 
 export LC_ALL=en_US.UTF-8
 
-# homebrewでインストールしたGitを使用するため、PATHに追加する。
-# TODO: バージョンを決め打ちしている。
-export PATH=$(brew --prefix)/Cellar/git/2.36.0/bin:$PATH
+# asdf
+. $HOME/.asdf/asdf.sh
+fpath=(${ASDF_DIR}/completions $fpath)
 
-source <(kubectl completion zsh)
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(navi widget zsh)"
-
-# 環境差分の.zshrcを読み込む
+# OS specific config
 if [ "$(uname)" = 'Darwin' ]; then
   source ~/dotfiles/.zsh/darwin.zsh
 fi
@@ -55,7 +31,13 @@ if [ "$(uname)" = 'Linux' ] && [[ "$(uname -r)" = *microsoft* ]]; then
   source ~/dotfiles/.zsh/wsl2.zsh
 fi
 
-# git管理しない.zshrcを読み込む
+if type lsb_release > /dev/null 2>&1; then
+  LINUX_DISTRO="$(lsb_release --id --short)"
+  if [ "$LINUX_DISTRO" = 'Ubuntu' ]|| [ "$LINUX_DISTRO" = 'Debian' ]; then
+    alias bat='batcat'
+  fi
+fi
+
 if [ -f ~/dotfiles/.zsh/local.zsh ]; then
   source ~/dotfiles/.zsh/local.zsh
 fi
@@ -70,7 +52,7 @@ function print_buffer_to_vscode() {
   if [ "$BUFFER" = "" ]; then
     return 0
   fi
-  # TODO: back slash escape and write tests
+  # TODO: back slash escape
   BUFFER=$(echo $BUFFER | node -e '
     const input = fs.readFileSync("/dev/stdin", "utf-8")
       .replace(/"/g, `\\"`)
@@ -96,3 +78,17 @@ function open_result_to_vscode() {
 
 zle -N open_result_to_vscode
 bindkey "^N" open_result_to_vscode
+
+# navi(install manually)
+export PATH="${PATH}:$HOME/.cargo/bin"
+eval "$(navi widget zsh)"
+
+# starship
+eval "$(starship init zsh)"
+
+# tmux(install manually)
+export PATH="${PATH}:/.local/bin"
+# tmuxのデフォルトをzshに固定する
+export ZSH_PATH_FOR_TMUX="$(which zsh)"
+
+autoload -Uz compinit && compinit

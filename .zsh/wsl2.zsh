@@ -24,3 +24,5 @@ fix_wsl2_interop() {
     fi
   done
 }
+
+fix_wsl2_interop

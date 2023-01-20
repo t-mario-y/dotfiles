@@ -4,24 +4,15 @@
 
 ### Initial setup
 
-gitおよびbashが使用できる環境で実行する。
+gitおよびbashが必要。別途、zshをログインシェルに設定する。
 
 ```shell script
 cd && git clone https://github.com/t-mario-y/dotfiles && cd dotfiles
-bin/symlink.sh
+scripts/symlink.sh
 
-# linux/WSL2: zshをインストールして、ログインシェルに設定する。
-sudo apt-get install zsh
-chsh -s $(which zsh)
-
-# パッケージインストール
-bin/install_homebrew.sh && bin/install_packages.sh && bin/symlink.sh
-```
-
-### Continuous update
-
-```shell script
-cd ~/dotfiles && bin/install_packages.sh && bin/symlink.sh && cd -
+scripts/install_initial_(OS specific).sh
+scripts/install_packages_common.sh
+scripts/install_packages_(OS specific).sh
 ```
 
 ## dotfiles管理対象外のもの
@@ -40,3 +31,13 @@ cd ~/dotfiles && bin/install_packages.sh && bin/symlink.sh && cd -
 ### フォント
 
 [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
+
+### Docker
+
+都度、公式のinstall手順(<https://docs.docker.com/engine/install/>)を参照する。
+
+non-root userで実行する際には、下記を実行する。
+
+```shell script
+sudo usermod -aG docker "$(whoami)"
+```

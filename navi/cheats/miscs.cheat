@@ -36,16 +36,27 @@ docker image prune --all
 
 % dotfiles
 
-# update environment
-cd ~/dotfiles && git pull && bin/install_packages.sh && bin/symlink.sh && cd -
+# update dotfiles repository
+cd ~/dotfiles && git pull && bin/symlink.sh && cd -
+
+# update tools(macOS)
+brew update && brew upgrade && brew cleanup
+
+# update tools(Debian)
+sudo apt-get update && sudo apt-get upgrade -y && \
+sudo apt update && sudo apt-get upgrade -y && \
+sudo apt-get autoremove -y
+
+# check tool versions managed by asdf
+delta <(asdf latest --all) <(asdf current)
 
 % tmux
 
 # launch or attach
 tmux attach-session -t0 || tmux new-session
 
-# kill all session and start
-tmux kill-session -a && tmux new-session
+# restart t0 session
+tmux kill-session -t0 && tmux new-session
 
 % homebrew
 
@@ -77,7 +88,7 @@ du -hs
 du -h 
 
 % delta
-# cool diff(input two files)
+# cool diff(input two files with fzh file search)
 delta --line-numbers 
 
 $ any_file_1: fd --no-ignore

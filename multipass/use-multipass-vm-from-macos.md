@@ -15,7 +15,6 @@ multipass info multipass-vm
 
 multipass stop unused-vm
 multipass delete unused-vm
-# 完全消去
 multipass purge
 ```
 
