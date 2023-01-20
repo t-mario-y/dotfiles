@@ -37,7 +37,7 @@ docker image prune --all
 % dotfiles
 
 # update dotfiles repository
-cd ~/dotfiles && git pull && bin/symlink.sh && cd -
+cd ~/dotfiles && git pull && scripts/symlink.sh && cd -
 
 # update tools(macOS)
 brew update && brew upgrade && brew cleanup
