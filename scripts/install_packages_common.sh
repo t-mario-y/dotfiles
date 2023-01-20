@@ -19,8 +19,8 @@ if type delta > /dev/null 2>&1; then
   echo 'delta is already installed.'
 else
   asdf plugin add delta https://github.com/andweeb/asdf-delta.git
-  asdf install delta 0.13.0
-  asdf global delta 0.13.0
+  asdf install delta 0.15.1
+  asdf global delta 0.15.1
 fi
 
 if type ghq > /dev/null 2>&1; then
