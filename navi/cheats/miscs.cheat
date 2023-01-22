@@ -66,6 +66,9 @@ brew list | xargs -I{} sh -c 'brew uses --installed {} | wc -l | xargs printf "%
 # print dependency by tree
 brew deps --installed --tree
 
+# dump
+brew bundle dump --force --describe --file=~/dotfiles/Brewfile.dump.rb
+
 % tldr-pages
 # print tldr pages from available commands
 bash -c "compgen -c" | grep "^[a-z].*" | sort | uniq | fzf --reverse | xargs tldr
