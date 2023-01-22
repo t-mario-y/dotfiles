@@ -8,6 +8,7 @@ sudo apt-get install -y --no-install-recommends \
   build-essential \
   ca-certificates \
   curl \
+  libz-dev \ # for asdf-ruby
   lsb-release \
   unzip \ # for asdf-ghq
   zsh
