@@ -15,6 +15,18 @@ else
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.0
 fi
 
+if type navi > /dev/null 2>&1; then
+  echo 'navi is already installed.'
+else
+  bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
+fi
+
+if type starship > /dev/null 2>&1; then
+  echo 'starship is already installed.'
+else
+  sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)" -y --force
+fi
+
 if type delta > /dev/null 2>&1; then
   echo 'delta is already installed.'
 else
@@ -29,18 +41,6 @@ else
   asdf plugin add ghq https://github.com/t-mario-y/asdf-ghq
   asdf install ghq 1.3.0
   asdf global ghq 1.3.0
-fi
-
-if type navi > /dev/null 2>&1; then
-  echo 'navi is already installed.'
-else
-  bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
-fi
-
-if type starship > /dev/null 2>&1; then
-  echo 'starship is already installed.'
-else
-  sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)" -y --force
 fi
 
 if type node > /dev/null 2>&1; then
