@@ -26,7 +26,6 @@ fi
 if type ghq > /dev/null 2>&1; then
   echo 'ghq is already installed.'
 else
-  sudo apt-get install -y --no-install-recommends unzip
   asdf plugin add ghq https://github.com/t-mario-y/asdf-ghq
   asdf install ghq 1.3.0
   asdf global ghq 1.3.0

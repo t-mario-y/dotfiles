@@ -9,6 +9,7 @@ sudo apt-get install -y --no-install-recommends \
   ca-certificates \
   curl \
   lsb-release \
+  unzip \
   zsh
 sudo apt-add-repository ppa:git-core/ppa -y
 sudo apt-get install -y git
