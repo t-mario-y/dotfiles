@@ -23,3 +23,4 @@ fi
 
 ln -snfv ~/dotfiles/.config/lazygit/config.yml "$lazygit_config_file"
 ln -snfv ~/dotfiles/navi/config.yaml "$navi_config_file"
+ln -snfv ~/dotfiles/.tool-versions ~/.tool-versions
