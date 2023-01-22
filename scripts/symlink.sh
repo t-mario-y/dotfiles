@@ -2,7 +2,6 @@
 
 set -eu
 
-# TODO: quit homebrew dependency
 ln -snfv ~/dotfiles/.zsh/.zshrc      ~/.zshrc
 ln -snfv ~/dotfiles/.gitconfig       ~/.gitconfig
 ln -snfv ~/dotfiles/.tmux/.tmux.conf ~/.tmux.conf
