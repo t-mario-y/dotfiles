@@ -1,3 +1,4 @@
+activemodel
 adoptopenjdk
 akka
 Alacritty
@@ -29,6 +30,7 @@ chsh
 cidr
 cimg
 circleci
+claide
 cloudbuild
 cloudwatch
 clusterops
@@ -37,10 +39,12 @@ codeql
 compat
 compgen
 constantize
+Consts
 Cyclomatic
 Dangerfile
 datadog
 datepicker
+ddtrace
 demodulize
 deps
 direnv
@@ -86,6 +90,7 @@ jenv
 joda
 kconv
 keyreq
+klass
 kube
 kubectl
 kubernetes
@@ -118,6 +123,7 @@ pipenv
 POSIX
 postgres
 postgresql
+preact
 preload
 prettierignore
 proot
@@ -151,6 +157,7 @@ shellformat
 sidekiq
 SIGKILL
 SIGTERM
+simplecov
 sjis
 Smoooooth
 solargraph
