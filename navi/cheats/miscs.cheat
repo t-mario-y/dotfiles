@@ -39,10 +39,10 @@ delta <(asdf latest --all) <(asdf current)
 % tmux
 
 # launch or attach
-tmux attach-session -t0 || tmux new-session
+tmux attach-session -t0 || tmux new-session -t0
 
 # restart t0 session
-tmux kill-session -t0 && tmux new-session
+tmux kill-session -t0 && tmux new-session -t0
 
 % homebrew
 
