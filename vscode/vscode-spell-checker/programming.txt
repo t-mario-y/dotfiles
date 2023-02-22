@@ -44,6 +44,7 @@ Cyclomatic
 Dangerfile
 datadog
 datepicker
+datetime
 ddtrace
 demodulize
 deps
