@@ -49,11 +49,13 @@ ddtrace
 demodulize
 deps
 direnv
+Discretionaries
 dockerize
 dotfiles
 dpkg
 dynamodb
 editability
+encryptor
 entrypoint
 enumerize
 erblint
