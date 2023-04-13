@@ -35,7 +35,7 @@ env RESQUE_INLINE=1 bundle exec rdebug-ide --host 0.0.0.0 --port 1235 --dispatch
 bundle exec rspec -fd --order=defined --dry-run 
 
 # run for target ruby file interactive
-git ls-files -- ':*spec.rb' | fzf-tmux -p --reverse | xargs bundle exec rspec -fd --fail-fast
+git ls-files -- ':*spec.rb' | fzf-tmux -p --reverse -w90% --exit-0 | xargs bundle exec rspec -fd --fail-fast
 
 # show filtered test log
 tail --lines=100 --follow log/test.log | grep -v 'TRUNCATE TABLE'
@@ -49,14 +49,14 @@ bundle config
 bundle list
 
 # bundle show(print gem path) interactive
-bundle list --name-only | fzf-tmux -p --reverse --exit-0 | xargs bundle show
+bundle list --name-only | fzf-tmux -p --reverse -w90% --exit-0 | xargs bundle show
 
 # update target gem only
-bundle list --name-only | fzf-tmux -p --reverse --exit-0 | bundle update --conservative
+bundle list --name-only | fzf-tmux -p --reverse -w90% --exit-0 | xargs bundle update --conservative
 
 # show gems dependency(verbose) interactive
 bundle list --name-only | xargs bundle exec gem dependency --reverse-dependencies
 
 % RuboCop
 # run for target ruby file interactive
-git ls-files -- ':*.rb' ':*.rake' ':*Rakefile' | fzf-tmux -p --reverse | xargs bundle exec rubocop
+git ls-files -- ':*.rb' ':*.rake' ':*Rakefile' | fzf-tmux -p --reverse -w90% --exit-0 | xargs bundle exec rubocop
