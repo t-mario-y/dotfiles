@@ -37,6 +37,11 @@ cd $(ghq list | fzf-tmux -p --reverse | xargs ghq list --full-path --exact)
 # hard reset to HEAD
 git add -N . && git reset --hard HEAD
 
+# hard reset target file
+cat <(git diff HEAD --name-only) <(git diff upstream/develop... --name-only) | \
+  fzf-tmux -p -w90% | \
+  xargs git restore --source upstream/develop 
+
 # soft reset to HEAD
 git reset --soft HEAD
 
@@ -57,7 +62,7 @@ git config --list <local_or_global_or_all>
 $ local_or_global_or_all: echo '--global\n--local\n' --- --fzf-overrides --reverse
 
 # print diff files compared to upstream develop branch
-cat <(git diff HEAD --name-only) <(git diff upstream/develop... --name-only) | sort | uniq
+cat <(git diff HEAD --name-only) <(git diff upstream/develop... --name-only)
 
 # fetch remote all
 git fetch --all
