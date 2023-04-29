@@ -69,6 +69,7 @@ faunadb
 Firestore
 flink
 fluentd
+fnmatch
 formik
 foxundermoon
 fromjson
@@ -169,6 +170,7 @@ sqlite
 storyname
 storyshot
 stree
+streerc
 struct
 submodule
 submodules
