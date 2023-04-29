@@ -1,9 +1,9 @@
 [user]
-name = t-mario-y
+	name = t-mario-y
 [core]
-editor = code --wait
+	editor = code --wait
 [pull]
-rebase = false
+	rebase = false
 [include] # 公開リポジトリに置かない情報をincludeする。
-path = ~/dotfiles/.gitconfig.local
+	path = ~/dotfiles/.gitconfig.local
 # user.email
