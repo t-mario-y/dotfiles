@@ -86,3 +86,7 @@ cat <(gh search prs --involves=@me --state=open) | \
 
 # view repository on browser
 gh repo view -w
+
+% gitmoji
+# commit with fuzzy-find emoji
+gitmoji --list | fzf-tmux -p --reverse | awk '{print $3}' | xargs git commit -m && git commit --amend
