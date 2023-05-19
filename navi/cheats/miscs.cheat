@@ -97,3 +97,6 @@ yarn why
 
 # audit only critical in dependencies
 yarn audit --group dependencies --level critical
+
+# refresh current process as login shell
+exec $SHELL --login
