@@ -66,8 +66,12 @@ bash -c "compgen -c" | grep "^[a-z].*" | sort | uniq | fzf --reverse | xargs nav
 # open tldr-pages from input command
 navi --tldr 
 
-% kill process
-lsof -P -i:<port_number> | fzf --exit-0 | awk "{print $2}" | xargs kill -9
+% kill
+# kill process by port
+lsof -P -i:<port_number> | fzf-tmux -p --exit-0 | awk '{print $2}' | xargs kill -9
+
+# kill process by name
+ps aux | grep <process_name> | fzf-tmux -p --reverse -w90% --exit-0 | awk '{print $2}' | xargs kill -9
 
 % file/dir size
 # human-readable, summarize
