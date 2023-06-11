@@ -6,6 +6,7 @@ amazonaws
 approvable
 arproxy
 autofetch
+autogen
 autoload
 autoloader
 awscli
@@ -122,6 +123,7 @@ openapi
 openapitools
 openjdk
 optparse
+overridable
 pino
 pipenv
 POSIX
