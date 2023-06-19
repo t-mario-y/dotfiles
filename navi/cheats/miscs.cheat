@@ -105,3 +105,7 @@ yarn audit --group dependencies --level critical
 % shell
 # refresh current process as login shell
 exec $SHELL --login
+
+% utils
+# infinity loop (write 'done')
+while [ 1 = 1 ]; do

@@ -48,6 +48,9 @@ git reset --soft HEAD
 # print current branch name
 git symbolic-ref --short HEAD
 
+# push to remote origin first time
+git push --set-upstream origin $(git symbolic-ref --short HEAD)
+
 # push --force-with-lease
 git push --force-with-lease
 
