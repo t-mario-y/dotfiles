@@ -18,3 +18,9 @@ ATTACH_TO_CONTAINER_SHELL_COMMAND=$(
   fzf-tmux -p --reverse --select-1 --exit-0 | \
   xargs -I{} echo docker exec -it {} bash) \
   && eval $ATTACH_TO_CONTAINER_SHELL_COMMAND
+
+# system prune --all
+docker system prune --all
+
+# image prune --all
+docker image prune --all
