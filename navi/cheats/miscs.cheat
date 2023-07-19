@@ -61,7 +61,7 @@ bash -c "compgen -c" | grep "^[a-z].*" | sort | uniq | fzf --reverse | xargs nav
 navi --tldr 
 
 % kill
-# kill process by port
+# kill process by port (use sudo if needed)
 lsof -P -i:<port_number> | fzf-tmux -p --exit-0 | awk '{print $2}' | xargs kill -9
 
 # kill process by name
