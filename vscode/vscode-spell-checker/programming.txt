@@ -1,3 +1,4 @@
+aasm
 accu
 activemodel
 adoptopenjdk
@@ -6,6 +7,7 @@ Alacritty
 amazonaws
 approvable
 arproxy
+autocorrect
 autofetch
 autogen
 autoload
@@ -68,6 +70,7 @@ esnext
 fargate
 fastify
 faunadb
+fetchable
 Firestore
 flink
 fluentd
@@ -101,6 +104,7 @@ kube
 kubectl
 kubernetes
 kustomize
+kwarg
 kwargs
 lazygit
 lcov
@@ -119,6 +123,7 @@ mypy
 navi
 nextjs
 nodenv
+numericality
 oidc
 openapi
 openapitools
@@ -138,6 +143,7 @@ protobuf
 pyenv
 pytest
 railtie
+railties
 Rakefile
 rdebug
 readline
