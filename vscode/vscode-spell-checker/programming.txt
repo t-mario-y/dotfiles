@@ -85,6 +85,7 @@ gocoverage
 gocovmerge
 gofmt
 golint
+gpio
 grpc
 gserviceaccount
 hadolint
@@ -118,6 +119,7 @@ marketo
 middlewares
 mkdir
 mockdate
+mruby
 multipass
 mypy
 navi
@@ -130,6 +132,8 @@ openapitools
 openjdk
 optparse
 overridable
+pico
+picoruby
 pino
 pipenv
 POSIX
