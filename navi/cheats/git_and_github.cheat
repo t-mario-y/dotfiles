@@ -13,7 +13,7 @@ git rebase upstream/<select_local_branch_name>
 git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n100 | \
   fzf-tmux -p -w90% --ansi --reverse | awk '{print $2}' | xargs git rebase --interactive
 
-# show log graph by oneline
+# show log graph by one-line
 git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n100
 
 # merge upstream branch
@@ -44,6 +44,9 @@ cat <(git diff HEAD --name-only) <(git diff upstream/develop... --name-only) | \
 
 # soft reset to HEAD
 git reset --soft HEAD
+
+# print latest commit
+git rev-parse HEAD
 
 # print current branch name
 git symbolic-ref --short HEAD
