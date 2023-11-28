@@ -7,7 +7,7 @@ multipass launch時にcloud-initにより公開鍵を設定する。
 
 ```sh
 multipass launch \
-  --cpus=6 --disk=20G --mem=8G --name=multipass-vm \
+  --cpus=6 --disk=20G --memory=16G --name=multipass-vm \
   --cloud-init ~/dotfiles/multipass/cloud-init.yaml
 
 multipass ls
