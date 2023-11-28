@@ -12,7 +12,7 @@ fi
 if type asdf > /dev/null 2>&1; then
   echo 'asdf is already installed.'
 else
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.0
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 fi
 
 if type navi > /dev/null 2>&1; then
