@@ -4,13 +4,14 @@ set -eu
 
 sudo apt-get update
 sudo apt-get upgrade -y
+# libz-dev for asdf-ruby, unzip for asdf-ghq
 sudo apt-get install -y --no-install-recommends \
   build-essential \
   ca-certificates \
   curl \
-  libz-dev \ # for asdf-ruby
+  libz-dev \
   lsb-release \
-  unzip \ # for asdf-ghq
+  unzip \
   zsh
 sudo apt-add-repository ppa:git-core/ppa -y
 sudo apt-get install -y git
