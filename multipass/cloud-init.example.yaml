@@ -1,4 +1,4 @@
 # cloud-config
 ssh_authorized_keys:
   # cloud-init.yaml にコピーし、生成した公開鍵を貼り付ける。
-  - "ssh-rsa DummyPublicKey dummy@example.com"
+  - "ssh-rsa ExamplePublicKey fake@example.com"
