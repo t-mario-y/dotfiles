@@ -3,7 +3,7 @@ brew install multipass
 
 ```
 
-multipass launch時にcloud-initにより公開鍵を設定する。
+SSH接続のため、multipass launch時にcloud-initにより予め公開した鍵を設定する。
 
 ```sh
 multipass launch \
@@ -26,7 +26,8 @@ ssh <ユーザ名、デフォルトはubuntu>@<IPv4アドレス、multipass info
 ```
 
 `~/.ssh/config`の設定例は下記の通り。
-```
+
+```sh
 Host multipass-vm
   HostName 192.168.64.4
   User ubuntu
