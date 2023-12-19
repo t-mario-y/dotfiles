@@ -88,11 +88,13 @@ golint
 gpio
 grpc
 gserviceaccount
+gteq
 hadolint
 Hankaku
 hashicorp
 Horusec
 hotfix
+iframe
 innodb
 intellij
 jbuilder
@@ -114,6 +116,7 @@ litestream
 localstack
 localstorage
 Loggable
+lteq
 ltsv
 marketo
 middlewares
