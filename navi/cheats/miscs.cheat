@@ -100,6 +100,10 @@ yarn audit --group dependencies --level critical
 # refresh current process as login shell
 exec $SHELL --login
 
+% eslint
+# run for upstream branch diff
+cat <(git diff HEAD --name-only) <(git diff upstream/main... --name-only)  | grep \.ts | xargs -I {} npx eslint --quiet {}
+
 % utils
 # infinity loop (write 'done')
 while [ 1 = 1 ]; do
