@@ -35,6 +35,7 @@ cidr
 cimg
 circleci
 claide
+clazz
 cloudbuild
 cloudwatch
 clusterops
@@ -59,7 +60,9 @@ dotfiles
 dpkg
 dynamodb
 editability
+elif
 encryptor
+enquete
 entrypoint
 enumerize
 erblint
@@ -122,6 +125,7 @@ marketo
 middlewares
 mkdir
 mockdate
+mouseevent
 mruby
 multipass
 mypy
@@ -210,6 +214,7 @@ uroot
 VARCHAR
 vcpus
 vercel
+vite
 webp
 wkhtmltopdf
 WORKDIR
