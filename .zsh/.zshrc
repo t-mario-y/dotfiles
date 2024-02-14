@@ -19,6 +19,10 @@ export LC_ALL=en_US.UTF-8
 . $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
 
+# https://cli.github.com/manual/gh_completion
+# does not work in zsh on Ubuntu via ssh
+fpath=(~/gh_cli_completions $fpath)
+
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
