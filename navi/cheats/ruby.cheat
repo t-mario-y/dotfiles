@@ -11,11 +11,6 @@ bin/rails server --port=3001
 # launch Resque process with rake
 env QUEUE="*" TERM_CHILD=1 bin/rake environment resque:work
 
-% Rails, Resque
-
-# launch Rails console with RESQUE_INLINE
-env RESQUE_INLINE=1 DISABLE_SPRING=1 bin/rails console
-
 % Rails, debug
 
 # launch Rails server with ruby-debug-ide
@@ -23,11 +18,8 @@ bundle exec rdebug-ide --host 0.0.0.0 --port 1235 --dispatcher-port 1235 -- bin/
 
 % Rails, Resque, debug
 
-# launch Rails console with ruby-debug-ide
-env RESQUE_INLINE=1 DISABLE_SPRING=1 bundle exec rdebug-ide --host 0.0.0.0 --port 1236 --dispatcher-port 1236 -- bin/rails console
-
-# launch Rails server with RESQUE_INLINE with ruby-debug-ide
-env RESQUE_INLINE=1 bundle exec rdebug-ide --host 0.0.0.0 --port 1235 --dispatcher-port 1235 -- bin/rails server --port=3001
+# launch Rails console with debug(rdbg)
+env DISABLE_PRY_RAILS=1 DISABLE_SPRING=1 rdbg -c -n -- bin/rails console -- --nomultiline
 
 % RSpec
 
