@@ -95,6 +95,7 @@ gteq
 hadolint
 Hankaku
 hashicorp
+helmfile
 Horusec
 hotfix
 iframe
@@ -167,6 +168,7 @@ resque
 retryable
 Ricty
 ripgrep
+Rollouts
 rubocop
 RUBYOPT
 scalamock
