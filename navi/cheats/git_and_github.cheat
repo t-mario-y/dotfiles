@@ -70,6 +70,9 @@ $ local_or_global_or_all: echo '--global\n--local\n' --- --fzf-overrides --rever
 # print diff files compared to upstream develop branch
 cat <(git diff HEAD --name-only) <(git diff upstream/develop... --name-only)
 
+# use delta as viewer temporary
+GIT_PAGER=delta git diff
+
 # fetch remote all
 git fetch --all
 

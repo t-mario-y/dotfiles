@@ -113,3 +113,7 @@ sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g'
 
 # print diff line only (same for git diff)
 ls -p | grep -v / | fzf-tmux -p --multi --reverse -w90% --exit-0 | xargs -t diff --unified=1 | grep -P '^\+'
+
+% AWS S3
+# show content like cat
+aws s3 cp {object_path} -
