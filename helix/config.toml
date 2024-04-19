@@ -1,0 +1,9 @@
+theme = "monokai_pro_octagon"
+
+[editor]
+true-color = true
+shell = ["zsh", "-c"]
+
+[editor.cursor-shape]
+insert = "bar"
+select = "underline"
