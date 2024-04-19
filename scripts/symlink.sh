@@ -14,7 +14,7 @@ if [ "$(uname)" = 'Linux' ]; then
 fi
 
 if [ "$(uname)" = 'Darwin' ]; then
-  mkdir -p "$HOME"/Library/Application\ Support/lazygit "$HOME"/Library/Application\ Support/navi
+  mkdir -p "$HOME"/Library/Application\ Support/lazygit
   lazygit_config_file=$HOME/Library/Application\ Support/lazygit/config.yml
 fi
 
