@@ -5,7 +5,7 @@
 
 ```shell script
 # macOS/Linuxでは、シンボリックファイルで管理する。
-ln -snfv ~/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -snfv ~/dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 
 # Windowsでは下記の手順を取る。
 # - scoopを使用してインストールする。https://github.com/ScoopInstaller/Extras/blob/master/bucket/alacritty.json
