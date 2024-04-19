@@ -9,7 +9,6 @@ ln -snfv ~/dotfiles/.tmux/.tmux.conf ~/.tmux.conf
 ln -snfv ~/dotfiles/starship.toml    ~/.config/starship.toml
 mkdir -p ~/.config/navi
 ln -snfv ~/dotfiles/navi/config.yaml ~/.config/navi/config.yaml
-
 if [ "$(uname)" = 'Linux' ]; then
   mkdir -p ~/.config/lazygit
   lazygit_config_file=~/.config/lazygit/config.yml
@@ -20,4 +19,4 @@ if [ "$(uname)" = 'Darwin' ]; then
   lazygit_config_file=$HOME/Library/Application\ Support/lazygit/config.yml
 fi
 
-ln -snfv ~/dotfiles/.config/lazygit/config.yml "$lazygit_config_file"
+ln -snfv ~/dotfiles/lazygit/config.yml "$lazygit_config_file"
