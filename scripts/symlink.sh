@@ -6,7 +6,7 @@ ln -snfv ~/dotfiles/.zsh/.zshrc      ~/.zshrc
 ln -snfv ~/dotfiles/.gitconfig       ~/.gitconfig
 ln -snfv ~/dotfiles/.tmux/.tmux.conf ~/.tmux.conf
 mkdir -p ~/.config/navi
-ln -snfv ~/dotfiles/.config/starship.toml ~/.config/starship.toml
+ln -snfv ~/dotfiles/starship.toml ~/.config/starship.toml
 
 if [ "$(uname)" = 'Linux' ]; then
   mkdir -p ~/.config/lazygit
