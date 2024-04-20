@@ -3,4 +3,4 @@ size = 14
 
 [shell]
 program = "/bin/zsh"
-args = [ "--login" ]
+args = ["--login"]

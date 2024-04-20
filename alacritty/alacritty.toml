@@ -1,1 +1,4 @@
-import = ["~/dotfiles/alacritty/alacritty.common.toml", "~/dotfiles/alacritty/alacritty.local.toml"]
+import = [
+  "~/dotfiles/alacritty/alacritty.common.toml",
+  "~/dotfiles/alacritty/alacritty.local.toml",
+]

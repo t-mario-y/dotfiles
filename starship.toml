@@ -3,7 +3,7 @@
 # Don't print a new line at the start of the prompt
 add_newline = false
 
-command_timeout=1500
+command_timeout = 1500
 
 [aws]
 format = "on [$symbol$profile]($style) "

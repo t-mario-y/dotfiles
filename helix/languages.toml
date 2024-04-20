@@ -26,5 +26,5 @@ language-servers = [
     "completion",
     "rename-symbol",
   ] },
-  "sorbet"
+  "sorbet",
 ]
