@@ -2,4 +2,4 @@
 git:
   branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --"
 os:
-  openCommand: "code {{filename}}"
+  open: "code {{filename}}"
