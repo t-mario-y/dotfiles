@@ -1,0 +1,7 @@
+% tmux
+
+# launch or attach
+tmux attach-session -t0 || tmux new-session -t0
+
+# restart t0 session
+tmux kill-session -t0 && tmux new-session -t0
