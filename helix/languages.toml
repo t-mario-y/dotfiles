@@ -13,6 +13,7 @@ args = ["lsp"]
 [[language]]
 name = "typescript"
 language-servers = ["deno-lsp"]
+auto-format = true
 
 [[language]]
 name = "ruby"
@@ -28,3 +29,8 @@ language-servers = [
   ] },
   "sorbet",
 ]
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["format", "-"] }
+auto-format = true
