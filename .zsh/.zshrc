@@ -90,7 +90,7 @@ eval "$(navi widget zsh)"
 # starship
 eval "$(starship init zsh)"
 
-# tmux(install manually)
+# tmux(install manually) and other original executables
 export PATH="${PATH}:/.local/bin"
 # tmuxのデフォルトをzshに固定する
 export ZSH_PATH_FOR_TMUX="$(which zsh)"
