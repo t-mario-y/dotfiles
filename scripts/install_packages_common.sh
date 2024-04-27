@@ -28,7 +28,6 @@ else
 fi
 
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs
-asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby
 asdf plugin add delta https://github.com/andweeb/asdf-delta
 asdf plugin add ghq https://github.com/kajisha/asdf-ghq
 asdf plugin add lazygit https://github.com/nklmilojevic/asdf-lazygit
