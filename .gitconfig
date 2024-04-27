@@ -1,9 +1,8 @@
 [user]
 	name = t-mario-y
 [core]
-	editor = code --wait
+	editor = helix
 [pull]
 	rebase = false
-[include] # 公開リポジトリに置かない情報をincludeする。
+[include]
 	path = ~/dotfiles/.gitconfig.local
-# user.email
