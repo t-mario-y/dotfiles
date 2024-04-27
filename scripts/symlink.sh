@@ -2,12 +2,12 @@
 
 set -eu
 
+mkdir -p ~/.config/{helix,navi}
 ln -snfv ~/dotfiles/.zsh/.zshrc      ~/.zshrc
 ln -snfv ~/dotfiles/.gitconfig       ~/.gitconfig
 ln -snfv ~/dotfiles/.tool-versions   ~/.tool-versions
 ln -snfv ~/dotfiles/.tmux/.tmux.conf ~/.tmux.conf
 ln -snfv ~/dotfiles/starship.toml    ~/.config/starship.toml
-mkdir -p ~/.config/{helix,navi}
 ln -snfv ~/dotfiles/helix/config.toml    ~/.config/helix/config.toml
 ln -snfv ~/dotfiles/helix/languages.toml ~/.config/helix/languages.toml
 ln -snfv ~/dotfiles/navi/config.yaml     ~/.config/navi/config.yaml
