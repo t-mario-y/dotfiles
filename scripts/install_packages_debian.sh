@@ -20,8 +20,8 @@ else
 fi
 sudo apt install gh
 
-if type tmux > /dev/null 2>&1 && [ "$(tmux -V)" = 'tmux 3.3a' ]; then
-  echo 'tmux 3.3a is already installed.'
+if type tmux > /dev/null 2>&1 && [ "$(tmux -V)" = 'tmux 3.4' ]; then
+  echo 'tmux 3.4 is already installed.'
 else
   sudo apt-get remove -y tmux
   sudo apt-get install -y --no-install-recommends \
@@ -32,17 +32,17 @@ else
     pkg-config
 
   cd "$HOME"
-  wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz
-  tar xzf tmux-3.3a.tar.gz
-  cd tmux-3.3a
-  ./configure --prefix="${ROOT_DIR}"/.local \
-    CFLAGS="-I${ROOT_DIR}/.local/include -I${ROOT_DIR}/.local/include/ncurses" \
-    LDFLAGS="-L${ROOT_DIR}/.local/include -L${ROOT_DIR}/.local/include/ncurses -L${ROOT_DIR}/.local/lib"
+  wget https://github.com/tmux/tmux/releases/download/3.4/tmux-3.4.tar.gz
+  tar xzf tmux-3.4.tar.gz
+  cd tmux-3.4
+  ./configure --prefix="$HOME"/.local \
+    CFLAGS="-I$HOME/.local/include -I$HOME/.local/include/ncurses" \
+    LDFLAGS="-L$HOME/.local/include -L$HOME/.local/include/ncurses -L$HOME/.local/lib"
   make
   sudo make install
   cd ..
-  rm tmux-3.3a.tar.gz
-  rm -rf tmux-3.3a
+  rm tmux-3.4.tar.gz
+  rm -rf tmux-3.4
   cd dotfiles
 
   TPM_PATH=~/.tmux/plugins/tpm
