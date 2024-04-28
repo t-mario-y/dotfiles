@@ -1,7 +1,7 @@
 [user]
 	name = t-mario-y
 [core]
-	editor = helix
+	editor = hx
 [pull]
 	rebase = false
 [include]
