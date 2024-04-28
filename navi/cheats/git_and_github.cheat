@@ -16,6 +16,9 @@ git log --graph --color=always --abbrev-commit --decorate --date=relative --pret
 # show log graph by one-line
 git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n100
 
+# git log for deleted files
+git log --all -- 
+
 # merge upstream branch
 git merge --no-ff upstream/<select_local_branch_name>
 
