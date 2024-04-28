@@ -35,7 +35,7 @@ else
   curl -sLO https://github.com/tmux/tmux/releases/download/3.4/tmux-3.4.tar.gz
   tar xzf tmux-3.4.tar.gz
   cd tmux-3.4
-  ./configure --prefix="$HOME"/.local \
+  ./configure --enable-sixel --prefix="$HOME"/.local \
     CFLAGS="-I$HOME/.local/include -I$HOME/.local/include/ncurses" \
     LDFLAGS="-L$HOME/.local/include -L$HOME/.local/include/ncurses -L$HOME/.local/lib"
   make
