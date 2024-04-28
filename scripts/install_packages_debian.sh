@@ -32,7 +32,7 @@ else
     pkg-config
 
   cd "$HOME"
-  wget https://github.com/tmux/tmux/releases/download/3.4/tmux-3.4.tar.gz
+  curl -sLO https://github.com/tmux/tmux/releases/download/3.4/tmux-3.4.tar.gz
   tar xzf tmux-3.4.tar.gz
   cd tmux-3.4
   ./configure --prefix="$HOME"/.local \
