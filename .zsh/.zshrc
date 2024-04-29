@@ -95,4 +95,6 @@ export PATH="${PATH}:$HOME/.local/bin"
 # tmuxのデフォルトをzshに固定する
 export ZSH_PATH_FOR_TMUX="$(which zsh)"
 
+export EDITOR=hx
+
 autoload -Uz compinit && compinit
