@@ -12,7 +12,14 @@ RUN_CONTAINER_AND_ATTACH_TO_SHELL_COMMAND=$(docker image ls --format={{.Reposito
   xargs -I{} echo docker run --rm -it --entrypoint=bash {}) \
   && eval $RUN_CONTAINER_AND_ATTACH_TO_SHELL_COMMAND
 
-# attach container with bash
+# run container and attach shell
+ATTACH_TO_CONTAINER_SHELL_COMMAND=$(
+  docker container ls --format={{.Names}} | \
+  fzf-tmux -p --reverse --select-1 --exit-0 | \
+  xargs -I{} echo docker exec -it {} bash) \
+  && eval $ATTACH_TO_CONTAINER_SHELL_COMMAND
+
+# attach running container shell
 ATTACH_TO_CONTAINER_SHELL_COMMAND=$(
   docker container ls --format={{.Names}} | \
   fzf-tmux -p --reverse --select-1 --exit-0 | \
