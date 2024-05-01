@@ -12,8 +12,14 @@ args = ["lsp"]
 
 [[language]]
 name = "typescript"
-language-servers = ["deno-lsp"]
+language-id = "typescript"
+scope = "source.ts"
+injection-regex = "^(ts|typescript)$"
+file-types = ["ts"]
+shebangs = ["deno"]
+roots = ["deno.json", "deno.jsonc", "package.json"]
 auto-format = true
+language-servers = ["deno-lsp"]
 
 [[language]]
 name = "ruby"
