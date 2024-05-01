@@ -1,5 +1,8 @@
 % tmux
 
+# attach session: findOrCreate
+bsterm tmux attach -w $(ghq list --full-path|fzf)
+
 # new session with name
 tmux new-session -s 
 
