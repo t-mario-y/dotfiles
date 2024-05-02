@@ -52,3 +52,6 @@ bundle list --name-only | xargs bundle exec gem dependency --reverse-dependencie
 % RuboCop
 # run for target ruby file interactive
 git ls-files -- ':*.rb' ':*.rake' ':*Rakefile' | fzf-tmux -p --reverse -w90% --exit-0 | xargs bundle exec rubocop
+
+# show cops
+bundle ex rubocop --show-cops
