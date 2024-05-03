@@ -21,6 +21,7 @@ FORMULAE=(
   shellcheck
   tmux
   tree
+  wezterm
 )
 
 for item in "${FORMULAE[@]}"; do
