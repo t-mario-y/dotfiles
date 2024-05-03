@@ -38,4 +38,15 @@ asdf plugin-add yq https://github.com/beardix/asdf-yq
 
 asdf install
 
+cargo install --locked \
+bat \
+broot \
+fd-find \
+git-delta \
+ripgrep \
+taplo-cli \
+yazi-cli \
+yazi-fm \
+zoxide
+
 npm install -g tldr
