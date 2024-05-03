@@ -12,5 +12,8 @@ tmux attach-session -t
 # kill session with completion
 tmux kill-session -t
 
+# focus tmux workspace: currently specified
+bstmux attach-session -w ~/dotfiles
+
 # focus VSCode by ghq, tmux
 TGT=$(tmux new-window -P); tmux send-keys -t "$TGT" "ghq list | fzf --reverse | xargs ghq list --full-path --exact | xargs code && exit" enter
