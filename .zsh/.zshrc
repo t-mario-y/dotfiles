@@ -48,6 +48,9 @@ if [ -f ~/dotfiles/.zsh/local.zsh ]; then
   source ~/dotfiles/.zsh/local.zsh
 fi
 
+alias lzg='lazygit'
+alias lzd='lazydocker'
+
 bindkey -r "^N" # down-line-or-history
 bindkey -r "^P" # up-line-or-history
 bindkey -r "^O" # accept-line-and-down-history
