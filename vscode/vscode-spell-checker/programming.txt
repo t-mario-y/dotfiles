@@ -52,6 +52,7 @@ datepicker
 datetime
 ddtrace
 demodulize
+deno
 deps
 direnv
 Discretionaries
