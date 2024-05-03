@@ -19,10 +19,10 @@ echo '{"name": "Mario"}' | node -e 'console.log(JSON.parse(fs.readFileSync("/dev
 # update dotfiles repository
 cd ~/dotfiles && git pull && scripts/symlink.sh && cd -
 
-# update tools(macOS)
+# upgrade tools(macOS)
 brew update && brew upgrade && brew cleanup
 
-# update tools(Debian)
+# upgrade tools(Debian)
 sudo apt-get update && sudo apt-get upgrade -y && \
 sudo apt update && sudo apt-get upgrade -y && \
 sudo apt-get autoremove -y
