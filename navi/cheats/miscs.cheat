@@ -100,6 +100,12 @@ cat <(git diff HEAD --name-only) <(git diff upstream/main... --name-only)  | gre
 # infinity loop (write 'done')
 while [ 1 = 1 ]; do
 
+# unarchive & unzip .tar.gz
+tar -xvzf foo.tar.gz
+
+# archive & zip to .tar.gz
+tar -cvzf foo.tar.gz {file_or_dir}
+
 # remove color from any output
 sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g'
 
