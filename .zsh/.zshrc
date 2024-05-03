@@ -102,7 +102,5 @@ export ZSH_PATH_FOR_TMUX="$(which zsh)"
 
 # helix editor
 export EDITOR=hx
-# https://github.com/helix-editor/helix/wiki/Debugger-Configurations#installation-instructions
-$(brew --prefix)/opt/llvm/bin
 
 autoload -Uz compinit && compinit
