@@ -1,4 +1,4 @@
-theme = "monokai_pro_octagon"
+theme = "dracula"
 
 [editor]
 true-color = true
