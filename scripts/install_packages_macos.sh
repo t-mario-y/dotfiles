@@ -10,7 +10,7 @@ brew upgrade
 
 FORMULAE=(
   awscli
-  bat
+  colima
   coreutils
   copyq
   gawk
@@ -18,7 +18,6 @@ FORMULAE=(
   git
   jq
   multipass
-  ripgrep
   shellcheck
   tmux
   tree
