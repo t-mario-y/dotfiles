@@ -10,3 +10,4 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+git-ignore = false # TODO: ignore usecase is project-specific
