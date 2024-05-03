@@ -103,4 +103,7 @@ export ZSH_PATH_FOR_TMUX="$(which zsh)"
 # helix editor
 export EDITOR=hx
 
+# deno
+export PATH="$PATH:$HOME/.deno/bin"
+
 autoload -Uz compinit && compinit

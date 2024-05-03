@@ -2,6 +2,7 @@
 
 set -eu
 
+curl -fsSL https://deno.land/install.sh | sh
 if type fzf > /dev/null 2>&1; then
   echo 'fzf is already installed.'
 else
