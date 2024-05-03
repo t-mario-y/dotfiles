@@ -109,3 +109,10 @@ ls -p | grep -v / | fzf-tmux -p --multi --reverse -w90% --exit-0 | xargs -t diff
 % AWS S3
 # show content like cat
 aws s3 cp {object_path} -
+
+% HTTP
+# simply GET
+cURL -sSL {URI}
+
+# Download file with default name: to specify, -o <name>
+cURL -sSLO {URI}
