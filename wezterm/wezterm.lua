@@ -2,10 +2,6 @@ local wezterm = require 'wezterm'
 
 local config = {
   color_scheme = 'Dracula',
-  font = wezterm.font_with_fallback({
-    { family = "JetBrainsMono Nerd Font",  weight = "Bold" },
-    { family = "Hiragino Kaku Gothic Pro", weight = "Bold" }, -- only effective on macOS
-  }),
   font_size = 14.0,
   line_height = 0.85,
   hide_tab_bar_if_only_one_tab = true,
@@ -19,5 +15,12 @@ local config = {
     { key = "f",          mods = 'CMD', action = wezterm.action.DisableDefaultAssignment },
   }
 }
+
+if wezterm.target_triple == "aarch64-apple-darwin" then
+  config.font = wezterm.font_with_fallback({
+    { family = "JetBrainsMono Nerd Font",  weight = "Bold" },
+    { family = "Hiragino Kaku Gothic Pro", weight = "Bold" }, -- only effective on macOS
+  })
+end
 
 return config
