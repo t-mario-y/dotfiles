@@ -3,6 +3,8 @@
 set -eu
 
 curl -fsSL https://deno.land/install.sh | sh
+curl -fsS  https://sh.rustup.rs | sh
+
 if type fzf > /dev/null 2>&1; then
   echo 'fzf is already installed.'
 else
