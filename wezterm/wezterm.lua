@@ -2,8 +2,8 @@ local wezterm = require 'wezterm'
 
 local config = {
   color_scheme = 'Dracula',
-  font_size = 14.0,
-  line_height = 0.85,
+  font_size = 16,
+  line_height = 0.75,
   hide_tab_bar_if_only_one_tab = true,
   -- window_background_opacity = 0.8,
   keys = {
