@@ -88,6 +88,15 @@ function open_result_to_vscode() {
 zle -N open_result_to_vscode
 bindkey "^N" open_result_to_vscode
 
+# OSC 52 based copy
+function tclip(){
+  if [ $# -eq 0 ]; then
+    printf "\e]52;c;%s\a" "$(base64 -w 0)"
+  else
+    printf "\e]52;c;%s\a" "$(printf "%s" "$*" | base64 -w 0)"
+  fi
+}
+
 # navi(install manually)
 export PATH="${PATH}:$HOME/.cargo/bin"
 eval "$(navi widget zsh)"
