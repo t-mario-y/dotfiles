@@ -2,8 +2,19 @@
 
 set -eu
 
+# These commands are easy, but wait user input
 curl -fsSL https://deno.land/install.sh | sh
 curl -fsS  https://sh.rustup.rs | sh
+cargo install --locked \
+  bat \
+  broot \
+  fd-find \
+  git-delta \
+  ripgrep \
+  taplo-cli \
+  yazi-cli \
+  yazi-fm \
+  zoxide
 
 if type fzf > /dev/null 2>&1; then
   echo 'fzf is already installed.'
@@ -37,16 +48,5 @@ asdf plugin add lazygit https://github.com/nklmilojevic/asdf-lazygit
 asdf plugin-add yq https://github.com/beardix/asdf-yq
 
 asdf install
-
-cargo install --locked \
-bat \
-broot \
-fd-find \
-git-delta \
-ripgrep \
-taplo-cli \
-yazi-cli \
-yazi-fm \
-zoxide
 
 npm install -g tldr
