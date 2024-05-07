@@ -1,7 +1,7 @@
 theme = "dracula"
 
 [editor]
-true-color = true
+auto-save = true
 shell = ["zsh", "-c"]
 
 [editor.cursor-shape]
@@ -15,6 +15,10 @@ git-ignore = false # TODO: ignore usecase is project-specific
 [editor.whitespace.render]
 space = 'all'
 tab = 'all'
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
 
 [keys.normal]
 tab = ":buffer-next"
