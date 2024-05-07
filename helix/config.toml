@@ -23,3 +23,5 @@ S-tab = ":buffer-previous"
 # custom integrations
 [keys.normal.'+']
 g = ":sh tmux display-message -p -F\"#{pane_current_path}\" | xargs tmux display-popup -xC -yC -w90% -h90% -E lazygit -p"
+# incomplete. need to open selected file on helix instance
+f = ":sh tmux display-message -p -F\"#{pane_current_path}\" | xargs tmux display-popup -xC -yC -w90% -h90% -E yazi"
