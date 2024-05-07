@@ -1,9 +1,6 @@
-[font]
-size = 14
-
 [shell]
-program = "/bin/zsh"
 args = ["--login"]
+program = "/bin/zsh"
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
@@ -16,3 +13,13 @@ style = "Italic"
 [font.normal]
 family = "JetBrainsMono Nerd Font"
 style = "Regular"
+
+[[keyboard.bindings]]
+key = "Left"
+mods = "Alt"
+chars = "\u001BB"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Alt"
+chars = "\u001BF"
