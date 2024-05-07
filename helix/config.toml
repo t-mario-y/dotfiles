@@ -19,3 +19,7 @@ tab = 'all'
 [keys.normal]
 tab = ":buffer-next"
 S-tab = ":buffer-previous"
+
+# custom integrations
+[keys.normal.'+']
+g = ":sh tmux display-message -p -F\"#{pane_current_path}\" | xargs tmux display-popup -xC -yC -w90% -h90% -E lazygit -p"
