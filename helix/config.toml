@@ -11,3 +11,11 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 git-ignore = false # TODO: ignore usecase is project-specific
+
+[editor.whitespace.render]
+space = 'all'
+tab = 'all'
+
+[keys.normal]
+tab = ":buffer-next"
+S-tab = ":buffer-previous"
