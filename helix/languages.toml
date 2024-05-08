@@ -6,6 +6,17 @@ args = []
 command = "srb"
 args = ["tc", "--lsp"]
 
+[language-server.stree]
+command = "stree"
+args = [
+  "lsp",
+  "--plugins",
+  "plugin/single_quotes",
+  "plugin/trailing_comma",
+  '--print-width',
+  '120',
+]
+
 [language-server.deno-lsp]
 command = "deno"
 args = ["lsp"]
@@ -32,9 +43,12 @@ language-servers = [
     "goto-implementation",
     "completion",
     "rename-symbol",
+    "format",
   ] },
   "sorbet",
+  "stree",
 ]
+auto-format = true
 
 [[language]]
 name = "toml"
