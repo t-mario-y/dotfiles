@@ -1,3 +1,4 @@
+.idea
 .zsh/local.zsh
 .gitconfig.local
 alacritty/alacritty.local.toml
