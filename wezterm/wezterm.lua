@@ -1,7 +1,8 @@
 local wezterm = require 'wezterm'
 
 local config = {
-  color_scheme = 'Dracula',
+  color_scheme = 'JetBrains Darcula',
+    -- color_scheme = 'Darcula (base16)',
   font_size = 16,
   line_height = 0.75,
   hide_tab_bar_if_only_one_tab = true,

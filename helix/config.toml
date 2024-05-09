@@ -1,4 +1,5 @@
-theme = "dracula"
+theme = "jetbrains_dark"
+# theme = "darcula"
 
 [editor]
 auto-save = true
