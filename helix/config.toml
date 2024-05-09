@@ -12,6 +12,11 @@ select = "underline"
 hidden = false
 git-ignore = false # TODO: ignore usecase is project-specific
 
+[editor.statusline]
+mode.normal = "🍙NOR"
+mode.insert = "🔥INS"
+mode.select = "🟩SEL"
+
 [editor.whitespace.render]
 space = 'all'
 tab = 'all'
