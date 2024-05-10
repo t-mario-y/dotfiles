@@ -10,6 +10,9 @@ formatter = 'syntax_tree'
 command = "srb"
 args = ["tc", "--lsp"]
 
+[language-server.rubocop]
+command = "bundle"
+args = ["exec", "rubocop", "--lsp"]
 
 [language-server.deno-lsp]
 command = "deno"
@@ -30,6 +33,7 @@ language-servers = ["deno-lsp"]
 name = "ruby"
 language-servers = [
   { name = "ruby-lsp", except-features = [
+    "diagnostics",
     "goto-definition",
     "goto-declaration",
     "goto-type-definition",
@@ -38,6 +42,7 @@ language-servers = [
     "completion",
     "rename-symbol",
   ] },
+  "rubocop",
   "sorbet",
 ]
 auto-format = true
