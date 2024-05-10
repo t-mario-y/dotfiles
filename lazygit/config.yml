@@ -3,3 +3,5 @@ git:
   branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --"
 os:
   open: "code {{filename}}"
+  # for OSC52 enabled terminal
+  copyToClipboardCmd: printf "\033]52;c;$(printf {{text}} | base64)\a" > /dev/tty
