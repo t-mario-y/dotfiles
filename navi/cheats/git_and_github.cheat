@@ -74,7 +74,7 @@ $ local_or_global_or_all: echo '--global\n--local\n' --- --fzf-overrides --rever
 cat <(git diff HEAD --name-only) <(git diff upstream/develop... --name-only)
 
 # use delta as viewer temporary
-GIT_PAGER=delta git diff
+GIT_PAGER=delta git diff -w
 
 # fetch remote all
 git fetch --all
