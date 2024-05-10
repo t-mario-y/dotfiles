@@ -122,6 +122,7 @@ litestream
 localstack
 localstorage
 Loggable
+lrange
 lteq
 ltsv
 marketo
