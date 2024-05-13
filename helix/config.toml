@@ -33,3 +33,10 @@ S-tab = ":buffer-previous"
 # custom integrations
 [keys.normal.'+']
 g = ":sh tmux display-message -p -F\"#{pane_current_path}\" | xargs tmux display-popup -xC -yC -w90% -h90% -E lazygit -p"
+o = [
+  ":new",
+  ":insert-output tmux display-popup -xC -yC -w90% -h90% -E 'yazi .' && pbpaste", # TODO: not using pbpaste
+  "goto_file",
+  "goto_last_modified_file",
+  ":buffer-close!",
+]
