@@ -14,6 +14,7 @@ FORMULAE=(
   coreutils
   copyq
   gawk
+  ggrep
   gh
   git
   jq

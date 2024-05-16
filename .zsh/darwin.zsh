@@ -7,6 +7,7 @@ if [ "$(uname -p)" = 'arm' ]; then
 fi
 
 alias base64='gbase64'
+alias grep='ggrep'
 
 # homebrewでinstallしたパッケージのcompletionを設定する。
 # 参考: https://docs.brew.sh/Shell-Completion
