@@ -4,7 +4,6 @@ set -eu
 
 brew tap github/gh
 brew tap homebrew/bundle
-brew tap homebrew/core
 
 brew upgrade
 
@@ -12,13 +11,14 @@ FORMULAE=(
   awscli
   colima
   coreutils
-  copyq
+  # copyq
   gawk
-  ggrep
+  grep
   gh
   git
+  helix
   jq
-  multipass
+  # multipass
   shellcheck
   tmux
   tree
