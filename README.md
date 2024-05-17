@@ -33,6 +33,8 @@ scripts/install_packages_(OS specific).sh
 [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
 [JetBrainsMono Nerd Font](https://github.com/Homebrew/homebrew-cask-fonts/blob/master/Casks/font-jetbrains-mono-nerd-font.rb)
 
+`brew install font-jetbrains-mono-nerd-font`
+
 ### Docker
 
 都度、公式のinstall手順(<https://docs.docker.com/engine/install/>)を参照する。
