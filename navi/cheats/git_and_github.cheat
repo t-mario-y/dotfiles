@@ -41,9 +41,9 @@ cd $(ghq list | fzf-tmux -p --reverse | xargs ghq list --full-path --exact)
 git add -N . && git reset --hard HEAD
 
 # hard reset target file
-cat <(git diff HEAD --name-only) <(git diff upstream/develop... --name-only) | \
+cat <(git diff HEAD --name-only) <(git diff upstream/main... --name-only) | \
   fzf-tmux -p -w90% | \
-  xargs git restore --source upstream/develop 
+  xargs git restore --source upstream/main 
 
 # soft reset to HEAD
 git reset --soft HEAD
@@ -70,8 +70,8 @@ git commit --amend --no-edit
 git config --list <local_or_global_or_all>
 $ local_or_global_or_all: echo '--global\n--local\n' --- --fzf-overrides --reverse
 
-# print diff files compared to upstream develop branch
-cat <(git diff HEAD --name-only) <(git diff upstream/develop... --name-only)
+# print diff files compared to upstream main branch
+cat <(git diff HEAD --name-only) <(git diff upstream/main... --name-only)
 
 # use delta as viewer temporary
 GIT_PAGER=delta git diff -w
