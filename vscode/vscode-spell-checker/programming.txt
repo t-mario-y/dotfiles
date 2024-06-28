@@ -40,6 +40,7 @@ cloudbuild
 cloudwatch
 clusterops
 codebuild
+codecov
 codeql
 compat
 compgen
@@ -135,6 +136,7 @@ multipass
 mypy
 navi
 nextjs
+nilable
 nodenv
 numericality
 oidc
@@ -167,6 +169,7 @@ recaptcha
 reduxjs
 referer
 resque
+restforce
 retryable
 Ricty
 ripgrep
