@@ -11,23 +11,18 @@ bin/rails server --port=3001
 # launch Resque process with rake
 env QUEUE="*" TERM_CHILD=1 bin/rake environment resque:work
 
-% Rails, debug
-
-# launch Rails server with ruby-debug-ide
-bundle exec rdebug-ide --host 0.0.0.0 --port 1235 --dispatcher-port 1235 -- bin/rails server --port=3001
-
-% Rails, Resque, debug
+% Rails
 
 # launch Rails console with debug(rdbg)
-env DISABLE_PRY_RAILS=1 DISABLE_SPRING=1 rdbg -c -n -- bin/rails console -- --nomultiline
+env DISABLE_SPRING=1 RUBY_DEBUG_IRB_CONSOLE=0 bin/rails console -- --nomultiline
 
 % RSpec
 
 # print spec structure
 bundle exec rspec -fd --order=defined --dry-run 
 
-# run for target ruby file interactive
-git ls-files -- ':*spec.rb' | fzf-tmux -p --reverse -w90% --exit-0 | xargs bundle exec rspec -fd --fail-fast
+# run target ruby file interactive
+git ls-files -- ':spec*.rb' | fzf-tmux -p --reverse -w90% --exit-0 | xargs bundle exec rspec -fd --fail-fast
 
 # show filtered test log
 tail --lines=100 --follow log/test.log | grep -v 'TRUNCATE TABLE'
