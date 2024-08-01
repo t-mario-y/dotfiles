@@ -17,3 +17,6 @@ bstmux session:attach -w ~/dotfiles
 
 # focus VSCode by ghq, tmux
 TGT=$(tmux new-window -P); tmux send-keys -t "$TGT" "ghq list | fzf --reverse | xargs ghq list --full-path --exact | xargs code && exit" enter
+
+# clear with tmux scroll buffer
+clear && tmux clear-history

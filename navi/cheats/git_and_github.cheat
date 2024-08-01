@@ -88,6 +88,9 @@ git remote | fzf-tmux -p --reverse | git remote remove
 # push to remote repository
 git remote | fzf-tmux -p --reverse | xargs -I{} git push --set-upstream {} $(git symbolic-ref --short HEAD)
 
+# skip ci by empty commit
+git commit --allow-empty -m '[skip ci]'
+
 % GitHub
 
 # search Pull Request and view on browser
