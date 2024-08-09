@@ -91,6 +91,12 @@ git remote | fzf-tmux -p --reverse | xargs -I{} git push --set-upstream {} $(git
 # skip ci by empty commit
 git commit --allow-empty -m '[skip ci]'
 
+# git grep: with line (n)umbers, not binary, (w)ord
+git grep -Inw 
+
+# simple grep: with line (n)umbers, (r)ecursive, (w)ord
+grep -nrw 
+
 % GitHub
 
 # search Pull Request and view on browser
