@@ -1,9 +1,9 @@
-import { serveDir } from 'jsr:@std/http/file-server';
+import { serveDir } from "jsr:@std/http/file-server";
 
 // PORT=3001 SERVE_DIR=coverage deno run --allow-all ~/dotfiles/utils/serve_dir.ts
-const dir = Deno.env.get('SERVE_DIR');
+const dir = Deno.env.get("SERVE_DIR");
 Deno.serve(
-  { port: parseInt(Deno.env.get('PORT') || '3001') },
+  { port: parseInt(Deno.env.get("PORT") || "3001") },
   (req: Request) => {
     const pathname = new URL(req.url).pathname;
     if (pathname.startsWith(`/${dir}`)) {
@@ -12,8 +12,8 @@ Deno.serve(
         urlRoot: dir,
       });
     }
-    return new Response('404: Not Found', {
+    return new Response("404: Not Found", {
       status: 404,
     });
-  }
+  },
 );
