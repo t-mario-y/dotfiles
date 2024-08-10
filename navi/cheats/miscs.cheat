@@ -1,9 +1,7 @@
 % jq
 
-$ yaml_file: fd --hidden ".*\.y[a]ml$" .
-
 # YAML to JSON
-yq e <yaml_file> --output-format json | jq
+git ls-files | grep -E ".*\.ya?ml$" | fzf-tmux | xargs -I{} yq e {} --output-format json | jq
 
 $ log_file: fd --no-ignore ".*\.log$" .
 
@@ -125,3 +123,7 @@ cURL -sSL {URI}
 
 # Download file with default name: to specify, -o <name>
 cURL -sSLO {URI}
+
+% fd
+# find including hidden files: not under git
+fd --hidden ".*\.ya?ml$" .
