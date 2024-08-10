@@ -8,6 +8,7 @@ fi
 
 alias base64='gbase64'
 alias grep='ggrep'
+alias awk='gawk'
 
 # homebrewでinstallしたパッケージのcompletionを設定する。
 # 参考: https://docs.brew.sh/Shell-Completion
