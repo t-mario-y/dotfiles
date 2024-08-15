@@ -215,6 +215,7 @@ tracefile
 trivy
 typecheck
 typeof
+Uncategorized
 unparse
 Unparser
 unscope
