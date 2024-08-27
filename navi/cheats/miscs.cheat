@@ -53,6 +53,12 @@ bash -c "compgen -c" | grep "^[a-z].*" | sort | uniq | fzf --reverse | xargs nav
 # open tldr-pages from input command
 navi --tldr 
 
+% process
+# search process by port
+lsof -P -i:
+# search process by name
+ps aux | grep 
+
 % kill
 # kill process by port (use sudo if needed)
 lsof -P -i:<port_number> | fzf-tmux -p --exit-0 | awk '{print $2}' | xargs kill -9
