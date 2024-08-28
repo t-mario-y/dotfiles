@@ -44,7 +44,10 @@ comm -3 <(cat <any_file_1> | sort) <(cat <any_file_2> | sort)
 
 % HTTP
 # simply GET
-cURL -sSL {URI}
+cURL -sSL 
 
 # Download file with default name: to specify, -o <name>
-cURL -sSLO {URI}
+cURL -sSLO 
+
+# with header
+cURL -i 
