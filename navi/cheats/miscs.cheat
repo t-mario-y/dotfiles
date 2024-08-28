@@ -8,10 +8,6 @@ $ log_file: fd --no-ignore ".*\.log$" .
 # show JSON string logs to JSON
 tail --lines=100 --follow <log_file> | jq -R 'fromjson?'
 
-% Node.js
-# node -e instead of jq
-echo '{"name": "Mario"}' | node -e 'console.log(JSON.parse(fs.readFileSync("/dev/stdin", "utf-8")).name);'
-
 % dotfiles
 
 # update dotfiles repository
@@ -53,26 +49,6 @@ bash -c "compgen -c" | grep "^[a-z].*" | sort | uniq | fzf --reverse | xargs nav
 # open tldr-pages from input command
 navi --tldr 
 
-% process
-# search process by port
-lsof -P -i:
-# search process by name
-ps aux | grep 
-
-% kill
-# kill process by port (use sudo if needed)
-lsof -P -i:<port_number> | fzf-tmux -p --exit-0 | awk '{print $2}' | xargs kill -9
-
-# kill process by name
-ps aux | grep <process_name> | fzf-tmux -p --reverse -w90% --exit-0 | awk '{print $2}' | xargs kill -9
-
-% file/dir size
-# human-readable, summarize
-du -hs 
-
-# human-readable
-du -h 
-
 % delta
 # cool diff(input two files with fzh file search)
 delta --line-numbers 
@@ -80,44 +56,9 @@ delta --line-numbers
 $ any_file_1: fd --no-ignore
 $ any_file_2: fd --no-ignore
 
-% comm
-# print lines only in one file(with -13 or -23)
-comm -3 <(cat <any_file_1> | sort) <(cat <any_file_2> | sort)
-
 % code CLI
 # open code from stdin with line number
  echo '' | xargs code --goto
-
-% yarn
-# see package dependency from specific package
-yarn why 
-
-# audit only critical in dependencies
-yarn audit --group dependencies --level critical
-
-% shell
-# refresh current process as login shell
-exec $SHELL --login
-
-% eslint
-# run for upstream branch diff
-cat <(git diff HEAD --name-only) <(git diff upstream/main... --name-only)  | grep \.ts | xargs -I {} npx eslint --quiet {}
-
-% utils
-# infinity loop (write 'done')
-while [ 1 = 1 ]; do
-
-# unarchive & unzip .tar.gz
-tar -xvzf foo.tar.gz
-
-# archive & zip to .tar.gz
-tar -cvzf foo.tar.gz {file_or_dir}
-
-# remove color from any output
-sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g'
-
-# print diff line only (same for git diff)
-ls -p | grep -v / | fzf-tmux -p --multi --reverse -w90% --exit-0 | xargs -t diff --unified=1 | grep -P '^\+'
 
 % AWS S3
 # show content like cat

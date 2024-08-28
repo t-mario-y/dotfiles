@@ -1,0 +1,14 @@
+% Node.js
+# node -e instead of jq
+echo '{"name": "Mario"}' | node -e 'console.log(JSON.parse(fs.readFileSync("/dev/stdin", "utf-8")).name);'
+
+% yarn
+# see package dependency from specific package
+yarn why 
+
+# audit only critical in dependencies
+yarn audit --group dependencies --level critical
+
+% eslint
+# run for upstream branch diff
+cat <(git diff HEAD --name-only) <(git diff upstream/main... --name-only)  | grep \.ts | xargs -I {} npx eslint --quiet {}

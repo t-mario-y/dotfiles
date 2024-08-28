@@ -1,0 +1,50 @@
+% process
+# search process by port
+lsof -P -i:
+# search process by name
+ps aux | grep 
+
+% kill
+# kill process by port (use sudo if needed)
+lsof -P -i:<port_number> | fzf-tmux -p --exit-0 | awk '{print $2}' | xargs kill -9
+
+# kill process by name
+ps aux | grep <process_name> | fzf-tmux -p --reverse -w90% --exit-0 | awk '{print $2}' | xargs kill -9
+
+% file/dir size
+# human-readable, summarize
+du -hs 
+
+# human-readable
+du -h 
+
+% shell
+# refresh current process as login shell
+exec $SHELL --login
+
+% utils
+# infinity loop (write 'done')
+while [ 1 = 1 ]; do
+
+# unarchive & unzip .tar.gz
+tar -xvzf foo.tar.gz
+
+# archive & zip to .tar.gz
+tar -cvzf foo.tar.gz {file_or_dir}
+
+# remove color from any output
+sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g'
+
+# print diff line only (same for git diff)
+ls -p | grep -v / | fzf-tmux -p --multi --reverse -w90% --exit-0 | xargs -t diff --unified=1 | grep -P '^\+'
+
+% comm
+# print lines only in one file(with -13 or -23)
+comm -3 <(cat <any_file_1> | sort) <(cat <any_file_2> | sort)
+
+% HTTP
+# simply GET
+cURL -sSL {URI}
+
+# Download file with default name: to specify, -o <name>
+cURL -sSLO {URI}
