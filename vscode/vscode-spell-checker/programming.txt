@@ -97,6 +97,7 @@ gteq
 hadolint
 Hankaku
 hashicorp
+healthz
 helmfile
 Horusec
 hotfix
