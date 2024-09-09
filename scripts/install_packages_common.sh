@@ -47,5 +47,3 @@ asdf plugin add lazygit https://github.com/nklmilojevic/asdf-lazygit
 asdf plugin-add yq https://github.com/beardix/asdf-yq
 
 asdf install
-
-npm install -g tldr
