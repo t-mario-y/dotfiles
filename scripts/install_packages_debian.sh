@@ -50,3 +50,7 @@ fi
 
 sudo apt upgrade && sudo apt install -y \
   shellcheck
+
+sudo add-apt-repository ppa:maveonair/helix-editor
+sudo apt update
+sudo apt install helix
