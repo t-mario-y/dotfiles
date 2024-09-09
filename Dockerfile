@@ -7,7 +7,8 @@ RUN apt-get update && \
       git \
       sudo \
       zsh && \
-    useradd -s /usr/bin/zsh -g 1000 dotfiles_test
+    useradd -s /usr/bin/zsh -g 1000 dotfiles_test && \
+    echo -e "foo\nfoo\n" | passwd dotfiles_test
 
 USER dotfiles_test
 WORKDIR /home/dotfiles_test
