@@ -7,7 +7,6 @@ sudo apt-get upgrade && sudo apt-get install -y --no-install-recommends \
   tree 
 sudo apt-get autoremove -y
 sudo apt upgrade && sudo apt install -y \
-  bat \
   shellcheck
 
 if type gh > /dev/null 2>&1; then
