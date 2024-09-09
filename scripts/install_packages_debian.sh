@@ -6,8 +6,6 @@ sudo apt-get upgrade && sudo apt-get install -y --no-install-recommends \
   jq \
   tree 
 sudo apt-get autoremove -y
-sudo apt upgrade && sudo apt install -y \
-  shellcheck
 
 if type gh > /dev/null 2>&1; then
   echo 'gh is already installed.'
@@ -49,3 +47,6 @@ else
     git clone https://github.com/tmux-plugins/tpm $TPM_PATH
   fi
 fi
+
+sudo apt upgrade && sudo apt install -y \
+  shellcheck
