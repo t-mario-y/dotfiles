@@ -15,6 +15,7 @@ RUN useradd -s /usr/bin/zsh -g 1000 dotfiles_test && \
     usermod -G sudo dotfiles_test 
 
 USER dotfiles_test
+WORKDIR /home/dotfiles_test
 
 # test script:
 # docker build -t dotfiles_test:latest .
