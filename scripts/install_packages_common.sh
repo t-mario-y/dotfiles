@@ -41,7 +41,6 @@ else
   sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)" -y --force
 fi
 
-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs
 asdf plugin add ghq https://github.com/kajisha/asdf-ghq
 asdf plugin add lazydocker https://github.com/comdotlinux/asdf-lazydocker.git
 asdf plugin add lazygit https://github.com/nklmilojevic/asdf-lazygit
