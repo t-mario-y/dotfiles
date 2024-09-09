@@ -24,4 +24,7 @@ WORKDIR /home/dotfiles_test
 # docker build -t dotfiles_test:latest .
 # docker run --rm -it dotfiles_test:latest
 # git clone https://github.com/t-mario-y/dotfiles
-# ...
+# cd dotfiles
+# scripts/symlink.sh
+# scripts/install_initial_debian.sh
+# scripts/install_packages_debian.sh
