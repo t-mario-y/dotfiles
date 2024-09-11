@@ -62,8 +62,8 @@ function print_buffer_to_vscode() {
     return 0
   fi
   # TODO: back slash escape
-  BUFFER=$(echo $BUFFER | deno eval '
-    const input = new TextDecoder("utf-8").decode(Deno.readFileSync("/dev/stdin", "utf-8"))
+  BUFFER=$(echo $BUFFER | node -e '
+    const input = fs.readFileSync("/dev/stdin", "utf-8")
       .replace(/"/g, `\\"`)
       .replace(/!/g, "\\!")
       .replace(/`/g, "\\`");
