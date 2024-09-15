@@ -104,10 +104,11 @@ eval "$(navi widget zsh)"
 # starship
 eval "$(starship init zsh)"
 
-# tmux(install manually) and other original executables
+# custom commands path
 export PATH="${PATH}:$HOME/.local/bin"
-# tmuxのデフォルトをzshに固定する
-export ZSH_PATH_FOR_TMUX="$(which zsh)"
+
+# see also ~/.tmux/.tmux.conf
+# export ZSH_PATH_FOR_TMUX="$(which zsh)"
 
 # helix editor
 export EDITOR=hx
