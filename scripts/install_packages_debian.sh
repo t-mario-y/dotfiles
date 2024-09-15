@@ -49,8 +49,7 @@ else
 #   fi
 fi
 
-sudo apt upgrade && sudo apt install -y \
-  shellcheck
+# sudo apt upgrade && sudo apt install -y shellcheck
 
 if type hx > /dev/null 2>&1; then
   echo 'helix editor is already installed.'
