@@ -98,11 +98,15 @@ function tclip(){
 }
 
 # navi(install manually)
-export PATH="${PATH}:$HOME/.cargo/bin"
-eval "$(navi widget zsh)"
+if type navi > /dev/null 2>&1; then
+  export PATH="${PATH}:$HOME/.cargo/bin"
+  eval "$(navi widget zsh)"
+fi
 
 # starship
-eval "$(starship init zsh)"
+if type starship > /dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
 
 # custom commands path
 export PATH="${PATH}:$HOME/.local/bin"
