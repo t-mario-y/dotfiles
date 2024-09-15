@@ -66,10 +66,13 @@ aws s3 cp {object_path} -
 
 % HTTP
 # simply GET
-curl -sSL {URI}
+curl -sSL 
 
 # Download file with default name: to specify, -o <name>
-curl -sSLO {URI}
+curl -sSLO 
+
+# with header
+curl -i 
 
 % fd
 # find including hidden files: not under git
