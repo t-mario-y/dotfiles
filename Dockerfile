@@ -19,11 +19,12 @@ RUN useradd -s /usr/bin/zsh -g 1000 dotfiles_test && \
 
 USER dotfiles_test
 WORKDIR /home/dotfiles_test
+# copy local files, or git clone https://github.com/t-mario-y/dotfiles
+COPY . /home/dotfiles_test/dotfiles
 
 # test script:
 # docker build -t dotfiles_test:latest .
 # docker run --rm -it dotfiles_test:latest
-# git clone https://github.com/t-mario-y/dotfiles
 # cd dotfiles
 # scripts/symlink.sh
 # scripts/install_initial_debian.sh
