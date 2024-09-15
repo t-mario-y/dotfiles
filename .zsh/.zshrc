@@ -35,6 +35,7 @@ if [ "$(uname)" = 'Linux' ] && [[ "$(uname -r)" = *microsoft* ]]; then
   source ~/dotfiles/.zsh/wsl2.zsh
 fi
 
+# currently broken: bat is now installed by cargo
 # batcat
 if type lsb_release > /dev/null 2>&1; then
   LINUX_DISTRO="$(lsb_release --id --short)"
@@ -97,9 +98,11 @@ function tclip(){
   fi
 }
 
-# navi(install manually)
+# custom commands path
+export PATH="${PATH}:$HOME/.local/bin"
+
+# navi (installed by cargo)
 if type navi > /dev/null 2>&1; then
-  export PATH="${PATH}:$HOME/.cargo/bin"
   eval "$(navi widget zsh)"
 fi
 
@@ -107,9 +110,6 @@ fi
 if type starship > /dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
-
-# custom commands path
-export PATH="${PATH}:$HOME/.local/bin"
 
 # see also ~/.tmux/.tmux.conf
 # export ZSH_PATH_FOR_TMUX="$(which zsh)"

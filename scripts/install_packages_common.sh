@@ -23,23 +23,22 @@ else
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 fi
 
-# terminal helpers, not essential
-bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
-
 if type starship > /dev/null 2>&1; then
   echo 'starship is already installed.'
 else
   sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)" -y --force
 fi
 
-curl -fsS  https://sh.rustup.rs | sh
+# curl -fsS  https://sh.rustup.rs | sh
 cargo install --locked \
   bat \
-  broot \
-  fd-find \
   git-delta \
-  ripgrep \
-  taplo-cli \
-  yazi-cli \
-  yazi-fm \
-  zoxide
+  navi \
+  taplo-cli
+  # some tools are install heavy for tiny devices
+  # broot \
+  # fd-find \
+  # ripgrep \
+  # yazi-cli \
+  # yazi-fm \
+  # zoxide
