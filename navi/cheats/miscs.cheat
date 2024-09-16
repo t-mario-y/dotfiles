@@ -79,8 +79,8 @@ curl -i
 fd --hidden ".*\.ya?ml$" .
 
 % RaspberryPi
-% CPU temp
+# CPU temp
 vcgencmd measure_temp
 
-% shut down
+# shut down
 sudo poweroff
