@@ -29,7 +29,7 @@ else
   sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)" -y --force
 fi
 
-# curl -fsS  https://sh.rustup.rs | sh
+curl -fsS  https://sh.rustup.rs | sh
 cargo install --locked \
   bat \
   git-delta \
