@@ -77,3 +77,10 @@ curl -i
 % fd
 # find including hidden files: not under git
 fd --hidden ".*\.ya?ml$" .
+
+% RaspberryPi
+% CPU temp
+vcgencmd measure_temp
+
+% shut down
+sudo poweroff
