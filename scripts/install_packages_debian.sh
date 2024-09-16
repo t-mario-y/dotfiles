@@ -42,11 +42,11 @@ else
 #   rm tmux-3.4.tar.gz
 #   rm -rf tmux-3.4
 #   cd dotfiles
+fi
 
-  TPM_PATH=~/.tmux/plugins/tpm
-  if [ ! -e $TPM_PATH ]; then
-    git clone https://github.com/tmux-plugins/tpm $TPM_PATH
-  fi
+TPM_PATH=~/.tmux/plugins/tpm
+if [ ! -e $TPM_PATH ]; then
+  git clone https://github.com/tmux-plugins/tpm $TPM_PATH
 fi
 
 # sudo apt upgrade && sudo apt install -y shellcheck
