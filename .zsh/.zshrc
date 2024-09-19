@@ -35,14 +35,6 @@ if [ "$(uname)" = 'Linux' ] && [[ "$(uname -r)" = *microsoft* ]]; then
   source ~/dotfiles/.zsh/wsl2.zsh
 fi
 
-# currently broken: bat is now installed by cargo
-# batcat
-if type lsb_release > /dev/null 2>&1; then
-  LINUX_DISTRO="$(lsb_release --id --short)"
-  if [ "$LINUX_DISTRO" = 'Ubuntu' ]|| [ "$LINUX_DISTRO" = 'Debian' ]; then
-    alias bat='batcat'
-  fi
-fi
 alias batman="~/ghq/github.com/eth-p/bat-extras/src/batman.sh"
 
 if [ -f ~/dotfiles/.zsh/local.zsh ]; then
