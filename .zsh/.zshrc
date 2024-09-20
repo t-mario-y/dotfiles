@@ -16,7 +16,7 @@ alias ls='ls -GF'
 export LC_ALL=en_US.UTF-8
 
 # asdf
-if [ -f .asdf/asdf.sh ]; then
+if [ -f ~/.asdf/asdf.sh ]; then
   . ~/.asdf/asdf.sh
   fpath=(${ASDF_DIR}/completions $fpath)
 fi
