@@ -22,6 +22,7 @@ FORMULAE=(
   shellcheck
   tmux
   tree
+  watch
   wezterm
 )
 
