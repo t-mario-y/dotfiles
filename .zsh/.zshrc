@@ -16,8 +16,10 @@ alias ls='ls -GF'
 export LC_ALL=en_US.UTF-8
 
 # asdf
-. $HOME/.asdf/asdf.sh
-fpath=(${ASDF_DIR}/completions $fpath)
+if [ -f .asdf/asdf.sh ]; then
+  . ~/.asdf/asdf.sh
+  fpath=(${ASDF_DIR}/completions $fpath)
+fi
 
 # https://cli.github.com/manual/gh_completion
 # does not work in zsh on Ubuntu via ssh
