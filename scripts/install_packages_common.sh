@@ -30,15 +30,15 @@ else
 fi
 
 curl -fsS  https://sh.rustup.rs | sh
-cargo install --locked \
+~/.cargo/bin/cargo install --locked \
   bat \
   git-delta \
-  navi \
-  taplo-cli
+  navi
   # some tools are install heavy for tiny devices
   # broot \
   # fd-find \
   # ripgrep \
+  # taplo-cli \
   # yazi-cli \
   # yazi-fm \
   # zoxide
