@@ -6,8 +6,8 @@ $ select_merge_conflict_process: echo 'rebase\nmerge\ncherry-pick\nrevert' --- -
 # pull upstream branch
 git pull upstream <select_local_branch_name>
 
-# rebase from upstream branch
-git rebase upstream/<select_local_branch_name>
+# rebase from specific branch
+git rebase origin/<select_local_branch_name>
 
 # interactive rebase from recent commit
 git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n100 | \
@@ -19,11 +19,11 @@ git log --graph --color=always --abbrev-commit --decorate --date=relative --pret
 # git log for deleted files
 git log --all -- 
 
-# merge upstream branch
-git merge --no-ff upstream/<select_local_branch_name>
+# merge specific branch
+git merge --no-ff origin/<select_local_branch_name>
 
-# interactive rebase from upstream branch
-git rebase --interactive upstream/<select_local_branch_name>
+# interactive rebase from specific branch
+git rebase --interactive origin/<select_local_branch_name>
 
 # switch local branch
 git switch <select_local_branch_name>
@@ -41,9 +41,9 @@ cd $(ghq list | fzf-tmux -p --reverse | xargs ghq list --full-path --exact)
 git add -N . && git reset --hard HEAD
 
 # hard reset target file
-cat <(git diff HEAD --name-only) <(git diff upstream/main... --name-only) | \
+cat <(git diff HEAD --name-only) <(git diff origin/main... --name-only) | \
   fzf-tmux -p -w90% | \
-  xargs git restore --source upstream/main 
+  xargs git restore --source origin/main 
 
 # soft reset to HEAD
 git reset --soft HEAD
@@ -70,8 +70,8 @@ git commit --amend --no-edit
 git config --list <local_or_global_or_all>
 $ local_or_global_or_all: echo '--global\n--local\n' --- --fzf-overrides --reverse
 
-# print diff files compared to upstream main branch
-cat <(git diff HEAD --name-only) <(git diff upstream/main... --name-only)
+# print diff files compared to main branch
+cat <(git diff HEAD --name-only) <(git diff origin/main... --name-only)
 
 # use delta as viewer temporary
 GIT_PAGER=delta git diff -w
