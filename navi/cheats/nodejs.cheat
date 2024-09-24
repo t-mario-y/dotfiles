@@ -8,7 +8,3 @@ yarn why
 
 # audit only critical in dependencies
 yarn audit --group dependencies --level critical
-
-% eslint
-# run for upstream branch diff
-cat <(git diff HEAD --name-only) <(git diff upstream/main... --name-only)  | grep \.ts | xargs -I {} npx eslint --quiet {}

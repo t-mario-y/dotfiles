@@ -3,9 +3,6 @@
 $ select_local_branch_name: git branch --format="%(refname:short)" --- --fzf-overrides --reverse
 $ select_merge_conflict_process: echo 'rebase\nmerge\ncherry-pick\nrevert' --- --fzf-overrides --reverse
 
-# pull upstream branch
-git pull upstream <select_local_branch_name>
-
 # rebase from specific branch
 git rebase origin/<select_local_branch_name>
 
