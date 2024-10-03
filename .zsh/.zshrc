@@ -52,7 +52,7 @@ bindkey -r "^O" # accept-line-and-down-history
 
 # ZLE
 # (want to share very long command) → echo "(want to share very long command)" | code -
-function print_buffer_to_vscode() {
+function print_buffer_to_tclip() {
   if [ "$BUFFER" = "" ]; then
     return 0
   fi
@@ -64,24 +64,24 @@ function print_buffer_to_vscode() {
       .replace(/`/g, "\\`");
     console.log(input);'
   )
-  BUFFER=" echo \"$BUFFER\" | code -"
+  BUFFER=" echo \"$BUFFER\" | tclip"
   zle accept-line
 }
 
-zle -N print_buffer_to_vscode
-bindkey "^O" print_buffer_to_vscode
+zle -N print_buffer_to_tclip
+bindkey "^O" print_buffer_to_tclip
 
-# (command) → command | code -
-function open_result_to_vscode() {
+# (command) → command | tclip -
+function open_result_to_tclip() {
   if [ "$BUFFER" = "" ]; then
     return 0
   fi
-  BUFFER=" $BUFFER | code -"
+  BUFFER=" $BUFFER | tclip"
   zle accept-line
 }
 
-zle -N open_result_to_vscode
-bindkey "^N" open_result_to_vscode
+zle -N open_result_to_tclip
+bindkey "^N" open_result_to_tclip
 
 # OSC 52 based copy
 function tclip(){
