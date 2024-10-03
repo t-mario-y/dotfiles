@@ -139,6 +139,7 @@ navi
 nextjs
 nilable
 nodenv
+noreferrer
 numericality
 oidc
 openapi
