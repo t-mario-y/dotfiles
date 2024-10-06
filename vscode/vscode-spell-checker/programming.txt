@@ -99,6 +99,7 @@ Hankaku
 hashicorp
 healthz
 helmfile
+hono
 Horusec
 hotfix
 iframe
