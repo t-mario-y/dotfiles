@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "request": "attach",
+      "name": "attach node/deno",
+      "type": "node",
+      "cwd": "${workspaceFolder}",
+      "env": {},
+      "port": 9229
+    },
+  ]
+}
