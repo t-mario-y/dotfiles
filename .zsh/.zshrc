@@ -38,11 +38,6 @@ if [ "$(uname)" = 'Linux' ] && [[ "$(uname -r)" = *microsoft* ]]; then
 fi
 
 alias batman="~/ghq/github.com/eth-p/bat-extras/src/batman.sh"
-
-if [ -f ~/dotfiles/.zsh/local.zsh ]; then
-  source ~/dotfiles/.zsh/local.zsh
-fi
-
 alias lzg='lazygit'
 alias lzd='lazydocker'
 
@@ -115,3 +110,7 @@ export EDITOR=hx
 export PATH="$PATH:$HOME/.deno/bin"
 
 autoload -Uz compinit && compinit
+
+if [ -f ~/dotfiles/.zsh/local.zsh ]; then
+  source ~/dotfiles/.zsh/local.zsh
+fi
