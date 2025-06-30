@@ -2,9 +2,6 @@
 
 set -eu
 
-brew tap github/gh
-brew tap homebrew/bundle
-
 brew upgrade
 
 FORMULAE=(
