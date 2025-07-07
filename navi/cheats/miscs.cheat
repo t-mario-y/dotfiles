@@ -64,6 +64,9 @@ $ any_file_2: fd --no-ignore
 # show content like cat
 aws s3 cp {object_path} -
 
+# EC2 status
+aws ec2 describe-instances --instance-ids $DEV_EC2_INSTANCE_ID | jq '.Reservations[0].Instances[0].State.Name' --raw-output
+
 % HTTP
 # simply GET
 curl -sSL 
