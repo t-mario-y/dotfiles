@@ -114,3 +114,6 @@ autoload -Uz compinit && compinit
 if [ -f ~/dotfiles/.zsh/local.zsh ]; then
   source ~/dotfiles/.zsh/local.zsh
 fi
+
+# direnv
+eval "$(direnv hook zsh)"
