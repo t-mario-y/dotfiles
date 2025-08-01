@@ -8,3 +8,6 @@ yarn why
 
 # audit only critical in dependencies
 yarn audit --group dependencies --level critical
+
+# deno serve static file by SERVE_DIR
+PORT=8080 SERVE_DIR=coverage deno run --allow-all ~/dotfiles/utils/serve_dir.ts
