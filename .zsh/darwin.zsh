@@ -7,9 +7,9 @@ if [ "$(uname -p)" = 'arm' ]; then
 fi
 
 alias base64='gbase64'
-alias grep='ggrep'
 alias awk='gawk'
 alias sed='gsed'
+PATH="$(brew --prefix grep)/libexec/gnubin:$PATH" # ggrep for grep
 
 # homebrewでinstallしたパッケージのcompletionを設定する。
 # 参考: https://docs.brew.sh/Shell-Completion
