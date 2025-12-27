@@ -13,6 +13,9 @@ tail --lines=100 --follow <log_file> | jq -R 'fromjson?'
 # update dotfiles repository
 cd ~/dotfiles && git pull && scripts/symlink.sh && cd -
 
+# attach session: dotfiles
+bstmux session:attach -w ~/dotfiles
+
 # upgrade tools(macOS)
 brew update && brew upgrade && brew cleanup
 
