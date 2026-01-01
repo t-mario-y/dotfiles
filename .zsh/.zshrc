@@ -107,6 +107,7 @@ fi
 export EDITOR=hx
 
 # deno
+export PATH="$PATH:$HOME/.deno/bin"
 . "$HOME/.deno/env"
 
 autoload -Uz compinit && compinit
