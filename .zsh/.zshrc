@@ -117,7 +117,7 @@ if [ -f ~/dotfiles/.zsh/local.zsh ]; then
 fi
 
 # bstmux
-alias bstmux='deno run --allow-env --allow-read --allow-write --allow-run /Users/t-mario-y/ghq/github.com/t-mario-y/boost-term/main.ts'
+alias bstmux='deno run --allow-env --allow-read --allow-write --allow-run ~/ghq/github.com/t-mario-y/boost-term/main.ts'
 
 # direnv
 eval "$(direnv hook zsh)"
