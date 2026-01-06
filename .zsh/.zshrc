@@ -107,8 +107,8 @@ fi
 export EDITOR=hx
 
 # deno
-export PATH="$PATH:$HOME/.deno/bin"
 . "$HOME/.deno/env"
+if [[ ":$FPATH:" != *":~/.zsh/completions:"* ]]; then export FPATH="~/.zsh/completions:$FPATH"; fi
 
 autoload -Uz compinit && compinit
 
