@@ -32,11 +32,11 @@ fi
 curl -fsS  https://sh.rustup.rs | sh
 ~/.cargo/bin/cargo install --locked \
   bat \
+  fd-find \
   git-delta \
   navi
   # some tools are install heavy for tiny devices
   # broot \
-  # fd-find \
   # ripgrep \
   # taplo-cli \
   # yazi-cli \
