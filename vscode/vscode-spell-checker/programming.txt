@@ -198,6 +198,7 @@ simplecov
 sjis
 Smoooooth
 solargraph
+spinbutton
 sprintf
 sqlite
 storyname
