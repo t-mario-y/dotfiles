@@ -11,6 +11,7 @@ FORMULAE=(
   # copyq
   findutils
   gawk
+  gnu-sed
   grep
   gh
   git
