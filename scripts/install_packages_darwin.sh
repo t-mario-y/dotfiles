@@ -9,6 +9,7 @@ FORMULAE=(
   colima
   coreutils
   # copyq
+  findutils
   gawk
   grep
   gh

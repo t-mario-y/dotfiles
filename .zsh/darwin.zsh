@@ -9,6 +9,8 @@ fi
 alias base64='gbase64'
 alias awk='gawk'
 alias sed='gsed'
+alias xargs='gxargs'
+alias find='gfind'
 PATH="$(brew --prefix grep)/libexec/gnubin:$PATH" # ggrep for grep
 
 # homebrewでinstallしたパッケージのcompletionを設定する。
