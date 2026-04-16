@@ -22,6 +22,7 @@ if wezterm.target_triple == "aarch64-apple-darwin" then
     { family = "JetBrainsMono Nerd Font",  weight = "Bold" },
     { family = "Hiragino Kaku Gothic Pro", weight = "Bold" }, -- only effective on macOS
   })
+  config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 end
 
 return config
