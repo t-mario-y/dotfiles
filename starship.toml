@@ -24,3 +24,6 @@ symbol = "🌍 "
 
 [ruby]
 disabled = true
+
+[git_status]
+ignore_submodules = true
