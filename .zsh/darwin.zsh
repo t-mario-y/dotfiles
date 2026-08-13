@@ -19,3 +19,5 @@ if type brew > /dev/null 2>&1; then
   autoload -Uz compinit
   compinit
 fi
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
