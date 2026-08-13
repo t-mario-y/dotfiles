@@ -17,39 +17,16 @@ else
   sudo apt install gh
 fi
 
-if type tmux > /dev/null 2>&1 && [ "$(tmux -V)" = 'tmux 3.4' ]; then
-  echo 'tmux 3.4 is already installed.'
+if type tmux > /dev/null 2>&1; then
+  echo 'tmux is already installed.'
 else
   sudo apt-get install -y tmux
-#   sudo apt-get remove -y tmux
-#   sudo apt-get install -y --no-install-recommends \
-#     bison \
-#     build-essential \
-#     libevent-dev \
-#     ncurses-dev \
-#     pkg-config
-
-#   cd "$HOME"
-#   curl -sLO https://github.com/tmux/tmux/releases/download/3.4/tmux-3.4.tar.gz
-#   tar xzf tmux-3.4.tar.gz
-#   cd tmux-3.4
-#   ./configure --enable-sixel --prefix="$HOME"/.local \
-#     CFLAGS="-I$HOME/.local/include -I$HOME/.local/include/ncurses" \
-#     LDFLAGS="-L$HOME/.local/include -L$HOME/.local/include/ncurses -L$HOME/.local/lib"
-#   make
-#   sudo make install
-#   cd ..
-#   rm tmux-3.4.tar.gz
-#   rm -rf tmux-3.4
-#   cd dotfiles
 fi
 
 TPM_PATH=~/.tmux/plugins/tpm
 if [ ! -e $TPM_PATH ]; then
   git clone https://github.com/tmux-plugins/tpm $TPM_PATH
 fi
-
-# sudo apt upgrade && sudo apt install -y shellcheck
 
 if type hx > /dev/null 2>&1; then
   echo 'helix editor is already installed.'
