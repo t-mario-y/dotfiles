@@ -31,3 +31,7 @@ docker system prune --all
 
 # image prune --all
 docker image prune --all
+
+% k8s
+# load helm completion
+source <(helm completion zsh)
