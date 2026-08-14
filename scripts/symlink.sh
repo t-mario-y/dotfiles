@@ -2,7 +2,7 @@
 
 set -eu
 
-mkdir -p ~/.config/{helix,navi,wezterm,yazi}
+mkdir -p ~/.config/{helix,mise,navi,wezterm,yazi}
 ln -snfv ~/dotfiles/.zsh/.zshrc      ~/.zshrc
 ln -snfv ~/dotfiles/.gitconfig       ~/.gitconfig
 ln -snfv ~/dotfiles/.tmux/.tmux.conf ~/.tmux.conf
