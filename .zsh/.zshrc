@@ -15,18 +15,15 @@ alias ls='ls -GF'
 
 export LC_ALL=en_US.UTF-8
 
-# asdf
-if [ -f ~/.asdf/asdf.sh ]; then
-  . ~/.asdf/asdf.sh
-  fpath=(${ASDF_DIR}/completions $fpath)
-fi
+# mise
+eval "$(mise activate zsh)"
 
 # https://cli.github.com/manual/gh_completion
 # does not work in zsh on Ubuntu via ssh
 fpath=(~/gh_cli_completions $fpath)
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 # OS specific config
 if [ "$(uname)" = 'Darwin' ]; then

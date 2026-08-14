@@ -27,9 +27,6 @@ sudo apt-get autoremove -y
 # upgrade tools(Cargo)
 rustup update && cat ~/.cargo/.crates2.json | jq '.installs|to_entries[].key' --raw-output | awk '{print $1}' | xargs cargo install --locked
 
-# check tool versions managed by asdf
-delta <(asdf latest --all) <(asdf current)
-
 % homebrew
 
 # inspect dependency between formula

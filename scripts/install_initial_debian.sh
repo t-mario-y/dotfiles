@@ -4,7 +4,7 @@ set -eu
 
 sudo apt-get update
 sudo apt-get upgrade -y
-# libz-dev for asdf-ruby, unzip for asdf-ghq
+# libz-dev for ruby, unzip for ghq
 sudo apt-get install -y --no-install-recommends \
   build-essential \
   ca-certificates \

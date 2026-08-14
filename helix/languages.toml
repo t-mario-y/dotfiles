@@ -3,7 +3,7 @@ command = "ruby-lsp"
 args = []
 
 [language-server.ruby-lsp.config]
-rubyVersionManager = 'asdf'
+rubyVersionManager = 'mise'
 formatter = 'syntax_tree'
 
 [language-server.sorbet]

@@ -8,7 +8,6 @@ FORMULAE=(
   awscli
   colima
   coreutils
-  # copyq
   findutils
   gawk
   gnu-sed
@@ -29,10 +28,10 @@ for item in "${FORMULAE[@]}"; do
   brew install "$item"
 done
 
+brew cleanup
+
 # tmux install script
 TPM_PATH=~/.tmux/plugins/tpm
 if [ ! -e $TPM_PATH ]; then
   git clone https://github.com/tmux-plugins/tpm $TPM_PATH
 fi
-
-brew cleanup

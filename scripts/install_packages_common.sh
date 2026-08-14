@@ -8,19 +8,10 @@ else
   curl -fsSL https://deno.land/install.sh | sh
 fi
 
-if type fzf > /dev/null 2>&1; then
-  echo 'fzf is already installed.'
+if type mise > /dev/null 2>&1; then
+  echo 'mise is already installed.'
 else
-  rm -rf ~/.fzf
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  yes | ~/.fzf/install
-fi
-
-if type asdf > /dev/null 2>&1; then
-  echo 'asdf is already installed.'
-else
-  rm -rf ~/.asdf
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+  curl https://mise.run | sh
 fi
 
 if type starship > /dev/null 2>&1; then
