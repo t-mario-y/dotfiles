@@ -15,6 +15,9 @@ alias ls='ls -GF'
 
 export LC_ALL=en_US.UTF-8
 
+# custom commands path
+export PATH="${PATH}:$HOME/.local/bin"
+
 # mise
 eval "$(mise activate zsh)"
 
@@ -83,9 +86,6 @@ function tclip(){
     printf "\e]52;c;%s\a" "$(printf "%s" "$*" | base64 -w 0)"
   fi
 }
-
-# custom commands path
-export PATH="${PATH}:$HOME/.local/bin"
 
 # navi (installed by cargo)
 if type navi > /dev/null 2>&1; then
