@@ -63,7 +63,7 @@ $ any_file_2: fd --no-ignore
 # open code from stdin with line number
  echo '' | xargs code --goto
 
-% AWS S3
+% AWS
 # show content like cat
 aws s3 cp {object_path} -
 
