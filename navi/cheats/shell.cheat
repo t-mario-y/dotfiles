@@ -6,10 +6,10 @@ ps aux | grep
 
 % kill
 # kill process by port (use sudo if needed)
-lsof -P -i:<port_number> | fzf-tmux -p --exit-0 | awk '{print $2}' | xargs kill -9
+lsof -P -i:<port_number> | fzf --exit-0 | awk '{print $2}' | xargs kill -9
 
 # kill process by name
-ps aux | grep <process_name> | fzf-tmux -p --reverse -w90% --exit-0 | awk '{print $2}' | xargs kill -9
+ps aux | grep <process_name> | fzf --reverse --exit-0 | awk '{print $2}' | xargs kill -9
 
 % file/dir size
 # human-readable, summarize
@@ -36,7 +36,7 @@ tar -cvzf foo.tar.gz {file_or_dir}
 sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g'
 
 # print diff line only (same for git diff)
-ls -p | grep -v / | fzf-tmux -p --multi --reverse -w90% --exit-0 | xargs -t diff --unified=1 | grep -P '^\+'
+ls -p | grep -v / | fzf --multi --reverse --exit-0 | xargs -t diff --unified=1 | grep -P '^\+'
 
 % comm
 # print lines only in one file(with -13 or -23)

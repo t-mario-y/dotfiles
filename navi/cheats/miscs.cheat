@@ -1,7 +1,7 @@
 % jq
 
 # YAML to JSON
-git ls-files | grep -E ".*\.ya?ml$" | fzf-tmux | xargs -I{} yq e {} --output-format json | jq
+git ls-files | grep -E ".*\.ya?ml$" | fzf | xargs -I{} yq e {} --output-format json | jq
 
 $ log_file: fd --no-ignore ".*\.log$" .
 

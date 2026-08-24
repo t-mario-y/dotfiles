@@ -7,8 +7,8 @@ $ select_merge_conflict_process: echo 'rebase\nmerge\ncherry-pick\nrevert' --- -
 git rebase origin/<select_local_branch_name>
 
 # interactive rebase from recent commit
-git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n100 | \
-  fzf-tmux -p -w90% --ansi --reverse | awk '{print $2}' | xargs git rebase --interactive
+git log --graph --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n100 | \
+  fzf --reverse | awk '{print $2}' | xargs git rebase --interactive
 
 # show log graph by one-line
 git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline -n100
@@ -32,15 +32,14 @@ git <select_merge_conflict_process> --abort
 git <select_merge_conflict_process> --continue
 
 # cd to repository managed by ghq
-cd $(ghq list | fzf-tmux -p --reverse | xargs ghq list --full-path --exact)
+cd $(ghq list | fzf --reverse | xargs ghq list --full-path --exact)
 
 # hard reset to HEAD
 git add -N . && git reset --hard HEAD
 
 # hard reset target file
 cat <(git diff HEAD --name-only) <(git diff origin/main... --name-only) | \
-  fzf-tmux -p -w90% | \
-  xargs git restore --source origin/main 
+  fzf | xargs git restore --source origin/main 
 
 # soft reset to HEAD
 git reset --soft HEAD
@@ -80,10 +79,10 @@ git fetch --all
 git remote add 
 
 # remove remote repository
-git remote | fzf-tmux -p --reverse | git remote remove 
+git remote | fzf --reverse | git remote remove 
 
 # push to remote repository
-git remote | fzf-tmux -p --reverse | xargs -I{} git push --set-upstream {} $(git symbolic-ref --short HEAD)
+git remote | fzf --reverse | xargs -I{} git push --set-upstream {} $(git symbolic-ref --short HEAD)
 
 # skip ci by empty commit
 git commit --allow-empty -m '[skip ci]'
@@ -99,7 +98,7 @@ grep -nrw
 # search Pull Request and view on browser
 ; TODO: カレントディレクトリ以外のPull Requestを探せるが、開くことができない
 cat <(gh search prs --involves=@me --state=open) | \
-  sort | uniq | fzf-tmux -p -w90% --reverse | \
+  sort | uniq | fzf --reverse | \
   cut -f2 | xargs -I {} gh pr view -w {}
 
 # view repository on browser
@@ -107,4 +106,4 @@ gh repo view -w
 
 % gitmoji
 # commit with fuzzy-find emoji
-gitmoji --list | fzf-tmux -p --reverse | awk '{print $3}' | xargs git commit -m && git commit --amend
+gitmoji --list | fzf --reverse | awk '{print $3}' | xargs git commit -m && git commit --amend
