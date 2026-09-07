@@ -1,6 +1,6 @@
-% Node.js
-# node -e instead of jq
-echo '{"name": "Mario"}' | node -e 'console.log(JSON.parse(fs.readFileSync("/dev/stdin", "utf-8")).name);'
+% Deno
+# deno eval instead of jq
+echo '{"name": "Mario"}' | deno eval --print 'JSON.parse(Deno.readTextFileSync("/dev/stdin")).name'
 
 % yarn
 # see package dependency from specific package
