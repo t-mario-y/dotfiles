@@ -83,7 +83,7 @@ fd --hidden ".*\.ya?ml$" .
 
 % RaspberryPi
 # CPU temp
-vcgencmd measure_temp
+awk '{printf "%.2f\n", $1/1000}' /sys/class/thermal/thermal_zone0/temp
 
 # shut down
 sudo poweroff
